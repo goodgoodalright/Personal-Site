@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Character Sheet</title>
+    <link rel="stylesheet" href="techcrunch-flex.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inconsolata:wght@200;400;700&family=Poiret+One&family=VT323&display=swap" rel="stylesheet">
+</head>
+<!--
+
+THINGS TO ADD
+- DESCRIPTIVE TEXT ON HOVER
+- TOGGLE FOR MENU FLIP: 
+- - NAVBAR: 
+- - CENTER: 
+- - SIDEBAR:
+- IMAGES & BACKGROUNDS
+- BORDER SHADOW & BORDER STYLIZATION
+- TEXT STYLIZATION
+
+-->
+<body>
+    <nav class="navbar">
+        <ul>
+            <li>
+                <ul class="premium">
+                    <li><img src="default.png" alt="site logo"></li>
+                    <li><strong>HP</strong> 263 / <strong>SP</strong> 407</li>
+                    <li>Game Overs: <strong>4</strong></li>
+                </ul>
+            </li>
+            <li class="nav">Lv: 44
+                <ul class="boxslide">
+                    <li>Area Rating: <em>Overprepared</em></li>
+                </ul>
+            </li>
+            <li class="nav">EXP: [FUNCTION]
+                <ul class="boxslide">
+                    <li>EXP until next level: [FUNCTION]</li>
+                </ul>
+            </li>
+            <li class="nav">STR: 27 (+6)
+                <ul class="boxslide">
+                    <li>Base: <strong>21</strong></li>
+                    <li>Horned Boots + 4</li>
+                    <li>Geis Aura + 2</li>
+                </ul>
+            </li>
+            <li class="nav">VIT: 34 (+8)
+                <ul class="boxslide">
+                    <li>Base: <strong>26</strong></li>
+                    <li>Thorn Wand - 4</li>
+                    <li>Horned Boots + 8</li>
+                    <li>Geis Aura + 4</li>
+                </ul>
+            </li>
+            <li class="nav">MAG: 60 (+24)
+                <ul class="boxslide">
+                    <li>Base: <strong>36</strong></li>
+                    <li>Thorn Wand + 10</li>
+                    <li>Emerald Amulet + 12</li>
+                    <li>Geis Aura + 2</li>
+                </ul>
+            </li>
+            <li class="nav">AGI: 35 (+14)
+                <ul class="boxslide">
+                    <li>Base: <strong>21</strong></li>
+                    <li>Thorn Wand + 2</li>
+                    <li>Horned Boots + 8</li>
+                    <li>Geis Aura + 4</li>
+                </ul>
+            </li>
+            <li class="nav">LCK: 27 (-1)
+                <ul class="boxslide">
+                    <li>Base: <strong>28</strong></li>
+                    <li>Thorn Wand + 6</li>
+                    <li>Horned Boots - 4</li>
+                    <li>Emerald Amulet - 7</li>
+                    <li>Geis Aura + 4</li>
+                </ul>
+            </li>
+            <li class="nav"><input type="search" placeholder="Search"></li>
+            <li class="nav"><a href="#" class="anchor">Switch to Map</a></li>
+        </ul>
+        <footer><em>Made by Megawind 2022</em></footer>
+    </nav>
+    <div class="main">
+        <main>
+            <section class="center">
+                <header class="header">
+                    <img src="cover(3).png" alt="site banner">
+                    <h1>Aradia Clawthorne</h1>
+                    <div class="container">
+                        <h3>Lv. 44 Summoner</h3>
+                        <h3>Female Demi-Human</h3>
+                    </div>
+                </header>
+                <h2>Current Quest</h2>
+                <section class="quest">
+                    <h5>"The masked merchant said they saw a bright blue light coming from the abandoned temple. It's probably nothing... Right?"</h5>
+                </section>
+                <h2>Current Status</h2>
+                <section class="character">
+                    <ul>
+                        <li>Status: fine, so far</li>
+                        <li>Rest: a little thirsty</li>
+                        <li>Mindset: anxious, curious</li>
+                    </ul>
+                    <ul>
+                        <li>Affinities: Earth, Light</li>
+                        <li>Resistances: Dark</li>
+                        <li>Weaknesses: Fire</li>
+                    </ul>
+                </section>
+                <h2>Active Gear</h2>
+                <section class="equipment">
+                    <h5>Thorn Wand
+                        <ul class="boxslide">
+                            <li>MAG+10 | VIT-4 | AGI+2 | LCK + 6</li>
+                            <li>Dark spiked branches twisted into a triple helix and joined by a leather handle.</li>
+                        </ul>
+                    </h5>
+                    <h5>Horned Boots
+                        <ul class="boxslide">
+                            <li>STR+4 | VIT+8 | AGI+8 | LCK-4</li>
+                            <li>Tall greaves wrought from the hide of an evil beast. Surprisingly comfortable arch support.</li>
+                        </ul>
+                    </h5>
+                    <h5>Emerald Amulet
+                        <ul class="boxslide">
+                            <li>MAG+12 | LCK-7</li>
+                            <li>Liberated from the Tomb of the Forest Queen. She was gifted this gem on her deathday.</li>
+                        </ul>
+                    </h5>
+                    <h5>Geis Aura
+                        <ul class="boxslide">
+                            <li>STR+2 | VIT+4 | MAG+2 | AGI+4 | LCK+4</li>
+                            <li>A fossilized demon that squirms in the presence of fresh blood. Grants mastery of healing skills.</li>
+                        </ul>
+                    </h5>
+                </section>
+                <h2>Inventory</h2>
+                <section class="items">
+                    <h5>Designer Hoodie
+                        <ul class="boxslide">
+                            <li>VIT+4 | AGI-2 | LCK+4</li>
+                            <li>A collector's item. The white stripes contrast tastefully with the plush purple fabric.</li>
+                        </ul>
+                    </h5>
+                    <h5>Silver Ring
+                        <ul class="boxslide">
+                            <li>MAG+6 | AGI+2 | LCK-3</li>
+                            <li>The signet ring you found in your pocket when you awoke. You have no idea where it came from or what the symbol represents.</li>
+                        </ul>
+                    </h5>
+                    <h5>Ice Wand
+                        <ul class="boxslide">
+                            <li>MAG+8 | VIT+6 | AGI-2</li>
+                            <li>A tooth from the Ice Dragon. Despite the thick handle, the magismith recommended you wear a thick glove to avoid frostbite.</li>
+                        </ul>
+                    </h5>
+                    <h5>Foil-wrapped Burger (Deluxe)
+                        <ul class="boxslide">
+                            <li>Restores 80% of HP.</li>
+                            <li>What, no curly fries?</li>
+                        </ul>
+                    </h5>
+                    <h5>Light-Up Sneakers
+                        <ul class="boxslide">
+                            <li>STR-4 | VIT+2 | AGI+8 | LCK+2</li>
+                            <li>Wanna see me run to that mountain and back? Wanna see me do it again?</li>
+                        </ul>
+                    </h5>
+                    <h5>FIEND Energy Drink
+                        <ul class="boxslide">
+                            <li>Restores 33% of HP and 66% of SP.</li>
+                            <li>Bears an uncanny resemblance to urine; best to drink it from the can. Pairs well with vodka.</li>
+                        </ul>
+                    </h5>
+                    <h5>Vitamin C+ Powder
+                        <ul class="boxslide">
+                            <li>Restores 33% of SP and removes most status effects.</li>
+                            <li>Harvested from sunnyflowers, this yellow-green powder is best ingested with a glass of water.</li>
+                        </ul>
+                    </h5>
+                    <h5>Ruby Amulet
+                        <ul class="boxslide">
+                            <li>STR+6 | VIT-6 | AGI+6</li>
+                            <li>This well-preserved demon heart is as heavy as it is ostentatious. Uncomfortable, usually makes its wearer irritable and impatient.</li>
+                        </ul>
+                    </h5>
+                    <h5>Broken Eyeglasses
+                        <ul class="boxslide">
+                            <li>AGI-4 | LCK-4</li>
+                            <li>Practically useless in this state and yet you can't bring yourself to throw them away like trash.</li>
+                        </ul>
+                    </h5>
+                    <h5>[empty]</h5>
+                    <h5>[empty]</h5>
+                    <h5>[empty]</h5>
+                </section>
+            </section>
+            <section class = 'sidebar'>
+                <section class="objectives">
+                    <h2>Local Objectives</h2>
+                    <ul>
+                        <li>Find the Ethereal Door.</li>
+                        <li>Return to the Temple.</li>
+                        <li class="done">Contact the Masked Merchant.</li>
+                        <li class="done">Explore the Sunken Ruins.</li>
+                        <li class="done">Avoid detection.</li>
+                    </ul>
+                </section>
+                <section class="notes">
+                    <h2>Field Notes</h2>
+                    <ul>
+                        <li>The door to the Cave of Gold is locked. I heard very faint sounds from behind the metal barrier.</li>
+                        <li>The masked merchant seems to be getting a little friendlier. Hard to tell but why else would I get a discount?</li>
+                        <li>People in the Other World are strange, very strange. Unless I'm the weird one. No, it's them; it has to be.</li>
+                        <li>Wolves hunt in packs! Goblins ill like fire.</li>
+                        <li>All roads lead to Gran Soren.</li>
+                    </ul>
+                </section>
+                <section class="secrets">
+                    <h2>Allies & Enemies</h2> 
+                    <ul>
+                        <li>Eudaimonia
+                            <ul class="boxslide">
+                                <li>A bronze humanoid automaton with a smiling mask and a charming, androgynous voice. The first and friendliest stranger I met on this strange journey.</li>
+                            </ul>
+                        </li>
+                        <li>???
+                            <ul class="boxslide">
+                                <li>I feel like I'm being watched...</li>
+                            </ul>
+                        </li>
+                        <li>Aergio
+                            <ul class="boxslide">
+                                <li>A massive creature that could vaguely be described as a man. All he seems to care about is eating, sleeping, and taking up space. However, he seems to know a lot more about this world than anybody else I've talked to.</li>
+                            </ul>
+                        </li>
+                        <li>Praxidice
+                            <ul class="boxslide">
+                                <li>Blindfolded twins conjoined at the hip wielding symbols of justice and punishment. Everyone tells me to stay as far away from them as I can. I wonder why.</li>
+                            </ul>
+                        </li>
+                        <li>???
+                            <ul class="boxslide">
+                                <li>I feel like I'm being watched...</li>
+                            </ul>
+                        </li>
+                        <li>Aidos
+                            <ul class="boxslide">
+                                <li>A six-armed hunchback draped in patchy robes. He seems to always take offense at what I'm doing but never stops to explain what it is I'm doing wrong.</li>
+                            </ul>
+                        </li>
+                        <li>Alala
+                            <ul class="boxslide">
+                                <li>A ferocious lion-woman who leads the owl-soldiers that keep chasing me. She seems to blame me for everything that's going wrong.</li>
+                            </ul>
+                        </li>
+                        <li>???
+                            <ul class="boxslide">
+                                <li>I feel like I'm being watched...</li>
+                            </ul>
+                        </li>
+                    </ul>
+                </section>
+                <section class="keyitems">
+                    <h2>Special Items</h2>
+                    <ul>
+                        <li class="end-row-up">Jade Chain
+                            <ul class="boxslide">
+                                <li>A bead chain of coarse, warm stones that attract the fossil demons. A blood sacrifice awakens one to borrow its powers.</li>
+                                <li>Held (14): Marogareh, Wadatsumi, Ankh, Iyomante, Shiranui, Hifumi, Kamudo, Narukami, Anathema, Miasma, Nirvana, Murakumo, <strong>Geis</strong>, Djed; Empty (10).</li>
+                            </ul>
+                        </li>
+                        <li class="end-row-up">Trusty Fishing Rod
+                            <ul class="boxslide">
+                                <li>The fisher's treasure and the bane of aquatic creatures. Fashioned from flexible wood and spiderworm silk.</li>
+                                <li>Largest catch:<br>River Baron (103 kg, 3.2m)</li>
+                            </ul>
+                        </li>
+                        <li class="end-row-bot">Teleportation Key
+                            <ul class="boxslide">
+                                <li>An archaic wooden key engraved with asymmetric runes. Glows in certain areas.</li>
+                                <li>Travel points: Grassy Hearth, Cave of the Atoll, Skybed, Drakehall.</li>
+                            </ul>
+                        </li>
+                        <li>???</li>
+                    </ul>
+                </section>
+            </section>
+        </main>
+    </div>
+    <script type="text/javascript" src="js/main.js"></script>
+</body>
+</html>
