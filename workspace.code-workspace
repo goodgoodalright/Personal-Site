@@ -1,0 +1,22 @@
+{
+	"folders": [
+		{
+			"path": "..\\..\\Leon Classwork"
+		},
+		{
+			"path": "..\\..\\html5up"
+		},
+		{
+			"path": "..\\..\\Leon Classwork\\personal site from hyperspace"
+		},
+		{
+			"path": "..\\..\\git\\Personal-Site"
+		},
+		{
+			"path": ".."
+		}
+	],
+	"settings": {
+		"liveServer.settings.multiRootWorkspaceName": "git"
+	}
+}
