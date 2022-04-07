@@ -72,6 +72,8 @@ body {
 a {
     text-decoration: none;
     color: #eee;
+    margin: 0;
+    padding: 0;
 }
 strong {
     font-weight: bold;
@@ -96,11 +98,14 @@ section {
     text-shadow: 2px #fff;
     background: linear-gradient(135deg, rgb(97, 80, 255), rgb(0, 121, 30));
 }
-li,
+.main li,
+.nav,
+.navbar,
+.premium li:nth-child(n+2),
+.premium img,
 section,
 .sidebar,
-.center,
-.navbar {
+.center {
     border: 2px double #fff;
     border-radius: 10px;
 }
@@ -313,6 +318,15 @@ body {
         background: #fff;
         max-width: 25%;
     }
+        .secrets li:hover ul {
+            max-width: 40%;
+            height: auto;
+            overflow: visible;
+        }
+        .secrets li:hover li {
+            position: relative;
+            top: 0;
+        }
     .nav:hover li,
     .equipment h5:hover li,
     .items h5:hover li,

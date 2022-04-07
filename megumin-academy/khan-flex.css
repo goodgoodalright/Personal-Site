@@ -86,7 +86,9 @@ main strong {
     color: rgb(221, 0, 0);
     text-shadow: 2px 2px 2px rgb(255, 230, 2);
 }
+
 /* STYLES */
+
 header {
     display: flex;
     flex-direction: row;
@@ -96,19 +98,19 @@ header {
     width: 100%;
     border-bottom: 1px solid #aaa;
 }
-header div {
-    width: 30%;
-    text-align: center;
-}
-header input {
-    margin-left: 1rem;
-    padding-left: 1rem;
-    background:rgb(221, 0, 0);
-    color: #fff;
-}
-input::placeholder {
-    color: #fff;
-}
+    header div {
+        width: 30%;
+        text-align: center;
+    }
+    header input {
+        margin-left: 1rem;
+        padding-left: 1rem;
+        background:rgb(221, 0, 0);
+        color: #fff;
+    }
+        input::placeholder {
+            color: #fff;
+        }
 main {
     display: flex;
     width: 80%;
@@ -116,36 +118,36 @@ main {
     justify-content: center;
     margin: 5% auto 2% auto;
 }
-.main-left {
-    width: 50%;
-    align-self: center;
-}
-.main-right {
-    width: 50%;
-    align-self: center;
-    padding: 0 auto;
-    font-size: 3rem;
-    font-family: 'Shadows Into Light Two', 'Nunito', sans-serif;
-}
-.above-nav {
-    margin-bottom: 1rem;
-    margin-top: -1rem;
-}
-nav {
-    position: absolute;
-}
+    .main-left {
+        width: 50%;
+        align-self: center;
+    }
+    .main-right {
+        width: 50%;
+        align-self: center;
+        padding: 0 auto;
+        font-size: 3rem;
+        font-family: 'Shadows Into Light Two', 'Nunito', sans-serif;
+    }
+    .above-nav {
+        margin-bottom: 1rem;
+        margin-top: -1rem;
+    }
+    nav {
+        position: absolute;
+    }
 button {
     padding: .75rem 1.5rem;
     border-radius: 10px;
     transition: all .4s ease-in-out;
 }
-button:hover {
-    background-position: 100% 0;
-    transition: all .4s ease-in-out;
-    color: #fff;
-    font-size: 1.5rem;
-    background-image: linear-gradient(to right, rgba(221, 0, 0, 0.9), rgb(117, 23, 0));
-}
+    button:hover {
+        background-position: 100% 0;
+        transition: all .4s ease-in-out;
+        color: #fff;
+        font-size: 1.5rem;
+        background-image: linear-gradient(to right, rgba(221, 0, 0, 0.9), rgb(117, 23, 0));
+    }
 footer {
     width: 100%;
     height: auto;
@@ -155,7 +157,9 @@ footer {
     padding: 0 2rem 0 0;
     margin: 0;
 }
+
 /* IMAGES */
+
 img {
     max-width: 100%;
 }
