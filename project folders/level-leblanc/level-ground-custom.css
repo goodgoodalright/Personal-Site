@@ -1,0 +1,289 @@
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+/* TEXT */
+
+body {
+	font-family: "Oswald", "Roboto", sans-serif;
+}
+em {
+	font-style: italic;
+}
+h1, h2, h4, h5, button, a {
+	text-transform: uppercase;
+}
+a {
+	text-decoration: none;
+	padding: 0 1rem;
+	color: #4c5867;
+}
+	.hero a {
+		padding: 2rem 0 4rem 0;
+	}
+	.nav-left a,
+	.footer a {
+		color: #fff;
+	}
+	.footer a {
+		padding-left: 0;
+		text-transform: none;
+	}
+p {
+	font-size: 1.25rem;
+	line-height: 1.5rem;
+}
+	.hero h1,
+	.hero p,
+	.employment p,
+	.rent p {
+		padding: 2%;
+		text-align: center;
+	}
+	.hero p {
+		margin: 0 10%;
+	}
+	.employment p,
+	.rent p {
+		margin: 0 25%;
+	}
+	.columns p,
+	.footer p {
+		font-size: .85rem;
+	}
+	.footer p {
+		font-weight: lighter;
+		line-height: 1rem;
+	}
+span {
+	color: #fff;
+	font-size: .75rem;
+	background: rgba(255, 255, 255, 0.3);
+	padding: 1rem;
+	border-radius: 10px;
+}
+	.footer span {
+		color: #fff;
+	}
+.hero h1 {
+	font-size: 5rem;
+}
+.employment h2,
+.rent h2 {
+	font-size: 2.5rem;
+}
+.columns h2 {
+	font-size: 1.5rem;
+	padding: 1rem 0;
+}
+.footer h4 {
+	padding: 1rem 0;
+}
+.footer h5 {
+	padding: 0.25rem 0;
+	color: #ff0000
+}
+
+/* LAYOUT */
+
+.nav {
+	display: flex;
+	flex-flow: row wrap;
+	justify-content: space-around;
+	width: auto;
+	height: auto;
+	padding: 0 2.5%;
+}
+	.nav-left,
+	.nav-mid,
+	.nav-right {
+		display: flex;
+		flex-flow: row wrap;
+		justify-content: space-around;
+		align-items: center;
+		padding: 1rem;
+		width: 30%;
+	}
+		.nav-left{
+			justify-content: flex-start;
+		}
+		.nav-mid {
+			justify-items: center;
+		}
+			.nav-mid img,
+			.footer img {
+				max-height: 3rem;
+			}
+		.nav-right {
+			justify-content: flex-end;
+		}
+.video {
+	display: flex;
+	flex-flow: column nowrap;
+}
+	iframe {
+		display: none;
+		margin: 1rem 0;
+	}
+.hero,
+.employment,
+.columns,
+.rent {
+	display: flex;
+	flex-flow: column nowrap;
+	align-items: center;
+	padding: 2.5% 10%;
+	width: auto;
+}
+	.employment,
+	.columns,
+	.rent {
+		padding-top: 5%;
+		padding-bottom: 5%;
+	}
+.columns {
+	display: flex;
+	flex-flow: row wrap;
+	justify-content: space-around;
+	align-items: center;
+}
+	.col-left,
+	.col-right {
+		width: 40%;
+		text-align: center;
+		display: flex;
+		flex-flow: column nowrap;
+		align-content: center;
+	}
+footer {
+	height: auto;
+	padding: 1rem 3rem;
+	color: #fff;
+}
+	hr {
+		margin-top: 1rem;
+	}
+	.footer {
+		display: flex;
+		flex-flow: row wrap;
+		align-items: flex-start;
+		justify-content: space-between;
+	}
+	.foot-left {
+		align-content: flex-start;
+	}
+		i {
+			padding-right: 1rem;
+			margin-top: 1rem;
+			font-size: 1.5rem;
+		}
+		.foot-left div {
+			padding: .5rem 0;
+		}
+	.foot-right {
+		align-content: flex-end;
+	}
+/* STYLES */
+
+.cafe-wrap {
+	background-image: url("rainy\ day.jpg");
+	background-size: cover;
+}
+.second-wrap {
+	background-image: url("counter.jpg");
+	background-size: auto;
+	background-position: 0 100%;
+	background-repeat: no-repeat;
+}
+.nav,
+.hero,
+.employment,
+.rent {
+	color: #fff;
+}
+	.nav,
+	footer {
+		background: rgba(255, 255, 255, 0.2);
+	}
+	.employment {
+		background: rgba(255, 255, 255, 0.1);
+	}
+.columns {
+	background: #fff;
+}
+	.col-left img {
+		max-height: auto;
+		clip-path: polygon(0% 0%, 66% 0%, 100% 33%, 100% 100%, 33% 100%, 0% 66%);
+		border-radius: 2.5%;
+	}
+	.col-right img {
+		max-height: auto;
+		clip-path: polygon(33% 0%, 0% 33%, 0% 100%, 66% 100%, 100% 66%, 100% 0%);
+		border-radius: 2.5%;
+	}
+	.col-left img,
+	.col-right img {
+		height: 350px;
+	}
+button {
+	background: transparent;
+	border: 1px solid #66768a;
+	color: #161f2a;
+	border-radius: 5px;
+	padding: .75rem 1.5rem;
+	font-weight: bold;
+}
+	button:hover,
+	.nav button:hover {
+		background: #161f2a;
+		color: #fff;
+	}
+	.nav button {
+		background: #fff;
+		border: none;
+		color: #66768a;
+	}
+	.employment button,
+	.columns button,
+	.rent button {
+		margin: 1rem 0;
+	}

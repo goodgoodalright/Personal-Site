@@ -1,0 +1,231 @@
+body{
+    background-image: url('https://i.ibb.co/sqSZF8m/Screen-Shot-2022-03-10-at-4-52-53-PM.png');
+    background-size:cover;
+    background-repeat: no-repeat;
+    width: 100%;
+    margin: 0;
+  }
+  
+  .all,
+  #activateYuh:hover,
+  #yuh:hover,
+  #letsGo:hover, 
+  #turnItUp:hover, 
+  #youGotGot:hover, 
+  #dominos:hover, 
+  #laugh:hover,
+  #uhoh:hover,
+  #instructions:hover {
+    cursor: url("https://cdn.glitch.global/6280a910-2650-4e16-abd8-2ce4794e0305/pizza-62.png?v=1646969072663"), auto;
+  }
+  
+  /* .soundclip */
+  
+  button{
+    background:rgba(255, 255, 255, 0.2);
+    height: 80px;
+    width: 80px;
+    color:white;
+    border:white 2px solid;
+    margin: 1%;
+  }
+  
+  button:hover{
+    height:140px;
+    width:140px;
+    background: rgba(0, 0, 0, 0.2);
+  }
+  
+  #activateYuh {
+    width: auto;
+    padding: 0 0.5rem;
+  }
+  #activateYuh:hover {
+    padding: 0 0.5rem;
+  }
+  
+  #yuh{
+    display: inline-block;
+    font-size:1.5rem; 
+  }
+  
+  #yuh:hover{
+    color:blue;
+    font-size:2.5rem;
+    font-weight:bold;
+    background:
+  }
+  
+  #letsGo{
+    display: inline-block;
+    font-size:1.7rem; 
+  }
+  
+  #letsGo:hover{
+    color:green;
+    font-size:1.9rem;
+    font-weight:bold;
+  }
+  
+  #turnItUp{
+    display: inline-block;
+    font-size:1.4rem; 
+    
+  }
+  
+  #turnItUp:hover{
+    color:red;
+    font-size:1.8rem;
+    font-weight:bold;
+    background:
+  }
+  
+  #youGotGot{
+    display: inline-block;
+    font-size:1.2rem; 
+  }
+  
+  #youGotGot:hover{
+    color:blue;
+    font-size:1.6rem;
+    font-weight:bold;
+    background:
+  }
+  
+  #dominos span{
+    display: inline-block;
+    font-size:1rem;
+  }
+  
+  #dominos:hover{
+    color:gold;
+    font-size: 2rem;
+    font-weight:bold;
+    background:
+  }
+  
+  #laugh span{
+    display: inline-block;
+    font-size:1rem; 
+  }
+  
+  #laugh:hover{
+    color:blue;
+    font-size:4rem;
+    font-weight:bold;
+  }
+  
+  #uhoh{
+    display: inline-block;
+    font-size:1.7rem; 
+  }
+  
+  #uhoh:hover{
+    color:red;
+    font-size:1.8rem;
+    font-weight:bold;
+  }
+  
+  #instructions {
+    display: inline-block;
+    width: auto;
+    padding: 0 0.5rem;
+    font-family: "Codystar";
+  }
+  #instructions:hover {
+    font-size: 1.15rem;
+    padding: 0 0.5rem;
+    font-family: "Codystar";
+  }
+  
+  /* BODY STYLES */
+  
+  header a{
+    display:block;
+    text-decoration: none;
+  }
+  
+  header,
+  footer {
+    text-transform: uppercase;
+    color: #fff;
+  }
+  
+  header {
+    display: flex;
+    flex-flow: column wrap;
+    width:100vw;
+    align-content: center;
+    justify-content: center;
+  }
+  img { 
+    height: auto;
+    width: 15vw;
+    margin: 1rem;
+    /* border: 3px solid #000; */
+  }
+  .playMusic {
+    align-self: center;
+    text-align: center;
+    width: 15vw;
+    margin-top: -10px;
+    font-size: 1.66rem;
+    font-family: "Audiowide", sans-serif;
+    text-transform: uppercase;
+  }
+  .clips {
+    display: flex;
+    width: 80vw;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    margin: 2rem 10vw;
+  }
+  
+  footer {
+    display: flex;
+    justify-content: center;
+    position: fixed;
+    text-align: center;
+    width: 100vw;
+    padding: 0;
+    margin-bottom: 3rem;
+  }
+  
+  /* TEXT STYLES */
+  
+  header span,
+  footer {
+    font-family: "Codystar";
+    text-shadow: 3px 3px #000;
+  }
+  
+  button {
+    font-family: "Megrim";
+    text-shadow: 3px 3px #000;
+  }
+  
+  /*Modal CSS*/
+  
+  .modal {
+    position: absolute;
+    top: 10%;
+    left: 15%;
+    border: 5px solid black;
+    border-radius: 5px;
+    z-index: 10;
+    background-image: url(https://cdn.glitch.global/6280a910-2650-4e16-abd8-2ce4794e0305/trashpizza.jpg?v=1646964695917);
+    width: 60%;
+    max-width: 80%;
+    height: 70%;
+    visibility: ;
+  }
+  
+  .modal.toggle{
+  visibility: visible;
+  }
+  
+  
+  
+  
+  

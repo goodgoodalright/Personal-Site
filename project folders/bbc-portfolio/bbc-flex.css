@@ -1,0 +1,285 @@
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+/* CSS RESET above */
+* {
+    box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+  }
+/* TEXT */
+em,
+span {
+    font-style: italic;
+    color:rgba(87, 236, 61)
+}
+a {
+    text-decoration: none;
+    color: #fff;
+}
+h4 {
+    text-transform: uppercase;
+}
+h1 {
+    font-size: 2rem;
+    font-weight: 600;
+}
+h2 {
+    font-size: 1.25rem;
+    font-weight: 600;
+}
+.story-text {
+    display: flex;
+    flex-flow: column wrap;
+    text-align: left;
+    margin: 1rem;
+    flex-grow: 1;
+    justify-content: flex-end;
+}
+    .welcome,
+    footer {
+        color: #fff;
+        text-shadow: 4px 4px 6px #000;
+    }
+    .story-text {
+        color: #fff;
+        text-shadow: 4px 4px 6px #000;
+        background: linear-gradient(330deg, rgba(87, 236, 61, 0.5), rgba(60, 155, 209, 0.5));
+        padding: 0.5rem;
+        border-radius: 5px;
+    }
+        .story-text h2 {
+            padding-bottom: .5rem;
+        }
+        .story-text h4 {
+            padding-top: .5rem;
+        }
+
+/* HEADER */
+
+.nav {
+    display: flex;
+    flex-direction: row nowrap;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 2rem;
+    background: #000;
+    color: #fff;
+    font-family: 'Dosis', 'Montserrat', sans-serif;
+}
+    ul img {
+        max-height: 1.25rem;
+    }
+    ul li {
+        border-right: 1px solid #eaeaed;
+        padding: 0 2rem;   
+    }
+    ul li:nth-child(2), ul li:nth-child(11) {
+        padding: 0 4rem 0 1rem;
+        white-space: nowrap;
+    }
+    select {
+        border: none;
+        color: #fff;
+        background: #000;
+        font-family: 'Nunito', 'Source Sans Pro', sans-serif;
+        font-size: 1rem;
+    }
+    ul li:last-child {
+        border-right: none;
+        margin: 0;
+        padding: 0 0 0 1rem;
+    }
+
+/*STYLES */
+
+.welcome {
+    display: flex;
+    justify-content: space-between;
+    margin: 2rem 2%; 
+}
+    .welcome,
+    footer span {
+        font-family: 'Libre Barcode 39 Text', sans-serif; 
+        letter-spacing: 0.33rem;
+        font-size: 1.5rem;
+    }
+.top-stories {
+    display: flex;
+    flex-direction: row wrap;
+    justify-content: space-evenly;
+    width: 100%;
+    margin: 0 auto;
+}
+    .main-story,
+    .secondary-stories,
+    .extras {
+        color: #fff;
+        align-items: center;
+    }
+    .main-story,
+    .secondary-stories {
+        height: 500px;
+        max-width: 50%;
+        margin: 0 2%;
+    }
+        .main-story div {
+            margin-top: 50%;
+            height: auto;
+        }
+    .secondary-stories {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+        align-items: flex-end;
+    }
+    .secondary-stories section {
+        height: 48%;
+        width: 48%;
+    }
+        .ss-one,
+        .ss-two {
+            margin: 0 0 2% 0;
+        }
+        .fl:hover {
+            box-shadow: 2px 2px 4px #fff;
+            animation: fade .3s ease-in;
+        }
+            @keyframes fade {
+                0% {
+                    box-shadow: 2px 2px 4px #000;
+                }
+                100% {
+                    box-shadow: 2px 2px 4px #fff;
+                }
+            }
+        .fl:hover .story-text {
+            animation: background .6s ease-out;
+            background: linear-gradient(330deg,rgba(60, 155, 209, 0.5), rgba(87, 236, 61, 0.5));
+        }
+            @keyframes background {
+                0% {
+                    background: linear-gradient(330deg, rgba(87, 236, 61, 0.5), rgba(60, 155, 209, 0.5));
+                }
+                100% {
+                    background: linear-gradient(330deg,rgba(60, 155, 209, 0.5), rgba(87, 236, 61, 0.5));
+                }
+            }
+    .extras {
+        display: flex;
+        width: 96%;
+        justify-content: space-between;
+        margin: 0 2%;
+    }
+        .extras section {
+            height: 200px;
+            width: auto;
+            margin-right: 3%;
+            margin-bottom: 3%;
+        }
+        .extras section:last-child {
+            margin-right: 0;
+        }
+footer {
+    position: static;
+    width: 100%;
+    bottom: 0;
+    margin: 0;
+    padding: 0 1rem;
+    background: #000;
+    height: 2rem;
+    display: flex;
+    justify-content: space-between;
+}
+
+/* IMAGES */
+
+body {
+    background: linear-gradient(#3c9bd1, #57ec3d);
+}
+.main-story {
+    background: url('tesiv.jpg');
+    max-height: 800px;
+    height: auto;
+    width: auto;
+} 
+.ss-one {
+    background: url('ddda.jpeg');
+}
+.ss-two {
+    background: url('p5r.jpg');
+}
+.ss-three {
+    background: url('13sar.jpg');
+}
+.ss-four {
+    background: url('dmc5.jpg');
+}
+.e-one {
+    background: url('arceus.jpg');
+}
+.e-two {
+    background: url('sk.jpg');
+}
+.e-three {
+    background: url('dq11.jpg');
+}
+.main-story,
+.ss-one,
+.ss-two,
+.ss-three,
+.ss-four,
+.e-one,
+.e-two,
+.e-three {
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    position: relative;
+    opacity: 0.75;
+    box-shadow: 4px 4px 6px #000;
+}
+.main-story {
+    background-position: left;
+}

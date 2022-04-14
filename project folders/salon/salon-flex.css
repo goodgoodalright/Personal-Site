@@ -1,0 +1,322 @@
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after, q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+/* TEXT */
+
+body {
+    font-family: "Cinzel", Helvetica, sans-serif;
+    text-transform: uppercase;
+    font-weight: 400;
+}
+h1 {
+    font-size: 4rem;
+}
+h2 {
+    font-family: "Dancing Script", sans-serif;
+    text-transform: none;
+    font-weight: 700;
+    font-size: 1.5rem;
+}
+strong {
+    font-weight: 700;
+    font-size: 2.5rem;
+}
+em {
+    font-style: italic;
+}
+button {
+    font-family: "Cinzel", sans-serif;
+}
+p {
+    font-family: "Montserrat", sans-serif;
+    text-transform: none;
+}
+.services h3,
+.info h1,
+.info p {
+    padding: 1rem 0;
+}
+    .info h1 {
+        font-size: 2.5rem;
+        font-weight: 500;
+    }
+    .services h3 {
+        font-size: 1.25rem;
+        font-weight: 700;
+    }
+    .services i {
+        font-size: 2rem;
+    }
+.bio h3 {
+    font-size: 1.5rem;
+    font-weight: 500;
+}
+    .bio p {
+        font-style: italic;
+    }
+.promo-text {
+    font-size: 1.5rem;
+}
+    .promo-text em {
+        font-size: 2.5rem;
+    }
+    .promo-text > h3 {
+        margin-bottom: 1rem;
+    }
+
+/* LAYOUT */
+
+header {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-around;
+    align-items: center;
+    width: 100%;
+    padding: 0.5rem 0;
+    margin: 0;
+}
+    header nav {
+        width: 50%;
+    }
+    header ul {
+        display: flex;
+        flex-flow: row nowrap;
+        justify-content: space-around;
+        align-items: center;
+        width: 100%;
+    }
+        header ul li:last-child {
+            display: flex;
+            flex-flow: row nowrap;
+            justify-content: space-between;
+            width: 10%;
+        }
+.landing {
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: space-between;
+    height: 80%;
+    padding: 10vh 10%;
+}
+    .hours {
+        position: absolute;
+        top: 5%;
+        right: 1rem;
+        text-orientation: sideways;
+        writing-mode: vertical-lr;
+        margin: 0;
+        padding: 0;
+    }
+    .landing h1 {
+        width: 70%;
+        font-size: 6rem;
+        letter-spacing: 5px;
+    }
+    .landing h3 {
+        font-size: 1.25rem;
+        padding-bottom: 1rem;
+    }
+    .buttons {
+        display: flex;
+        flex-flow: row nowrap;
+        justify-content: space-between;
+        width: 30%;
+    }
+        .buttons button,
+        .info button {
+            background: #000;
+            color: #fff;
+            padding: 0.5rem 1rem;
+            font-size: 1.15rem;
+            border: none;
+            margin-bottom: 1rem;
+        }
+        .info button {
+            padding: 0.5rem 2rem;
+            font-weight: 500;
+        }
+.discount {
+    display: flex;
+    flex-flow: column wrap;
+    background: #000;
+    color: #fff;
+    width: 30%; /* margin: -12rem 0 2rem 10%; */
+    padding: 2rem 0;
+    z-index: 1;
+}
+    .discount > h3 {
+        border-left: 5px solid #fff;
+        padding: 0.5rem 0 0.5rem 2rem;
+    }
+    .discount :nth-child(n+2) {
+        margin-left: 2rem;
+    }
+    .discount button {
+        text-align: left;
+        color: #000;
+        background: #fff;
+        width: 50%;
+        margin-top: 1rem;
+        padding: 0.5rem 1rem;
+    }
+.services {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    align-content: center;
+    padding: 2.5% 10%;
+}
+    .services div {
+        width: 30%;
+        text-align: center;
+    }
+.info {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-evenly;
+    align-items: center;
+    padding: 2.5% 10%;
+    width: 80%;
+}
+    .info-text {
+        width: 40%;
+    }
+.staff {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    padding: 2.5% 10%;
+}
+    .staff section {
+        width: 25%;
+        display: flex;
+        flex-flow: column nowrap;
+        justify-content: center;
+        align-items: center;
+    }
+        .staff img {
+            height: 80%;
+            filter: drop-shadow(3px 3px 5px #333)
+        }
+        .staff img,
+        .bio {
+            border-radius: 10px;
+        }
+    .bio {
+        padding: 1rem;
+        margin: 1rem 0;
+        text-align: center;
+        background-image: linear-gradient(45deg, #000, #333);
+        color: #fff;
+        width: 100%;
+        filter: drop-shadow(2px 2px 4px #333);
+        background-size: 300% 100%;
+        transition: all 0.6s ease-in-out;
+    }
+        .bio:hover {
+            transition: all 0.8s ease-in-out;
+            background-position: 100% 0;
+        }
+        .bio.color {
+            background-image: linear-gradient(to right, rgb(0, 208, 255), rgb(255, 0, 225), rgb(0, 208, 255), rgb(0, 255, 17));
+        }
+        .bio.color-two {
+            background-image: linear-gradient(to right, rgb(0, 255, 17), rgb(0, 123, 255), rgb(255, 0, 255), rgb(0, 208, 255));
+        }
+        .bio.color-three {
+            background-image: linear-gradient(to right, rgb(255, 0, 255), rgb(0, 123, 255), rgb(0, 208, 255), rgb(0, 255, 17));
+        }
+.promo {
+    display: flex;
+    flex-flow: column nowrap;
+    width: 60%;
+    justify-content: flex-start;
+    align-items: flex-start;
+    margin: 2rem 20% 2rem 20%;
+}
+    .promo div {
+            padding: 8rem 3rem;
+        }
+    .promo button {
+        background: #000;
+        color: #fff;
+        width: auto;
+        padding: 0.5rem 1rem;
+        border: none;
+        font-size: 1.5rem;
+        margin-top: 1rem;
+    }
+.lookbook {
+    display: grid;
+    grid-template-columns: 3;
+    grid-template-rows: auto;
+}
+
+/* STYLE */
+
+header button {
+    border: none;
+    background: #fff;
+    font-family: "Cinzel", sans-serif;
+    font-size: 1.1rem;
+}
+.landing {
+    background-image: url("purple-hair.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    color: #fff;
+    clip-path: polygon(0% 0%, 0% 82.5%, 95% 100%, 100% 95%, 100% 0%);
+    border-bottom-right-radius: 30%;
+}
+    .landing-wrap {
+        filter: drop-shadow(3px 3px 5px #000);
+    }
+    .discount {
+        clip-path: none;
+    }
+.info {
+    background-color: linear-gradient(to right, rgba(255, 255, 255, 0.6), rgba(255, 255, 255)); 
+}
+    .info img {
+    /*     clip-path: polygon(25% 0%, 100% 0%, 75% 100%, 0% 100%); */
+        clip-path: polygon(0% 0%, 75% 0%, 100% 100%, 25% 100%);
+    }
+    .info-img-wrap {
+        filter: drop-shadow(4px 8px 8px #000);
+    }
+    .info-img-wrap:hover {
+        filter: drop-shadow(4px 8px 8px linear-gradient(to right, rgb(0, 208, 255), rgb(255, 0, 225), rgb(0, 208, 255), rgb(0, 255, 17)));
+    }
+.promo {
+    background-image: url("Promo-Banner-Image.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    filter: drop-shadow(3px 3px 3px #000);
+}
+    .promo-text {
+        filter: none;
+    }

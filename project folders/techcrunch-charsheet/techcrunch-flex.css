@@ -1,0 +1,384 @@
+/* CSS RESET */
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+} /* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+    font-size: 16px;
+    font-weight: 400;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+/* Box Model Hack */
+* {
+  box-sizing: border-box;
+}
+
+/* TEXT */
+
+body {
+    font-family: 'Inconsolata', 'Poiret One', monospace;
+}
+    input,
+    ::placeholder {
+        font-family: 'VT323', monospace;
+    }
+    header {
+        font-size: 1.5rem;
+
+    }
+    h1,
+    h2,
+    h3 {
+        font-family: 'Poiret One', sans-serif;
+        line-height: 100%;
+        font-weight: 600;
+    }
+a {
+    text-decoration: none;
+    color: #eee;
+    margin: 0;
+    padding: 0;
+}
+strong {
+    font-weight: bold;
+}
+em {
+    font-style: italic;
+}
+.nav li:nth-child(n+2),
+.equipment li:nth-child(n+2),
+.items li:nth-child(n+2) { 
+    font-style: italic;
+}
+.done {
+    text-decoration: line-through;
+}
+
+/* STYLE */
+
+body,
+section {
+    color: #fff;
+    text-shadow: 2px #fff;
+    background: linear-gradient(135deg, rgb(97, 80, 255), rgb(0, 121, 30));
+}
+.main li,
+.nav,
+.navbar,
+.premium li:nth-child(n+2),
+.premium img,
+section,
+.sidebar,
+.center {
+    border: 2px double #fff;
+    border-radius: 10px;
+}
+
+/* LAYOUT */
+body {
+    display: flex;
+    flex-flow: row nowrap;
+    overflow: hidden;
+}
+.navbar {
+    display: flex;
+    flex-flow: column wrap;
+    width: 20%;
+    height: auto;
+    margin: 1rem;
+    justify-content: space-between;
+}
+    .premium {
+        display: flex;
+        flex-flow: row wrap;
+        align-items: center;
+        justify-content: space-around;
+        text-align: center;
+    }
+        .premium li:nth-child(n+2) {
+            padding: 0.5rem;
+            width: auto;
+            background: linear-gradient(45deg, rgb(0, 172, 43), rgb(97, 80, 255));
+        }
+    .nav {
+        margin: 1rem;
+    }
+        .nav,
+        footer {
+            padding-left: 1rem;
+        }
+        footer {
+            padding: 0 1rem 1rem 0;
+            text-align: end;
+        }
+        .nav input {
+            width: 100%;
+            background: linear-gradient(45deg, rgb(0, 172, 43), rgb(97, 80, 255));
+            color: #fff;
+            text-transform: uppercase;
+            border-radius: 10px;
+        }
+        .navbar ul li:nth-child(9) {
+            padding-left: 0;
+        }
+        ::placeholder {
+            color: #fff;
+        }
+        .anchor {
+            text-decoration: none;
+        }
+.main {
+    display: flex;
+    flex-flow: row nowrap;
+    width: 80%;
+    height: auto;
+    margin: 1rem 1rem 1rem 0;
+}
+    .header {
+        display: flex;
+        flex-flow: row wrap;
+        justify-content: center;
+        align-items: center;
+        background: linear-gradient(135deg, rgb(97, 80, 255), rgb(0, 121, 30));
+        border: 1px solid #fff;
+        border-radius: 10px;
+    }
+        .header h1 {
+            max-width: 50%;
+            height: 100%;
+            align-self: center;
+            padding: 3rem 1rem;
+        }
+        .container {
+            display: flex;
+            flex-flow: column wrap;
+        }
+        .container h3 {
+            height: auto;
+            width: 100%;
+            padding: 1rem;
+            align-self: center;
+        }
+    main {
+        display: flex;
+        align-items: flex-start;
+    }
+    .center {
+        display: flex;
+        flex-flow: column wrap;
+        max-width: auto;
+        width: 60%;
+        height: 100%;
+        align-items: flex-start;
+        justify-content: space-between;
+        text-align: center;
+    }
+        .center section {
+            margin: 1rem;
+        }
+        .center h2 {
+            margin: 0 1rem 0.25rem 1rem;
+        }
+        .center h2:first-of-type {
+            margin-top: 1rem;
+        }
+        .character,
+        .equipment,
+        .items,
+        .quest {
+            width: 95%;
+            height: auto;
+            display: flex;
+        }
+        .quest,
+        .equipment,
+        .items {
+            flex-flow: row wrap;
+            justify-content: space-evenly;
+            align-items: center;
+        }
+        .character {
+            flex-flow: column wrap;
+            justify-content: space-around;
+            height: 6rem;
+        } 
+            .character ul {
+                width: 50%;
+                padding: 1rem;
+            }
+            .character li {
+                padding: 0.25rem 0;
+            }
+        .quest h5 {
+            padding: 1rem;
+            width: 100%;
+        }
+        .equipment h5,
+        .items h5 {
+            display: flex;
+            width: 25%;
+            padding: auto 1rem;
+            height: 3rem;
+            align-items: center;
+            justify-content: center;
+        }
+    .sidebar {
+        display: flex;
+        flex-flow: column wrap;
+        width: auto;
+        max-width: 40%;
+        height: 100%;
+        align-self: center;
+        justify-content: space-between;
+    }
+        .sidebar h2,
+        .sidebar li {
+            padding: 1rem;
+        }
+            .objectives ul,
+            .notes ul,
+            .secrets ul,
+            .keyitems ul {
+                display: flex;
+                flex-flow: row wrap;
+                max-height: 6rem;
+                overflow: auto;
+            }
+            .objectives li,
+            .notes li {
+                width: 100%;
+            }
+            .secrets li,
+            .keyitems li {
+                width: 50%;
+                align-self: space-evenly;
+            }
+
+/* HOVER */
+
+.nav ul,
+.equipment ul,
+.items ul,
+.keyitems li ul,
+.secrets li ul {
+    display: none;
+    position: absolute;
+    width: auto;
+    height: auto;
+}
+    .equipment h5:hover,
+    .items h5:hover {
+        border: 1px solid #fff;
+        background: rgba(255, 255, 255, 0.2);
+        border-radius: 10px;
+    }
+    .nav:hover ul,
+    .equipment h5:hover ul,
+    .items h5:hover ul,
+    .keyitems li:hover ul,
+    .secrets li:hover ul {
+        display: flex;
+        flex-flow: column nowrap;
+        background: #fff;
+        max-width: 25%;
+    }
+        .secrets li:hover ul {
+            max-width: 40%;
+            height: auto;
+            overflow: visible;
+        }
+        .secrets li:hover li {
+            position: relative;
+            top: 0;
+        }
+    .nav:hover li,
+    .equipment h5:hover li,
+    .items h5:hover li,
+    .keyitems li:hover li,
+    .secrets li:hover li {
+        width: auto;
+        padding: 0.25rem;
+    }
+    .keyitems .end-row-up:hover ul {
+        overflow: visible;
+        height: auto;
+        position: fixed;
+        bottom: 2.5rem;
+    }
+    .keyitems .end-row-bot:hover ul {
+        bottom: 1.15rem;
+    }
+    .nav:hover li,
+    .header:hover,
+    .quest:hover,
+    .main h5:hover li:hover,
+    .main ul:hover li:hover,
+    .equipment h5:hover li,
+    .items h5:hover li,
+    .keyitems li:hover,
+    .end-row-up:hover li,
+    .end-row-bot:hover li,
+    .secrets li:hover li {
+        background: linear-gradient(30deg, rgb(0, 172, 43), rgb(97, 80, 255));
+    }
+
+.boxslide {
+    animation: boxslide 1s 1 ease-in;
+    opacity: 85%;
+    background: linear-gradient(30deg, rgb(0, 172, 43, 0.7), rgba(97, 80, 255, 0.7));
+    border-radius: 10px;
+}
+
+    @keyframes boxslide {
+        from {
+            opacity: 0%;
+        }
+        to {
+            opacity: 85%;
+        }
+    }
+/* IMAGES */
+.premium img {
+    max-width: 100%;
+}
+.header img {
+    max-width: 30%;
+    max-height: auto;
+    align-self: center;
+}

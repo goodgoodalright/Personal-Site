@@ -1,0 +1,288 @@
+/* http://meyerweb.com/eric/tools/css/reset/
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+/* TEXT */
+
+body {
+    font-family: "Josefin Sans", "El Messiri", "Lavishly Yours", "Great Vibes", Helvetica, sans-serif;
+    font-size: 400;
+}
+h1 {
+    font-family: "El Messiri", Helvetica, sans-serif;
+    font-weight: 700;
+    font-size: 4rem;
+    padding: 1rem 0;
+}
+h2 {
+    font-family: "Lavishly Yours", Helvetica, sans-serif;
+    font-size: 2rem;
+    color: #ff8800;
+}
+    .hours h2 {
+        font-weight: 500;
+    }
+h3,
+h4 {
+    font-size: 1.5rem;
+    font-weight: 500;
+}
+
+.reviews p {
+    font-family: "Great Vibes", Helvetica, sans-serif;
+    font-size: 1.25rem;
+}
+.reviews span,
+.reviews p {
+    font-style: italic;
+}
+
+/* LAYOUT */
+main {
+    display: flex;
+    flex-flow: column nowrap;
+    width: 100%;
+}
+    header {
+        width: 100%;
+        display: flex;
+        justify-content: flex-end;
+    }
+        nav {
+            width: 50%;
+            padding: 1rem 3rem;
+        }
+            .nav {
+                position: relative;
+            }
+            nav a {
+                text-decoration: none;
+                color: #000;
+            }
+            nav a:hover {
+                color: rgb(0, 45, 178);
+                transition: all 0.5s;
+            }
+        .nav,
+        .socials {
+            display: flex;
+            flex-flow: row nowrap;
+            justify-content: space-evenly;
+            width: 100%;
+            height: auto;
+        }
+    .hero {
+        height: auto;
+        display: flex;
+        flex-flow: column wrap;
+        justify-content: flex-start;
+        width: 100%;
+    }  
+        .hero section {
+            width: 60%;
+            height: 80%;
+            padding: 7%;
+            align-items: flex-start;
+        }
+        .hero h1 {
+            width: 70%;
+        }
+        .hero input,
+        .hero button {
+            padding: 0.5rem;
+            margin: 0;
+        }
+        .hero input {
+            width: 60%;
+            border-top-left-radius: 5px;
+            border-bottom-left-radius: 5px;
+        }
+        .hero button {
+            padding: 0.5rem 1.5rem;
+            border-top-right-radius: 5px;
+            border-bottom-right-radius: 5px;
+        }
+        .socials {
+            width: 30%;
+            padding: 1rem 0;
+        }
+    .about {
+        display: flex;
+        flex-flow: row nowrap;
+        height: 100%;
+        width: 100%;
+        justify-content: space-between;
+        align-items: center;
+    }
+        .about-text {
+            width: 70%;
+            height: 600px;
+            display: flex;
+            justify-content: flex-end;
+        }
+            .about-text div {
+                width: 35%;
+                display: flex;
+                flex-flow: row wrap;
+                justify-content: flex-start;
+                align-items: center;
+            }
+            .about-text h2 {
+                margin: 2rem 0 0 0;
+            }
+            .about-text button {
+                margin: 0 0 2rem 0;
+                padding: 0.5rem 1.5rem;
+                border-radius: 5px;
+            }
+        .berries, .pie {
+            width: auto;
+        }
+        img {
+            max-height: 600px;
+        }
+            .berries img {
+                padding: auto;
+            }
+    .specialties {
+        display: flex;
+        flex-flow: column wrap;
+        justify-content: space-around;
+        align-content: center;
+        align-items: center;
+        width: 100%;
+        padding: 2rem 0;
+    }
+        .specialties ul {
+            display: flex;
+            flex-flow: row nowrap;
+            justify-content: space-around;
+        }
+    .hours-background,
+    .reviews {
+        display: flex;
+        flex-flow: column wrap;
+        justify-content: space-between;
+        align-content: center;
+        align-items: center;
+        text-align: center;
+        width: 50%;
+        margin: 2rem 0;
+    }
+        .hours {
+            display: flex;
+            justify-content: center;
+        }
+        .hours-background {
+            background: rgba(255, 255, 255, 0.6);
+            border-radius: 5px;
+            padding: 2rem 0;
+        }
+        .hours-background div {
+            display: flex;
+            flex-flow: column wrap;
+            justify-content: space-evenly; 
+            height: 6rem;
+        }
+        .times {
+            display: flex;
+            flex-flow: row nowrap;
+            justify-content: space-between;
+            height: auto;
+            width: 80%;
+        }
+            .times div {
+                width: 55%;
+            }
+    .testimonials {
+        display: flex;
+        flex-flow: column nowrap;
+        justify-content: space-around;
+        align-items: center;
+        width: 60%;
+    }
+        .reviews {
+            width: 100%;
+        }
+        .testimonials h5, 
+        .testimonials span,
+        .testimonials p {
+            padding-top: 1rem;
+        }
+
+/* STYLE */
+
+button {
+    background: #ff8800;
+    color: #fff;
+    width: auto;
+}
+.hours i,
+.reviews i {
+    color: #ff8800;
+}
+.hero {
+    background-image: url("landing.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+.about-text{
+    background-image: url("pie.jpg");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: -150% 0;
+}
+.hours {
+    background-image: url("muffins.jpg");
+    background-size: cover;
+    background-position: 0 20%;
+    background-repeat: no-repeat;
+}
+.reviews img {
+    border-radius: 50%;
+    max-height: 10%;
+}

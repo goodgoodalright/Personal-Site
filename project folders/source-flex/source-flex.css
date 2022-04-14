@@ -1,0 +1,257 @@
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+    margin: .75rem;
+    background: #f5f9fc;
+    height: auto;
+    width: auto;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after, q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+/* TEXT */
+body {
+    color: #304659;
+    font-family: "Noto Sans", "Montserrat", sans-serif;
+}
+a {
+    text-decoration: none;
+    color: #304659;
+}
+    .columns a {
+        font-weight: 700;
+    }
+h1,
+h3 {
+    font-weight: 700;
+    font-size: 2.5rem;
+}
+    .nav h1,
+    h3 {
+        font-size: 1.5rem;
+    }
+p {
+    font-size: 1.25rem;
+}
+    .columns p {
+        padding: 1rem 0;
+        font-size: 1rem;
+    }
+i {
+    font-size: 1.75rem;
+    padding: 1rem 0;
+}
+
+/* LAYOUT */
+
+@media only screen and (max-width: 768px) {
+    body {
+        display: flex;
+        flex-flow: column wrap;
+        width: auto;
+        margin: 0;
+    }
+        .nav {
+            display: block;
+            width: 100%;
+            border-bottom: 1px solid #304659;
+            padding: 1vh 0;
+            margin: 1vh 0;
+        }  
+            .nav h1 {
+                text-align: center;
+                padding: 0;
+                margin: 1vh 0;
+            }
+            .nav input,
+            .nav button {
+                display: none;
+            }
+            label[for="toggle"] {
+                display: block;
+                cursor: pointer;
+                position: absolute;
+                top: 2vh;
+                left: 2vw;
+            }
+                i {
+                    margin: 0;
+                    padding: 0;
+                }
+            .nav-links {
+                display: none;
+                width: 100%;
+            }
+                .nav-links a {
+                    display: block;
+                    width: auto;
+                    padding: 2vh 0;  
+                    text-align: center;
+                }
+                #toggle:checked ~ .nav-links {
+                    display: block;
+                }
+    .main {
+        padding: 2vh 2vw;
+        width: auto;
+    }
+        .main .tagline {
+            display: flex;
+            flex-flow: column nowrap;
+            justify-content: space-between;
+            align-content: center;
+            width: 100%;
+            margin: 2vh 0;
+        }
+            main .tagline section {
+                width: 100%;
+                margin: 1rem 0;
+            }
+            main .tagline h1 {
+                padding: 0.5rem 0;
+                font-size: 3.25rem;
+                width: 90%;
+            }
+            main .tagline input,
+            main .tagline button {
+                width: 100%;
+                margin-top: 1rem;
+            }
+            main .tagline p {
+                margin: 0.5rem 0;
+                text-align: justify;
+            }
+            img {
+                width: auto;
+                align-self: center;
+            }
+        .columns {
+            display: flex;
+            flex-flow: row wrap;
+            justify-content: space-evenly;
+            width: 100%;
+        }
+            .columns section {
+                width: 50%;
+                padding: 1rem 0;
+            }
+            .columns i {
+                padding: 1rem 0;
+            }
+        .below {
+            width: 100%;
+        }
+            .below h1 {
+                padding: 1rem 0;
+            }
+}
+/* @media (max-width: 991px) {
+
+} */
+
+@media only screen and (min-width: 769px) {
+    main {
+        padding: 1rem 3rem;
+    }
+    .nav {
+        display: flex;
+        flex-direction: row wrap;
+        justify-content: space-between;
+        align-items: center;
+    }
+        .nav h1,
+        .nav button {
+            margin: 0 1rem;
+        }
+        .nav a {
+            padding: 0 1rem;
+            font-size: .9rem;
+        }
+        label,
+        #toggle {
+            display: none;
+        }
+    .tagline {
+        display: flex;
+        flex-flow: row wrap;
+        justify-content: space-evenly;
+        width: 100%;
+        margin: 2rem 0;
+    }
+        .tagline section {
+            padding: 3rem 0;
+            width: 40%;
+        }
+            .tagline section * {
+                padding: 1rem 0;
+            }
+        img {
+            width: 40%;
+            height: auto;
+        }
+
+    .columns {
+        display: flex;
+        flex-flow: row nowrap;
+        justify-content: space-evenly;
+        align-content: center;
+        height: auto;
+        width: 90%;
+        margin-bottom: 2rem;
+    }
+        .columns section {
+            padding: 0 2rem;
+        }
+    .below {
+        display: flex;
+        flex-flow: row wrap;
+        width: 50%;
+        padding: 0 1.6rem;
+    }
+        .below p {
+            padding: 1rem 0;
+        }
+}
+/* STYLE */
+
+.nav button,
+.tagline button {
+    border: none;
+    background: #304659;
+    color: #fff;
+    font-weight: 700;
+    padding: 0.5rem 1rem;
+}
+.tagline input {
+    border: none;
+    background: #e1e9f0;
+    color: #304659;
+    height: 2rem;
+    width: 60%;
+    padding: 0.5rem 1rem;
+}
+    ::placeholder {
+        color: #304659;
+    }
