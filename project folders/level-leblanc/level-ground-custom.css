@@ -146,6 +146,9 @@ span {
 		.nav-left{
 			justify-content: flex-start;
 		}
+			.nav-left h3:first-child {
+				margin: 0 1rem;
+			}
 		.nav-mid {
 			justify-items: center;
 		}
@@ -265,12 +268,13 @@ footer {
 		height: 350px;
 	}
 button {
-	background: transparent;
+	background: rgba(255, 255, 255, 0.3);
 	border: 1px solid #66768a;
 	color: #161f2a;
 	border-radius: 5px;
 	padding: .75rem 1.5rem;
 	font-weight: bold;
+	cursor: pointer;
 }
 	button:hover,
 	.nav button:hover {

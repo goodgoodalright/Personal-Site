@@ -327,6 +327,16 @@ input, select, textarea {
 		text-align: right;
 	}
 
+	.inner .sample-contract h3,
+	.inner .sample-contract h4,
+	.inner .sample-contract h5,
+	.inner .sample-contract p,
+	.inner .sample-contract span {
+		padding: 1rem 0 0.5rem 0;
+		line-height: 1.75rem;
+		margin: 0;
+	}
+
 /* Row */
 
 	.row {
@@ -1818,6 +1828,18 @@ input, select, textarea {
 
 /* Button */
 
+	#show-contract {
+		background:rgba(255, 255, 255, 0.15);
+		margin: 1rem 0;
+		text-align: center;
+	}
+		.button-wrap {
+			display: flex;
+			flex-flow: column nowrap;
+			justify-content: center;
+			width: 20%;
+			margin: 0 auto;
+		}
 	input[type="submit"],
 	input[type="reset"],
 	input[type="button"],
@@ -2893,6 +2915,16 @@ input, select, textarea {
 		font-size: 0.9em;
 		margin-top: -0.6em;
 		line-height: 1.5em;
+	}
+	.sample-contract {
+		display: none;
+		margin: 2rem;
+		padding: 2rem;
+		text-align: justify;
+		border: 3px solid #fff;
+	}
+	.sample-contract .indent {
+		margin: 0 2.5rem;
 	}
 
 /* Split */

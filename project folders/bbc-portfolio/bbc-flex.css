@@ -48,6 +48,9 @@ table {
     font-weight: 400;
   }
 /* TEXT */
+body {
+    cursor: url("pointer.png"), auto;
+}
 em,
 span {
     font-style: italic;
