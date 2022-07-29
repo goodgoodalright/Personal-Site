@@ -1,0 +1,317 @@
+/* reset removed margins, lists; body min-height, img display, click fonts */
+/* CSS Sections: TEXT, STRUCTURE, PROJECTS */
+
+/* TEXT */
+h1 {
+    font-size: 2rem;
+    font-style: italic;
+    transition: all .5s ease-in-out;
+}
+    h1:hover {
+        text-shadow: 8px 8px 3px rgba(255, 255, 255, 0.5);
+        margin: 0 1rem;
+    }
+h2 {
+    font-size: 1.5rem;
+    text-decoration: underline;
+    padding-left: 1rem;
+    opacity: 1;
+    transition: all 1s ease-in-out;
+    overflow: hidden;
+}
+h3 {
+    font-size: 2rem;
+    margin: 1rem;
+    overflow: hidden;
+    white-space: nowrap;
+    transition: all .3s ease-in-out;
+}
+    h3:hover {
+        text-shadow: 8px 8px 3px rgba(255, 255, 255, 0.5);
+    }
+.contents a {
+    padding: 0.25rem 0.5rem;
+    margin: 0.15rem 0.25rem;
+    text-decoration: none;
+}
+/* APPEARANCES */
+
+/* STRUCTURE */
+body {
+    margin: 1rem 2rem;
+    min-height: auto;
+    background-color: #337cac;
+}
+main {
+    display: flex;
+    flex-flow: column nowrap;
+    width: 100%;
+}
+#main {
+    transition: margin-right .5s;
+}
+header,
+.scroll-to-top {
+    display: flex;
+    flex-flow: row;
+    justify-content: space-between;
+    width: 100%;
+    padding: 1.5rem;
+}
+    .open-contents, 
+    .scroll-to-top {
+        text-align: right;
+        cursor: pointer;
+        transition: all .5s;
+    }
+    .scroll-to-top {
+        justify-content: flex-end;
+        font-size: 3rem;
+        position: fixed;
+        bottom: 1rem;
+        right: 1rem;
+    }
+    #footer {
+        display: none;
+    }
+.contents {
+    list-style: upper-roman;
+    padding: 0;
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    right: 0;
+    background-color: #111;
+    color: #eee;
+    overflow-x: hidden;
+    transition: 0.5s;    
+    display: flex;
+    flex-flow: column;
+}
+    .contents a {
+        padding: 1rem 2rem;
+        margin: 0.5rem 0;
+        text-decoration: none;
+        font-size: 1.5rem;
+        color: #818181;
+        display: block;
+        transition: 0.3s;
+    }
+    .contents a:hover {
+        color: #f1f1f1;
+        margin-left: 2rem;
+    }
+    .close-contents {
+        position: absolute;
+        top: 0;
+        right: 1rem;
+        margin: 0 0 1rem 0;
+    }
+        .close-contents a {
+            font-size: 3rem;
+            background-color: transparent;
+        }
+    @media screen and (max-height: 450px) {
+        .contents {padding: 1rem 0.5rem}
+        .contents a {font-size: 1rem}
+    }
+
+.project-container {
+    display: flex;
+    flex-flow: column;
+    border: 1px solid #aaa;
+    border-radius: 5px;
+    box-shadow: 5px 5px 8px #444;
+    background-color: #ddd;
+    margin: 1rem;
+    padding: 1.75rem;
+    width: 50%;
+    justify-content: center;
+    align-self: center;
+    transition: all .5s ease-in-out;
+}
+    .project-container:hover {
+        background-color: #fff;
+        width: 60%
+    }
+        .project-container:hover h2 {
+            opacity: 0;
+            line-height: 0;
+        }
+    .project-container section {
+        max-width: 80%;
+        align-self: center;
+    }
+.project {
+    border: 2px solid #ddd;
+    display: flex;
+    flex-flow: column wrap;
+    margin: 2rem;
+    justify-content: center;
+}
+/* PROJECTS */
+.stopwatch {
+    font: 300 italic 1.5rem 'Roboto mono', monospace;
+    color: #fff;
+    min-width: 60%;
+    min-height: 200px;
+    padding: 2rem;
+    align-self: center;
+    align-content: center;
+    align-items: center;
+    background: #448aff;
+    border-radius: 5%;
+    transition: all .5s;
+}
+    .stopwatch:hover {
+        padding: 3rem;
+        background-color:rgba(68, 255, 118)
+    }
+    .stopwatch > * {
+        border-radius: 5%;
+    }
+    .stopwatch p {
+        background: rgba(255, 255, 255, 0.2);
+        padding: 0.5rem 2rem;
+        transition: all .5s;
+    }
+        .stopwatch:hover p {
+            background-color: #444;
+        }
+    .stopwatch span {
+        background: #fff;
+        color: #0381bb;
+        font: 300 3rem 'Roboto mono', monospace;
+        margin: 1rem;
+        padding: 0.5rem;
+        width: auto;
+        height: auto;
+        display: flex;
+        justify-content: center;
+        transition: all .5s;
+    }
+        .stopwatch:hover span {
+            color: #333;
+            padding: 1rem;
+        }
+    .stopwatch .buttons {
+        width: 100%;
+        display: flex;
+        justify-content: space-around;
+    }
+        .stopwatch .buttons button:nth-last-child(2) {
+            background: #d23332;
+        }
+        .stopwatch .buttons button:nth-last-child(1) {
+            background: #20b380;
+        }
+    .stopwatch button {
+        width: 30%;
+        height: auto;
+        padding: 0.8rem;
+        background: #205e94;
+        color: #fff;
+        border: none;
+        font: 300 1.25rem 'Poppins', sans-serif;
+        border-radius: 5%;
+        cursor: pointer;
+    }
+
+.clock {
+    font: 300 1.5rem 'Roboto mono', monospace;
+    color: #fff;
+    width: 40%;
+    height: 150px;
+    border-radius: 30% 10%;
+    box-shadow: inset 5px 2px 2px 0 rgba(68, 138, 255, 0.5),
+                inset 2px 5px 8px 0 rgba(68, 255, 118, 0.5),
+                2px 5px 8px 0 #448aff,
+                5px 2px 8px 0 #44ff76;
+    align-self: center;
+    align-content: center;
+    align-items: center;
+    background: #000;
+    color: #44ff76;
+    transition: all .2s ease-in-out;
+    padding: 2rem;
+    /* font used in example is Orbitron */
+}
+    .clock p {
+        font-style: italic;
+        color: #448aff;
+        text-shadow: 1px 1px 3px #44ff76;
+    }
+    .clock:hover {
+        border-radius: 10% 30%;
+        height: 200px;
+        box-shadow: inset 2px 8px 5px 0 rgba(68, 255, 118, 0.5),
+                inset 5px 2px 5px 0 rgba(68, 138, 255, 0.5),
+                5px 8px 5px 0 #44ff76,
+                2px 5px 8px 0 #448aff;
+    }
+.calc-body {
+    display: flex;
+    flex-flow: column wrap;
+    width: 60%;
+    justify-content: center;
+    align-self: center;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 3px;
+    background-color: #0381bb;
+}
+    .calc-result { /* screen */
+        width: 100%;
+        height: 5rem;
+        background-color: #252525;
+        color: #fff;
+        border-radius: 3px;
+        font-size: 4rem;
+        text-align: right;
+        padding: 0.15rem 3rem 0.15rem 2rem;
+        transition: all .2s ease-in-out;
+    }
+    .calc-btn { /* all keys */
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        grid-gap: 20px;
+        padding: 20px;
+    }
+        .calc-btn button {
+            height: 2rem;
+            background-color: #ccc;
+            border-radius: 3px;
+            border: 1px solid #c4c4c4;
+            color: #333;
+            box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.05), inset 0 1px 0 0 rgba(0, 0, 0, 0.05), inset 0 -1px 0 0 rgba(255, 255, 255, 0.15), 0 1px 0 0 rgba(255, 255, 255, 0.15);
+            text-shadow: 0 1px rgba(255, 255, 255, 0.4);
+        }
+        .calc-btn button:hover {
+            background-color: #aeaeae;
+        }
+        .calc-btn button:active {
+            font-weight: 700;
+        }
+    .calc-top { /* operators */ 
+        background-color: #eaeaea;
+        color: #337cac;
+    }
+    #calc-clear { /* all-clear fnc */
+        background-color: #f0595f;
+        border-color: #b0353a;
+        color: #fff;
+    }
+        .calc-clear:hover {
+            background-color: #f17377;
+        }
+    #calc-equals { /* equals */
+        background-color: #2e86c0;
+        border-color: #337cac;
+        color: #fff;
+        height: 100%;
+        grid-area: 2 / 4 / 6 / 5;
+    }
+        #calc-equals:hover {
+            background-color: #4e9ed4;
+        }

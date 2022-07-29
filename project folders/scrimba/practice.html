@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=<device-width>, initial-scale=1.0">
+    <title>Document</title>
+    <link href="practice.css" rel="stylesheet">
+</head>
+<body>
+    <div class="horizontal error-msg">
+        <img alt="shoe" src="./assets/shoe.jpg"">
+        <p class="shoe-text">It's a shoe.</p>
+        <button class="purchase" onclick="purchase()">Purchase - $149</button>
+        <p id="error"></p>
+    </div>
+    <div class="horizontal calculator">
+        <input type="number" id="num1">
+        <input type="number" id="num2">
+        <br>
+        <div class="buttons">
+            <button onclick="add()" id="add">Add</button>
+            <button onclick="subtract()" id="subtract">Subtract</button>
+            <button onclick="divide()" id="divide">Divide</button>
+            <button onclick="multiply()" id="multiply">Multiply</button>
+        </div>
+        <br>
+        <span id="sum">0</span>
+    </div>
+    <script src="practice.js"></script>
+</body>
+</html>
