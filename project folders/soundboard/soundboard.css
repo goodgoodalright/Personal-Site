@@ -1,0 +1,82 @@
+body {
+     background-image: url('https://i.ibb.co/sqSZF8m/Screen-Shot-2022-03-10-at-4-52-53-PM.png');
+     background-size: cover;
+     background-repeat: no-repeat;
+     background-color: transparent;
+     width: auto;
+     height: auto;
+     margin: 0;
+     padding: 3rem;
+     overflow: hidden;
+     display: flex;
+     flex-flow: column;
+     justify-content: center;
+     align-items: center;
+     transition: all .5s ease-in-out;
+}
+/* #body {
+     cursor: url("https://cdn.glitch.global/6280a910-2650-4e16-abd8-2ce4794e0305/pizza-62.png?v=1646969072663"), auto;
+} */
+.intro,
+.logo,
+.hidden {
+     transition: all 1s ease-in-out;
+}
+.hidden {
+     display: none;
+}
+.intro {
+     display: flex;
+     flex-flow: column;
+     justify-content: space-evenly;
+     height: 80vh;
+     opacity: 1;
+}
+     .revealer,
+     .concealer {
+          text-align: center;
+          padding: 1rem;
+          margin: 0;
+          cursor: pointer;
+     }
+     .logo,
+     .hero,
+     .nav {
+          height: 40px;
+          width: auto;
+          margin: auto;
+          padding: 10%;
+          border: 2px solid #ddd;
+          border-radius: 10%;
+          background:rgba(255, 255, 255, 0.2);
+     }
+          .logo {height: 100%;}
+          .hero {height: 400px;}
+     .logo:hover {
+          height: 125%;
+          width: auto;
+          margin: auto;
+          padding: 5%;
+          cursor: pointer;
+          border: 2px solid rgb(158, 0, 0);
+          border-radius: 25%;
+          background:rgba(255, 255, 255, 0.4);
+     }
+.hero,
+.nav {
+     display: flex;
+     background: 
+}
+
+/* soundclip */
+
+button {
+     background: rgba(255, 255, 255, 0.2);
+     height: 80px;
+     weight: 80px;
+     color: #fff;
+     border: 2px solid #ddd;
+     padding: 5%;
+}
+
+/* buttons by ID, buttons:hover*/
