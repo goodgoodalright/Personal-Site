@@ -3053,11 +3053,14 @@ input, select, textarea {
 			display: block;
 			position: relative;
 			width: 25em;
+			overflow: hidden;
 		}
 
 			.spotlights > section > .image img {
 				border-radius: 0;
 				display: block;
+				width: fit-content;
+				height: fit-content;
 			}
 
 			.spotlights > section > .image:before {
@@ -3143,8 +3146,8 @@ input, select, textarea {
 			}
 
 				.spotlights > section > .image {
-					width: 100%;
-					height: 50vh;
+					width: 25em;
+					height: 25em;
 				}
 
 				.spotlights > section > .content {
