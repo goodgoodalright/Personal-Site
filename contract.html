@@ -20,9 +20,11 @@
             <a href="index.html" class="title">Dev by Soto</a>
             <nav>
                 <ul>
-                    <li><a href="index.html">Home</a></li>
-                    <li><a href="generic.html" class="active">Generic</a></li>
-                    <li><a href="elements.html">Elements</a></li>
+                    <li><a href="index.html#intro">Welcome</a></li>
+                    <li><a href="index.html#one">Portfolio</a></li>
+                    <li><a href="index.html#two">Skills</a></li>
+                    <li><a href="index.html#three">Contact Me</a></li>
+                    <li><a href="contract.html" class="active">Contract</a></li>
                 </ul>
             </nav>
         </header>
@@ -34,16 +36,17 @@
             <section id="main" class="wrapper">
                 <div class="inner">
                     <h1 class="major">Contract & FAQ</h1>
-                    <span class="image fit"><img src="images/cover.png" alt="" /></span>
                     <p>
                         In the interest of transparency, below is a draft of the contract that may be presented to prospective clients. Each contract shall be made unique and submitted for review after an initial meeting to determine what exactly the client is asking for within their budget for the project. This meeting is vital as it provides detail to make the contract clear and concise; this document will be accompanied by an itemized proposal of services with deadlines for deliverables and disbursement.
                     </p>
                     <p>
                         The client will be afforded time to review the contract in private before any commitment is made. Generally speaking, all work will begin after a deposit, a sum paid at the halfway mark, and the remainder paid at completion and release of the product.
                     </p>
+
                     <div class="button-wrap">
-                        <button name="show-contract" id="show-contract" class="button submit">Sample Contract</button>
+                        <button name="show-contract" id="show-contract" class="button submit toggle-contract">Sample Contract</button>
                     </div>
+
                     <section class="sample-contract" id="contract">
                         <h3>The Contract</h3>
                         <span>Between Daniel Soto and [customer name]</span>
@@ -191,7 +194,7 @@
                         </p>
                         <p>
                             Although the language is casual, the intentions are serious and this contract is a legally binding document.
-                        </p>
+                        </p>                        
                         <h3>Signatures</h3>
                         <div class="signatures">
                             <div class="indent">
@@ -201,6 +204,11 @@
                         <p>Everyone should sign above and keep a copy for their records.</p>
                         </div>
                     </section>
+
+                    <div class="button-wrap">
+                        <button name="hide-contract" id="hide-contract" class="button submit toggle-contract">Hide Contract</button>
+                    </div>
+
                     <h1><a href="index.html#three">Contact Me</a></h1>
                     <ul class="icons">
                         <li><a href="https://twitter.com/goodgoodalright" class="icon brands fa-twitter"><span class="label">Twitter</span></a></li>

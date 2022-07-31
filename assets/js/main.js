@@ -192,14 +192,14 @@
 			.on('click', function() {
 				document.getElementById('contract').style.display = block
 			}) */
-		const targetDiv = document.getElementById("contract");
-		const btn = document.getElementById("show-contract");
-		btn.onclick = function () {
-		if (targetDiv.style.display !== "none") {
-			targetDiv.style.display = "none";
-		} else {
-			targetDiv.style.display = "block";
-		}
-		};
+		var contract = $('#contract');
+		$('#show-contract').click(function () {
+			$('#contract').show();
+			$('#hide-contract').show();
+		});
+		$('#hide-contract').click(function() {
+			$('#contract').hide();
+			$('#hide-contract').hide();
+		})
 
 })(jQuery);

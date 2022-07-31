@@ -2605,6 +2605,29 @@ input, select, textarea {
 			#one img {
 				background-position: 40%;
 			}
+		.about-me .image img {
+			border-radius: 33%;
+			padding: 10%;
+			margin: -1rem 0 2rem 1rem;
+			width: 100%;
+			background-position-x: right;
+		}
+			.about-me .image {
+				width: 30%;
+			}
+			.about-text {
+				width: 70%;
+				display: flex;
+				flex-flow: column;
+				justify-content: flex-start;
+				text-align: justify;
+			}
+			.about-me {
+				display: flex;
+				flex-flow: row;
+				justify-content: space-between;
+				align-content: center;
+			}
 
 		.image.left, .image.right {
 			max-width: 40%;
@@ -3281,6 +3304,18 @@ input, select, textarea {
 		.wrapper.alt {
 			background-color: #261c3e;
 		}
+		/* 
+			CC4400
+			D66915
+			E08E29
+			F0C761
+			FFFF99
+			C2FCFF
+			7CC6DE
+			3890BC
+			1C489A
+			000077
+		*/
 
 		.wrapper.style1 {
 			background-color: #5e42a6;
@@ -3299,7 +3334,7 @@ input, select, textarea {
 		}
 
 		.wrapper.style3 {
-			background-color: #b74e91;
+			background-color: #aab9ce;
 		}
 
 		.wrapper.style3-alt {
