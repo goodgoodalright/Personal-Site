@@ -1852,22 +1852,34 @@ input, select, textarea {
 
 /* Button */
 
+/* 			CC4400
+			D66915
+			E08E29
+			F0C761
+
+			FFFF99
+			C2FCFF */
+
 	#show-contract,
 	#hide-contract {
-		background:rgba(255, 255, 255, 0.15);
+		background:rgba(255, 255, 255, 0.08);
+		color :rgba(224, 142, 41, 0.85);
 		margin: 1rem 0;
 		text-align: center;
 	}
 		#hide-contract {
 			display: none;
 		}
-		.button-wrap {
-			display: flex;
-			flex-flow: column nowrap;
-			justify-content: center;
-			width: 20%;
-			margin: 0 auto;
-		}
+	#end-one {
+		margin-left: 1rem;
+	}
+	.button-wrap {
+		display: flex;
+		flex-flow: column nowrap;
+		justify-content: center;
+		width: 20%;
+		margin: 0 auto;
+	}
 	input[type="submit"],
 	input[type="reset"],
 	input[type="button"],
@@ -3151,19 +3163,19 @@ input, select, textarea {
 			}
 
 		.spotlights > section:nth-child(2) {
-			background-color: rgba(0, 0, 0, 0.15);
+			background-color: rgba(0, 0, 0, 0.125);
 		}
 
 		.spotlights > section:nth-child(3) {
-			background-color: rgba(0, 0, 0, 0.3);
+			background-color: rgba(0, 0, 0, 0.25);
 		}
 
 		.spotlights > section:nth-child(4) {
-			background-color: rgba(0, 0, 0, 0.45);
+			background-color: rgba(0, 0, 0, 0.375);
 		}
 
 		.spotlights > section:nth-child(5) {
-			background-color: rgba(0, 0, 0, 0.6);
+			background-color: rgba(0, 0, 0, 0.5);
 		}
 
 		.spotlights > section.inactive > .image:before,

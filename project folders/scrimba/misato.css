@@ -7,16 +7,14 @@ body {
     width: auto;
     padding: 0;
     margin: 0;
-    background: rgba(35, 0, 122, 0.219)
+    background: #000044;
 }
 ul {
     list-style: none;
     padding: 0;
     margin: 2rem 1rem;
 }
-h1 {
-    flex-basis: auto;
-}
+
     #original {
         display: block;
     }
@@ -26,31 +24,40 @@ h1 {
 .two-column {
     display: flex;
     flex-flow: row nowrap;
-    width: 60%;
-    justify-content: center;
+    border-radius: 15px;
+    width: 70%;
+    padding: 2rem;
+    background-color: #1C489A;
+    justify-content: space-evenly;
     align-content: center;
 }
     #score {
+        background-color: rgba(255, 255, 255, 0.2);
+        border-radius: 5px;
+        box-shadow: 3px 3px 3px #000;
+        height: 50%;
         width: auto;
     }
     img {
         max-height: 80vh;
         max-width: auto;
         flex-basis: 1;
+        border-radius: 15px;
+        box-shadow: 5px 5px 8px #000044;
     }
 .right-column {
     display: flex;
     flex-flow: column nowrap;
-    justify-content: center;
+    justify-content: space-evenly;
     align-content: center;
     width: 50%;
+    max-height: 80%;
 }
     .buttons {
         display: flex;
         flex-flow: column nowrap;
         justify-content: center;
         align-items: center;
-        margin: 2rem 1rem;
     }
     button {
         padding: 1rem 2rem;
@@ -58,8 +65,4 @@ h1 {
         flex-basis: 1;
         width: 50%; 
         border-radius: 10px;
-    }
-    #score {
-        background:rgba(35, 0, 122, 0.219);
-        height: 50%;
     }
