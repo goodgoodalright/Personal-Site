@@ -1849,17 +1849,7 @@ input, select, textarea {
 			border-radius: 0;
 			padding: 0;
 		}
-
-/* Button */
-
-/* 			CC4400
-			D66915
-			E08E29
-			F0C761
-
-			FFFF99
-			C2FCFF */
-
+		
 	#show-contract,
 	#hide-contract {
 		background:rgba(255, 255, 255, 0.08);
@@ -3346,7 +3336,8 @@ input, select, textarea {
 			background-color: #261c3e;
 		}
 		/* 
-			#newPalette
+			#newPalette - https://coolors.co/palette/cc4400-d66915-e08e29-f0c761-ffff99-c2fcff-7cc6de-3890bc-1c489a-000077
+			
 			CC4400
 			D66915
 			E08E29

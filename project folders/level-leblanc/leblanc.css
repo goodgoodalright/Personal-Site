@@ -46,39 +46,41 @@ table {
 body {
 	font-family: "Oswald", "Roboto", sans-serif;
 }
-em {
-	font-style: italic;
-}
-h1, h2, h4, h5, button, a {
-	text-transform: uppercase;
-}
-a {
-	text-decoration: none;
-	padding: 0 1rem;
-	color: #4c5867;
-}
-	.hero a {
-		padding: 2rem 0 4rem 0;
+	em {
+		font-style: italic;
 	}
-	.nav-left a,
-	.footer a {
+	h1, h2, h4, h5, button, a {
+		text-transform: uppercase;
+	}
+	.nav,
+	.hero,
+	.employment,
+	.rent {
 		color: #fff;
 	}
-	.footer a {
-		padding-left: 0;
-		text-transform: none;
+.text-fit * {
+	padding: 2%;
+	text-align: center;
+}
+.big-text {
+	font-size: 4.5rem;
+}
+.med-text {
+	font-size: 2.5rem;
+}
+	.employment h2,
+	.rent h2 {
+		font-size: 2.5rem;
 	}
+	.columns h2 {
+		font-size: 1.5rem;
+		padding: 1rem 0;
+	}
+.small-text,
 p {
 	font-size: 1.25rem;
 	line-height: 1.5rem;
 }
-	.hero h1,
-	.hero p,
-	.employment p,
-	.rent p {
-		padding: 2%;
-		text-align: center;
-	}
 	.hero p {
 		margin: 0 10%;
 	}
@@ -94,27 +96,36 @@ p {
 		font-weight: lighter;
 		line-height: 1rem;
 	}
+a {
+	text-decoration: none;
+	padding: 0 1rem;
+	color: #4c5867;
+}
+	.hero a {
+		padding: 2rem 0 4rem 0;
+	}
+	.nav-left a,
+	.footer a {
+		color: #edd;
+	}
+	.footer a {
+		padding-left: 0;
+		text-transform: none;
+	}	
 span {
-	color: #fff;
+	color: #edd;
 	font-size: .75rem;
 	background: rgba(255, 255, 255, 0.3);
 	padding: 1rem;
 	border-radius: 10px;
 }
+
 	.footer span {
-		color: #fff;
+		color: #edd;
 	}
-.hero h1 {
+/* .hero h1 {
 	font-size: 5rem;
-}
-.employment h2,
-.rent h2 {
-	font-size: 2.5rem;
-}
-.columns h2 {
-	font-size: 1.5rem;
-	padding: 1rem 0;
-}
+} */
 .footer h4 {
 	padding: 1rem 0;
 }
@@ -237,12 +248,6 @@ footer {
 	background-position: 0 100%;
 	background-repeat: no-repeat;
 }
-.nav,
-.hero,
-.employment,
-.rent {
-	color: #fff;
-}
 	.nav,
 	footer {
 		background: rgba(255, 255, 255, 0.2);
@@ -291,3 +296,25 @@ button {
 	.rent button {
 		margin: 1rem 0;
 	}
+
+/* MEDIA QUERIES */
+
+@media screen and (max-width: 990px) {
+	body {
+		width: auto;
+	}
+	.nav {
+		width: 100%;
+		height: auto;
+		display: flex;
+		flex-flow: row nowrap;
+		justify-content: space-between;
+	}
+		.nav section {
+			width: 25%;
+		}
+	.columns {
+		display: flex;
+		flex-flow: column nowrap;
+	}
+}

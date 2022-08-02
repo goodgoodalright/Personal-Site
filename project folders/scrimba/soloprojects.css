@@ -1,23 +1,63 @@
 /* reset removed margins, lists; body min-height, img display, click fonts */
-/* CSS Sections: TEXT, STRUCTURE, PROJECTS */
+/* CSS Sections: APPEARANCES, TEXT, STRUCTURE, PROJECTS */
+
+#newPalette {
+    color: #10451D;
+    /* 
+    10451D - dark green
+    155D27
+    1A7431 - green
+    208B3A
+    25A244 - lighter green
+    2DC653
+    4AD66D - light green
+    6EDE8A
+    92E6A7 - seafoam
+    B7EFC5
+    */
+}
+
+/* APPEARANCES */
+
+.style1 {
+    background-color: #1A7431;
+}
+.style2 {
+    background-color: #25A244;
+}
+.style3 {
+    background-color: #4AD66D;
+}
+.style4 {
+    background-color: #92E6A7;
+}
 
 /* TEXT */
+a {
+    color: #4AD66D;
+    text-decoration: none;
+    transition: all .5s ease-in-out;
+}
 h1 {
     font-size: 2rem;
     font-style: italic;
     transition: all .5s ease-in-out;
+    color: #4AD66D;
 }
-    h1:hover {
-        text-shadow: 8px 8px 3px rgba(255, 255, 255, 0.5);
+    h3:hover,
+    h1:hover,
+    a:hover {
+        text-shadow: 8px 8px 3px #155D27;
+        color: #92E6A7;
         margin: 0 1rem;
     }
 h2 {
-    font-size: 1.5rem;
-    text-decoration: underline;
+    font-size: 2.5rem;
     padding-left: 1rem;
     opacity: 1;
     transition: all 1s ease-in-out;
     overflow: hidden;
+    color: #10451D;
 }
 h3 {
     font-size: 2rem;
@@ -26,21 +66,17 @@ h3 {
     white-space: nowrap;
     transition: all .3s ease-in-out;
 }
-    h3:hover {
-        text-shadow: 8px 8px 3px rgba(255, 255, 255, 0.5);
-    }
+    h3:hover {margin: 1rem}
 .contents a {
     padding: 0.25rem 0.5rem;
     margin: 0.15rem 0.25rem;
     text-decoration: none;
 }
-/* APPEARANCES */
 
 /* STRUCTURE */
 body {
     margin: 1rem 2rem;
     min-height: auto;
-    background-color: #337cac;
 }
 main {
     display: flex;
@@ -84,7 +120,7 @@ header,
     top: 0;
     right: 0;
     background-color: #111;
-    color: #eee;
+    color: #4AD66D;
     overflow-x: hidden;
     transition: 0.5s;    
     display: flex;
@@ -95,14 +131,21 @@ header,
         margin: 0.5rem 0;
         text-decoration: none;
         font-size: 1.5rem;
-        color: #818181;
         display: block;
         transition: 0.3s;
     }
-    .contents a:hover {
-        color: #f1f1f1;
-        margin-left: 2rem;
-    }
+    /* 
+    10451D - dark green
+    155D27
+    1A7431 - green
+    208B3A
+    25A244 - lighter green
+    2DC653
+    4AD66D - light green
+    6EDE8A
+    92E6A7 - seafoam
+    B7EFC5
+    */
     .close-contents {
         position: absolute;
         top: 0;
@@ -121,10 +164,10 @@ header,
 .project-container {
     display: flex;
     flex-flow: column;
-    border: 1px solid #aaa;
+    border: 1px solid #6EDE8A;
     border-radius: 5px;
-    box-shadow: 5px 5px 8px #444;
-    background-color: #ddd;
+    box-shadow: 3px 3px 8px #10451D;
+    background-color: #25A244;
     margin: 1rem;
     padding: 1.75rem;
     width: 50%;
@@ -133,7 +176,7 @@ header,
     transition: all .5s ease-in-out;
 }
     .project-container:hover {
-        background-color: #fff;
+        background-color: #2DC653;
         width: 60%
     }
         .project-container:hover h2 {
@@ -145,7 +188,6 @@ header,
         align-self: center;
     }
 .project {
-    border: 2px solid #ddd;
     display: flex;
     flex-flow: column wrap;
     margin: 2rem;
@@ -257,9 +299,9 @@ header,
     width: 60%;
     justify-content: center;
     align-self: center;
-    border: 1px solid rgba(255, 255, 255, 0.2);
     border-radius: 3px;
     background-color: #0381bb;
+    box-shadow:rgba(0, 0, 0, 0.05);
 }
     .calc-result { /* screen */
         width: 100%;
