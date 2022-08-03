@@ -7,9 +7,9 @@
     <title>Cafe Leblanc</title>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200;300;400;500;600&display=swap" rel="stylesheet">
-    <script src="/project folders/level-leblanc/leblanc.js"></script>
+    <script src="../project folders/level-leblanc/leblanc.js"></script>
     <!-- <link href="/project folders/level-leblanc/leblanc.css" rel="stylesheet"> -->
-    <link href="/project folders/level-leblanc/leblanc-media.css" rel="stylesheet">
+    <link href="../project folders/level-leblanc/leblanc-media.css" rel="stylesheet">
     <script src="https://kit.fontawesome.com/572a286c23.js" crossorigin="anonymous"></script>
 </head>
 <body>
@@ -21,27 +21,22 @@
                     <h3>四軒茶屋<span class="hover-reveal"><em>Yongenjaya</em></span></h3>
                 </div>
                 <h3><a href="https://tokyocoffee.org/2016/05/29/cafe-de-lambre/" target="_blank">Inspiration</a></h3>
-                <h3><a href="index.html#one">Home</a></h3>
+                <h3><a href="../index.html#one">Home</a></h3>
             </section>
             <section class="nav-mid">
-                <img src="/project folders/level-leblanc/hat-3.png" alt="logo" class="nav-img">
+                <img src="../project folders/level-leblanc/hat-3.png" alt="logo" class="nav-img">
             </section>
             <section class="nav-right">
                 <button name="donate">Donate</button>
             </section>
         </header>
         <header class="small-nav"> <!-- @media small version -->
-            <section class="small-nav-left">
-                <img src="/project folders/level-leblanc/hat-3.png" alt="logo" class="nav-img">
-            </section>
-            <section class="small-nav-right">
-                <div class="yongenjaya">
-                    <h3>四軒茶屋<span class="hover-reveal"><em>Yongenjaya</em></span></h3>
-                </div>
-                <h3><a href="https://tokyocoffee.org/2016/05/29/cafe-de-lambre/" target="_blank">Inspiration</a></h3>
-                <h3><a href="index.html#one">Home</a></h3>
-                <button name="donate">Donate</button>
-            </section>
+            <div class="yongenjaya">
+                <h3>四軒茶屋<span class="hover-reveal"><em>Yongenjaya</em></span></h3>
+            </div>
+            <h3><a href="https://tokyocoffee.org/2016/05/29/cafe-de-lambre/" target="_blank">Inspiration</a></h3>
+            <h3><a href="../index.html#one">Home</a></h3>
+            <button name="donate">Donate</button>
         </header>
 
         <main>
@@ -50,7 +45,7 @@
                 <div class="small-text text-fit">
                     <p>A cozy coffee-lover's dream nestled in the heart of Yongen-Jaya. This <em>kissaten</em> affords commuter, student, and alleycat alike a retreat to rest and recharge.<br>Savor an expert brew of beans curated from all corners of the globe and lose yourself in a dish of five-star curry honed over a decade of experience.</p>   
                 </div>
-                <div>
+                <div class="contact">
                     <button name="contact" id="toggle-contact">Contact Us</button><span class="hover-reveal">: (+81) 0-1234-5678</span>
                 </div>
                 <div class="tiny-header text-fit">
@@ -69,15 +64,18 @@
     <div class="second-wrap">
             <section class="columns section">
                 <section class="col-left text-fit">
-                    <img src="/project folders/level-leblanc/coffee-2.jpg" alt="a barista pouring coffee">
+                    <img src="../project folders/level-leblanc/coffee-2.jpg" alt="a barista pouring coffee">
                     <h2 class="med-header">Coffee</h2>
-                    <p>Our meticulous pour-over process, from our trusted suppliers to the shop's trademark ceramic cups, evolves every day in pursuit of the perfect cup of coffee. Every bean is aged in airtight glass jars, weighed by hand to the gram, and poured through a perfect ratio of filtered spring water to coax otherwise secret flavors that will envelop your senses.<br>Yes, this is coffee, but it is so much more.</p>
-                    <button name="harvests">Harvests on Hand</button>
+                    <p class="small-text text-fit">Our meticulous pour-over process, from our trusted suppliers to the shop's trademark ceramic cups, evolves every day in pursuit of the perfect cup of coffee. Every bean is aged in airtight glass jars, weighed by hand to the gram, and poured through a perfect ratio of filtered spring water to coax otherwise secret flavors that will envelop your senses. Coffee for the soul.</p>
+                    <button name="harvest-btn" id="harvest-btn">Harvests on Hand</button>
+                    <ul class="harvest-list">
+                        <li><!-- TODO: EXPAND LIST WITH BEANS --></li>
+                    </ul>
                 </section>
                 <section class="col-right text-fit">
-                    <img src="/project folders/level-leblanc/curry.jpg" alt="Japanese curry">
+                    <img src="../project folders/level-leblanc/curry.jpg" alt="Japanese curry">
                     <h2 class="med-header">Curry</h2>
-                    <p>Famous for its rejuvenating effects, this hearty and healthy staple of the cafe is deceptively easy to make but nearly impossible to copy. Nine spices dance in harmony with a sweet and tangy mix of caramelized fruits and herbs swimming in a bath of homegrown comfort. Popular demand for our original beef plate gave rise to equally delicious vegetarian and vegan dishes.<br>The result, an ochre tide crashing against a bed of white rice, is nothing short of sublime.</p>
+                    <p class="small-text text-fit">Famous for its rejuvenating effects, this hearty and healthy staple of the cafe is deceptively easy to make but nearly impossible to copy. Nine spices dance with a sweet and tangy mix of caramelized fruits and herbs swimming in homegrown comfort. Popular demand for our original beef plate brought us to equally delicious vegetarian and vegan dishes. It'll steal your heart.</p>
                     <button name="order">Place an Order</button>
                 </section>
             </section>
@@ -89,20 +87,20 @@
             </section>
         </main>
         <footer>
-            <section class="footer">
+            <section class="footer-wrap footer-first">
                 <section class="foot-left">
                     <div class="icons">
-                        <i class="fa-brands fa-facebook-square"></i>
-                        <i class="fa-brands fa-twitter"></i>
-                        <i class="fa-solid fa-envelope"></i>
+                        <i class="fa-brands fa-facebook-square"><a href="#"></a></i>
+                        <i class="fa-brands fa-twitter"><a href="https://twitter.com/goodgoodalright"></a></i>
+                        <i class="fa-solid fa-envelope"><a href="mailto:goodgoodalright@gmail.com"></a></i>
                     </div>
                     <div class="footer-links">
                         <div>
-                            <h5>Site Map</h5>
-                            <a href="http://www.cafedelambre.com/" target="_blank">Inspiration</a><a href="#">Place an Order</a>
+                            <h5 class="small-header">Site Map</h5>
+                            <a href="http://www.cafedelambre.com/" target="_blank">Inspiration</a><a href="#">Place an Order</a><a href="../index.html#one">Home</a>
                         </div>
                         <div>
-                            <h5>Apply</h5>
+                            <h5 class="small-header">Apply</h5>
                             <a href="#">Employment</a><a href="#">Rent</a>
                         </div>
                     </div>
@@ -114,12 +112,12 @@
                         Chuo City, Tokyo, JP 104-0061<br>
                         +81 3-3571-1551
                     </p>
-                    <h4 class="tiny-text"><em><a href="emailto:#">Sojiro@phantomthieves.org</a></em></h4>
+                    <hr>
+                    <h4 class="tiny-text"><em><a href="mailto:goodgoodalright@gmail.com">Sojiro@phantomthieves.org</a></em></h4>
                 </section>
             </section>
-            <hr>
-            <section class="footer">
-                <span class="text-fit footer-span">Cafe Leblanc is a fictional restaurant from the Atlus games <em>Persona 5</em> & <em>Persona 5 Royal</em>.</span>
+            <section class="footer-wrap footer-last">
+                <span class="text-fit tiny-header footer-span">Cafe Leblanc is a fictional restaurant from the Atlus games<br><em>Persona 5</em> and <em>Persona 5 Royal</em>.</span>
                 <img src="/project folders/level-leblanc/hat-3.png" alt="logo" class="footer-img">
             </section>
         </footer>

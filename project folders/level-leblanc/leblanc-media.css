@@ -50,7 +50,7 @@ add media queries;
 /* ALL */
 html {
      font-family: "Oswald", "Roboto", sans-serif;
-	font-size: 18px;
+	font-size: 20px;
      color: #fff
 }
 .cafe-wrap {
@@ -63,7 +63,7 @@ html {
 	background-position: 0 100%;
 	background-repeat: no-repeat;
 }
-.nav, footer {
+.nav, .small-nav, footer {
      background:rgba(255, 255, 255, 0.2);
 }
 .postings /* postings? */ {
@@ -81,21 +81,22 @@ em {font-style: italic;}
      text-align: justify;
 	text-align-last: center;
 }
-.big-header {font-size: 4.5rem; line-height: 5rem; font-weight: bold; padding: 2rem;}
+.big-header {font-size: 4.5rem; line-height: 5rem; font-weight: bold; padding: 2rem; text-shadow: 3px 3px 5px #000;}
 .big-text {font-size: 3.5rem; line-height: 3.5rem; font-weight: bold;}
-.med-header {font-size: 2.5rem; line-height: 2.5rem; padding: 1rem 2rem;}
+.med-header {font-size: 2.5rem; line-height: 2.5rem; padding: 1rem 2rem; text-shadow: 3px 3px 5px #000;}
 .med-text {font-size: 2rem; line-height: 2rem;}
-.small-header {font-size: 1.25rem; line-height: 1.33rem;}
-.small-text {font-size: 1rem; line-height: 1.25rem;}
+.small-header {font-size: 1.25rem; line-height: 1.5rem; text-shadow: 3px 3px 5px #000;}
+.small-text {font-size: 1rem; line-height: 1.5rem; font-weight: lighter;}
 .tiny-header {font-size: 0.9rem; line-height: 1.33rem; font-weight: lighter}
 .tiny-text {font-size: 0.8rem; line-height: 1rem; font-weight: lighter}
-a {text-decoration: none; transition: all .5s ease-in-out;}
-	.nav a:hover {color: #800000;}
-.nav a {padding: 0 1rem; color: #fff;}
+a {text-decoration: none; transition: all .5s ease-in-out; color: #ddd;}
+	.nav a:hover,
+	.small-nav a:hover {color: #ab0000;}
+.nav a,
+.small-nav a {padding: 0 1rem; color: #fff;}
 /* nav & footer a color #edd, padding-left: 0, text-transform: none*/
 .hero a {padding: 2rem 0 4rem 0;}
 h5 {color: #ff0000;}
-hr {margin-top: 1rem;}
 .span {
      color: #edd;
      background: rgba(255, 255, 255, 0.3);
@@ -115,7 +116,7 @@ hr {margin-top: 1rem;}
      justify-content: space-evenly;
      width: auto;
      height: auto;
-     padding: 1rem;
+     padding: 0 1rem;
 }
 	.nav-left,
 	.nav-mid,
@@ -124,7 +125,7 @@ hr {margin-top: 1rem;}
 		flex-flow: row wrap;
 		justify-content: space-around;
 		align-items: center;
-		padding: 1rem;
+		padding: 0.33rem 1rem;
 		width: 30%;
 	}
 		.nav-left{
@@ -143,14 +144,19 @@ hr {margin-top: 1rem;}
 		.nav-right {
 			justify-content: flex-end;
 		}
-.section {
+.section,
+.contact {
 	display: flex;
 	flex-flow: column nowrap;
 	justify-content: center;
+	align-content: center;
 	align-items: center;
 	padding: 5% 10%;
 	width: auto;
 }
+	.contact {
+		padding: 0;
+	}
      .columns {
           display: flex;
           flex-flow: row wrap;
@@ -161,14 +167,14 @@ hr {margin-top: 1rem;}
 footer {
      height: auto;
 	width: auto;
-	padding: 1rem 3rem;
+	padding: 0 3rem;
 	color: #fff;
      display: flex;
      flex-flow: column nowrap;
      align-items: center;
-     justify-content: space-evenly;
+     justify-content: space-between;
 }
-	.footer {
+	.footer-wrap {
 		display: flex;
 		flex-flow: row nowrap;
 		width: 100%;
@@ -178,17 +184,29 @@ footer {
 	.icons {
 		margin: 1rem 0;
 		font-size: 1.25rem;
+		transition: all .5s ease-in-out;
+		color: inherit;
 	}
+		.icons i:hover {
+			color: #880000;
+		}
 	.footer-links {
 		display: flex;
 		flex-flow: column nowrap;
 	}
-	.foot-left, .foot-right {width: 40%;}
-		
+		.footer-links a, .icons i {padding-right: 1.15rem;}
+		.footer-links div:first-of-type {margin-bottom: 1rem;}
+		.footer-links h5 {margin-bottom: .5rem;}
+	.foot-left, 
+	.foot-right {width: 40%;}
 		.foot-right {
 			text-align: right;
 			align-self: center;
 		}
+	.footer-last {
+		align-items: center; 
+		justify-content: space-between;
+	}
 .hover-reveal {
 	display: block;
 	transform: scaleY(0);
@@ -201,13 +219,11 @@ footer {
 		transform: scaleY(1);
 	}
 	.yongenjaya h3 {
-		margin-top: 1rem;
 		transition: all .3s ease-in-out;
 		position: relative;
 		top: .5rem;
 	}
 	.yongenjaya h3:hover {
-		margin-top: 0;
 		top: 0;
 		color: #800000;
 	}
@@ -223,27 +239,22 @@ footer {
 	}
 button {
 	background: rgba(255, 255, 255, 0.3);
-	border: 1px solid #66768a;
-	color: #810000;
+	border: 1px solid #880000;
+	color: #880000;
 	border-radius: 10px;
 	padding: .75rem 1.25rem;
 	font-weight: bold;
 	cursor: pointer;
-	transition: background .4s ease-in-out, color .7s ease-in-out;
+	transition: background .4s ease-in-out, color .7s ease-in-out, border-color .4s ease-in-out;
 }
 	button:hover,
 	.nav button:hover {
 		background: #161f2a;
 		color: #fff;
+		border-color: #ddd;
 	}
-	.nav button {
-		background: #fff;
-		border: none;
-		color: #66768a;
-	}
-	.employment button,
-	.columns button,
-	.rent button {
+	.postings button,
+	.columns button {
 		margin: 1rem 0;
 	}
 
@@ -252,13 +263,20 @@ button {
 	.small-nav {display: none;}
      .col-left,
      .col-right {
-          width: 40%;
+          width: 45%;
 		height: 100%;
+		padding: 0;
           text-align: center;
           display: flex;
           flex-flow: column nowrap;
           align-content: center;
+		justify-content: center;
      }
+		.col-left {justify-content: space-evenly;}
+		.col-right h2,
+		.col-right p,
+		.col-left button,
+		.col-right button {margin: 0;}
      .col-left img {
 		max-height: auto;
 		clip-path: polygon(0% 0%, 66% 0%, 100% 33%, 100% 100%, 33% 100%, 0% 66%);
@@ -275,6 +293,7 @@ button {
 	}
 }
 @media screen and (max-width: 990px) { /* smaller than desktop*/
+	html {font-size: 18px;}
 	body {
 		width: auto;
 	}
@@ -284,7 +303,8 @@ button {
 		height: 5rem;
 		display: flex;
 		flex-flow: row nowrap;
-		justify-content: space-between;
+		justify-content: space-evenly;
+		align-items: center;
 	}
 		.small-nav img {
 			max-height: 3rem; 
@@ -311,13 +331,13 @@ button {
 	}
 	.col-left img {
 		max-height: auto;
-		max-width: 40%;
+		max-width: 100%;
 		clip-path: polygon(0% 0%, 66% 0%, 100% 33%, 100% 100%, 33% 100%, 0% 66%);
 		border-radius: 2.5%;
 	}
 	.col-right img {
 		max-height: auto;
-		max-width: 40%;
+		max-width: 100%;
 		clip-path: polygon(33% 0%, 0% 33%, 0% 100%, 66% 100%, 100% 66%, 100% 0%);
 		border-radius: 2.5%;
 	}
