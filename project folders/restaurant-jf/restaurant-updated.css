@@ -1,0 +1,151 @@
+/* RESET */
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+/* TEXT */
+html {
+     font-size: 18px;
+}
+body {
+     font-family: "Josefin Sans", "El Messiri", "Lavishly Yours", "Great Vibes", Helvetica, sans-serif;
+}
+.messiri-text {
+     font-family: "El Messiri", Helvetica, sans-serif;
+     font-weight: 700;
+     font-size: 4rem;
+     padding: 1rem 0;
+}
+.lavish-text {
+     font-family: "Lavishly Yours", Helvetica,  sans-serif;
+     font-size: 2rem;
+     color: #ff8800;
+}
+     .hours h2 {
+        font-weight: 500;
+     }
+/* h3, h4 */ .header {
+     font-size: 1.5rem;
+     font-weight: 500;
+}
+.vibes-text {
+     font-family: "Great Vibes", Helvetica, sans-serif;
+     font-size: 1.25rem;
+}
+     .reviews {
+          font-style: italic;
+     }
+
+/* STRUCTURE */
+main {
+     display: flex;
+     flex-flow: column nowrap;
+     width: 100%;
+}
+header {
+     width: 100%;
+     display: flex;
+     justify-content: flex-end;
+}
+nav {
+     width: 50%;
+     padding: 1rem 3rem;
+}
+     .nav,
+     .socials {
+          display: flex;
+          flex-flow: row nowrap;
+          justify-content: space-evenly;
+          width: 100%;
+          height: auto;
+     }
+     .nav {
+          position: relative;
+     }
+     nav a {
+          text-decoration: none;
+          color: #000;
+     }
+     nav a:hover {
+          color: rgb(0, 45, 178);
+          transition: all 0.5s;
+     }
+/* APPEARANCES */
+button {
+     background: #ff8800;
+     color: #fff;
+     width: auto;
+}
+.hours i,
+.reviews i {
+     color: #ff8800;
+}
+.hero {
+     background-image: url("landing.jpg");
+     background-size: cover;
+     background-repeat: no-repeat;
+}
+.about-text{
+     background-image: url("pie.jpg");
+     background-size: contain;
+     background-repeat: no-repeat;
+     background-position: -150% 0;
+}
+.hours {
+     background-image: url("muffins.jpg");
+     background-size: cover;
+     background-position: 0 20%;
+     background-repeat: no-repeat;
+}
+.reviews img {
+     border-radius: 50%;
+     max-height: 10%;
+}
+/* MEDIA */
+@media screen and (min-width: 991px) { /* desktop */
+
+}
+@media screen and (min-width: 991px) { /* smaller */
+
+}
