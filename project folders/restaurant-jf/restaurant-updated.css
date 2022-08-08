@@ -122,18 +122,18 @@ button {
      color: #ff8800;
 }
 .hero {
-     background-image: url("landing.jpg");
+     background-image: url("./landing.jpg");
      background-size: cover;
      background-repeat: no-repeat;
 }
 .about-text{
-     background-image: url("pie.jpg");
+     background-image: url("./pie.jpg");
      background-size: contain;
      background-repeat: no-repeat;
      background-position: -150% 0;
 }
 .hours {
-     background-image: url("muffins.jpg");
+     background-image: url("./muffins.jpg");
      background-size: cover;
      background-position: 0 20%;
      background-repeat: no-repeat;
@@ -147,5 +147,10 @@ button {
 
 }
 @media screen and (min-width: 991px) { /* smaller */
-
+     main {
+          display: flex;
+          flex-flow: column nowrap;
+          width: 100%;
+          height: 100%;
+     }
 }
