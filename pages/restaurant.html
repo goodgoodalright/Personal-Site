@@ -9,31 +9,33 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=El+Messiri:wght@400;500;600;700&family=Great+Vibes&family=Josefin+Sans:ital,wght@0,100;0,300;0,400;0,700;1,100;1,300;1,400;1,700&family=Lavishly+Yours&display=swap" rel="stylesheet">
-    <link href="../project folders/restaurant-jf/restaurant.css" rel="stylesheet">
-    <!-- <link href="../project folders/restaurant-jf/restaurant-updated.css" rel="stylesheet"> -->
+    <!-- <link href="../project folders/restaurant-jf/restaurant.css" rel="stylesheet"> -->
+    <link href="../project folders/restaurant-jf/restaurant-updated.css" rel="stylesheet">
 </head>
 <body>
     <!-- navbar starts at 50%, 5 items; cart icon, search icon -->
     <!-- landing, about, specialties, hours, testimonials-->
     <main>
-        <section class="hero">
-            <header>
-                <nav>
-                    <ul class="nav">
-                        <li><a href="../index.html#one">Home</a></li>
-                        <li><a href="#">About Us</a></li>
-                        <li><a href="#">Menu</a></li>
-                        <li><a href="#">Order Now</a></li>
-                        <li><a href="#">Blog</a></li>
-                        <li><a href="#">Locations</a></li>
-                        <li><i class="fa-solid fa-cart-shopping"></i></li>
-                        <li><i class="fa-solid fa-magnifying-glass"></i></li>
-                    </ul>
-                </nav>
-            </header>
-            <section>
+        <header> 
+            <!-- updated section to header, 
+            changed header to nav, moved ul up one indent,
+            changed section 2 to section '.hero',
+            need to fix original CSS -->
+            <nav>
+                <ul class="navbar">
+                    <li><a href="../index.html#one">Home</a></li>
+                    <li><a href="#">About Us</a></li>
+                    <li><a href="#">Menu</a></li>
+                    <li><a href="#">Order Now</a></li>
+                    <li><a href="#">Blog</a></li>
+                    <li><a href="#">Locations</a></li>
+                    <li><i class="fa-solid fa-cart-shopping"></i></li>
+                    <li><i class="fa-solid fa-magnifying-glass"></i></li>
+                </ul>
+            </nav>
+            <section class="hero">
                 <h2>Howdy, Partner</h2>
-                <h1>Welcome To<br>Jester & Fjord's<br>Fun Good-Time Cuisine Restaurant</h1>
+                <h1>Welcome To<br>Jester & Fjord's<br>Fun Good-Time Cuisine Restaurant</h1> <!-- set width to 70% -->
                 <label for="search">
                     <input type="search" placeholder="Search here"><!-- --><button name="location" id="search">Locations</button>
                 </label>
@@ -43,7 +45,7 @@
                     <li><i class="fa-brands fa-instagram"></i> 55k</li>
                 </ul>
             </section>
-        </section>
+        </header>
         <section class="about">
             <section class="about-text"> 
                 <div>
