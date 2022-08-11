@@ -15,38 +15,40 @@
 <body>
     <!-- navbar starts at 50%, 5 items; cart icon, search icon -->
     <!-- landing, about, specialties, hours, testimonials-->
-    <main>
-        <header> 
-            <!-- updated section to header, 
-            changed header to nav, moved ul up one indent,
-            changed section 2 to section '.hero',
-            need to fix original CSS -->
-            <nav>
-                <ul class="navbar">
-                    <li><a href="../index.html#one">Home</a></li>
-                    <li><a href="#">About Us</a></li>
-                    <li><a href="#">Menu</a></li>
-                    <li><a href="#">Order Now</a></li>
-                    <li><a href="#">Blog</a></li>
-                    <li><a href="#">Locations</a></li>
-                    <li><i class="fa-solid fa-cart-shopping"></i></li>
-                    <li><i class="fa-solid fa-magnifying-glass"></i></li>
-                </ul>
-            </nav>
-            <section class="hero">
-                <h2>Howdy, Partner</h2>
-                <h1>Welcome To<br>Jester & Fjord's<br>Fun Good-Time Cuisine Restaurant</h1> <!-- set width to 70% -->
-                <label for="search">
-                    <input type="search" placeholder="Search here"><!-- --><button name="location" id="search">Locations</button>
-                </label>
-                <ul class="socials">
-                    <li><i class="fa-brands fa-facebook-f"></i> 252k</li>
-                    <li><i class="fa-brands fa-twitter"></i> 62k</li>
-                    <li><i class="fa-brands fa-instagram"></i> 55k</li>
-                </ul>
-            </section>
-        </header>
-        <section class="about">
+    <!-- updated section to header, 
+        changed header to nav, moved ul up one indent,
+        changed section 2 to section '.hero',
+        need to fix original CSS -->
+    <header id="nav" class="header">
+        <nav class="navbar">
+            <a href="../index.html#one">Portfolio</a>
+            <a href="#one">Home</a>
+            <a href="#two">About Us</a>
+            <a href="#three">Menu</a>
+            <a href="#four">Order Now</a>
+            <a href="#five">Blog</a>
+            <a href="#six">Locations</a>
+            <a href="#"><i class="fa-solid fa-cart-shopping"></i></a>
+            <a href="#"><i class="fa-solid fa-magnifying-glass"></i></a>
+            </ul>
+        </nav>
+    </header>
+    
+    <main id="content">
+        <section id="one" class="hero">
+            <h2>Howdy, Partner</h2>
+            <h1>Welcome To<br>Jester & Fjord's<br>Fun Good-Time Cuisine Restaurant</h1> <!-- set width to 70% -->
+            <label for="search">
+                <input type="search" placeholder="Search here"><!-- --><button name="location" id="search">Locations</button>
+            </label>
+            <ul class="socials">
+                <li><i class="fa-brands fa-facebook-f"></i> 252k</li>
+                <li><i class="fa-brands fa-twitter"></i> 62k</li>
+                <li><i class="fa-brands fa-instagram"></i> 55k</li>
+            </ul>
+        </section>
+
+        <section id="two" class="about">
             <section class="about-text"> 
                 <div>
                     <h2>About Us</h2>
@@ -60,7 +62,8 @@
                 <img src="/project folders/restaurant-jf/berries.jpg">
             </section>
         </section>
-        <section class="specialties">
+
+        <section id="three" class="specialties">
             <h2>Order Online Now</h2>
             <h1>Our Specialty Cuisine</h1>
             <nav>
@@ -75,7 +78,8 @@
             <!-- 2 rows of 4 that cycle between 2-5 pages -->
             <!-- each li has a different set of these rows -->
         </section>
-        <section class="hours">
+
+        <section id="four" class="hours">
             <div class="hours-background">
                 <h2>Book A Table</h2>
                 <h1>Hours of Operation</h1>
@@ -96,7 +100,9 @@
                 </section>
             </div>
         </section>
-        <section class="reviews">
+
+        <section id="five" class="reviews">
+            <!-- link to blog.html; create blog.html -->
             <h2>Testimonials</h2>
             <h1>Customer Reviews</h1>
             <section class="testimonials">
@@ -106,9 +112,14 @@
                 <span><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></span>
                 <p>Deliciously glazed and seasoned chicken breasts, fresh mushrooms, and a garlic and white wine sauce to die for. This cuisine is the best this side of the Atlantic, praise that I, a well-traveled individual, do not lightly give.</p> <!-- italicize -->
             </section>
-            <!-- rotates like the menu, 4-6 options -->
+            <!-- NEEDS A CAROUSEL rotates like the menu, 4-6 options -->
         </section>
     </main>
-    <footer></footer>
+
+    <footer id="six" class="footer-style">
+        <span>&copy; goodgoodalright. All rights reserved.</span>
+        <span>Design: <a href="http://html5up.net">HTML5 UP</a></span>
+    </footer>
+    <script src="../project folders/restaurant-jf/restaurant.js"></script>
 </body>
 </html>

@@ -73,21 +73,21 @@ body {
      font-family: "Great Vibes", Helvetica, sans-serif;
      font-size: 1.25rem;
 }
-.navbar a {
+.navbar a,
+footer a {
      text-decoration: none;
      color: #000;
 }
-     .navbar a:hover {
+     .navbar a:hover,
+     footer a:hover {
           color: rgb(0, 45, 178);
           transition: all 0.5s;
      }
 .reviews {
      font-style: italic;
 }
-.testimonials h5,
-.testimonials span,
-.testimonials p { /* change to .testimonials-text */
-     padding-top: 1rem;
+.testimonials * {
+     padding-top: 1rem; /* from .testimonials h5 & span & p */
 }
 
 /* STRUCTURE */
@@ -95,31 +95,37 @@ main {
      display: flex;
      flex-flow: column nowrap;
      width: 100%;
-}
-header {
-     /* changed from .hero */
      height: auto;
-     display: flex;
-     flex-flow: column wrap;
-     justify-content: flex-start;
-     width: 100%;
 }
-     nav {
-          display: flex;
-          justify-content: flex-end;
-          width: 100%;
-     }      /* removed .nav {position: relative;} */
+.header {
+     /* changed from .hero */
+     display: flex;
+     flex-flow: row;
+     justify-content: flex-end;
+     width: 100%;
+     height: auto;
+     background: #ddd;
+     border-bottom: 1px solid #333;
+     position: relative;
+}
      .navbar {
-          width: 60%;
           display: flex;
+          flex-flow: row nowrap;
           justify-content: space-between;
+          width: 66%;
           padding: 1rem 3rem;
-     }
+          margin-right: 2rem;
+          overflow: hidden;
+     }      /* removed .nav {position: relative;} */
           .sticky {
                position: fixed;
                top: 0;
                width: 100%;
           }
+          .sticky + .content {
+               padding-top: 60px;
+          }
+          .content {padding: 1rem 0;}
 .hero, /* changed from .nav */
 .socials {
      display: flex;
@@ -159,13 +165,11 @@ header {
      width: 100%;
      padding: 2rem 0;
 }
-
-.specialties ul {
-     display: flex;
-     flex-flow: row nowrap;
-     justify-content: space-around;
-}
-
+     .specialties ul {
+          display: flex;
+          flex-flow: row nowrap;
+          justify-content: space-around;
+     }
 .hours-background,
 .reviews {
      display: flex;
@@ -177,25 +181,21 @@ header {
      width: 50%;
      margin: 2rem 0;
 }
-
-.hours {
-     display: flex;
-     justify-content: center;
-}
-
-.hours-background {
-     background: rgba(255, 255, 255, 0.6);
-     border-radius: 5px;
-     padding: 2rem 0;
-}
-
-.hours-background div {
-     display: flex;
-     flex-flow: column wrap;
-     justify-content: space-evenly;
-     height: 6rem;
-}
-
+     .hours-background {
+          background: rgba(255, 255, 255, 0.6);
+          border-radius: 5px;
+          padding: 2rem 0;
+     }
+     .hours-background div {
+          display: flex;
+          flex-flow: column wrap;
+          justify-content: space-evenly;
+          height: 6rem;
+     }
+     .hours {
+          display: flex;
+          justify-content: center;
+     }
 .times {
      display: flex;
      flex-flow: row nowrap;
@@ -203,11 +203,9 @@ header {
      height: auto;
      width: 80%;
 }
-
-.times div {
-     width: 55%;
-}
-
+     .times div {
+          width: 55%;
+     }
 .testimonials {
      display: flex;
      flex-flow: column nowrap;
@@ -215,7 +213,6 @@ header {
      align-items: center;
      width: 60%;
 }
-
 .reviews {
      width: 100%;
 }
@@ -245,6 +242,18 @@ button {
 .reviews i {
      color: #ff8800;
 }
+.footer-style {
+     background: linear-gradient(315deg, #4143ac, #000077);
+     height: auto;
+     width: 100%;
+     display: flex;
+     flex-flow: row nowrap;
+     justify-content: space-between;
+}
+     footer span {
+          padding: 1rem 3rem;
+          color:rgba(255, 255, 255, 0.6);
+     }
 
 /* IMAGES */
 .hero {

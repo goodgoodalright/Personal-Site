@@ -1,10 +1,11 @@
 // sticky nav on scroll
-var navbar = document.querySelector('.nav');
+window.onscroll = function() {scroll()};
+var navbar = document.getElementById('nav');
 var sticky = navbar.offsetTop;
-window.onscroll = function() {
+function scroll() {
      if(window.scrollY >= sticky) {
-          navbar.classList.add('.sticky');
+          navbar.classList.add('sticky');
      } else {
-          navbar.classList.remove('.sticky');
+          navbar.classList.remove('sticky');
      }
 };
