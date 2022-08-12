@@ -49,18 +49,29 @@ html {
      font-size: 18px;
 }
 body {
-     font-family: "Josefin Sans", "El Messiri", "Lavishly Yours", "Great Vibes", Helvetica, sans-serif;
+     font-family: "Josefin Sans", Helvetica, sans-serif;
 }
-.messiri-text {
+.messiri-header {
      font-family: "El Messiri", Helvetica, sans-serif;
      font-weight: 700;
      font-size: 4rem;
-     padding: 1rem 0;
+     padding-top: 1rem;
 }
-.lavish-text {
+     .messiri-font {
+          font-family: "El Messiri", Helvetica, sans-serif;
+          font-weight: 400;
+          font-size: 2rem;
+     }
+.lavish-header {
      font-family: "Lavishly Yours", Helvetica,  sans-serif;
-     font-size: 2rem;
+     font-size: 2.5rem;
+     line-height: 3.33rem;
+     padding: .66rem 0;
      color: #ff8800;
+}
+.vibes-font {
+     font-family: "Great Vibes", Helvetica, sans-serif;
+     font-size: 1.25rem;
 }
 .bold-text { /* h3, h4 */
      font-size: 1.5rem;
@@ -69,20 +80,22 @@ body {
      .hours h2 {
           font-weight: 500;
      }
-.vibes-text {
-     font-family: "Great Vibes", Helvetica, sans-serif;
-     font-size: 1.25rem;
-}
 .navbar a,
+.socials a,
 footer a {
      text-decoration: none;
      color: #000;
 }
      .navbar a:hover,
+     .socials a:hover,
      footer a:hover {
           color: rgb(0, 45, 178);
           transition: all 0.5s;
      }
+.hours i,
+.reviews i {
+     color: #ff8800;
+}
 .reviews {
      font-style: italic;
 }
@@ -91,14 +104,7 @@ footer a {
 }
 
 /* STRUCTURE */
-main {
-     display: flex;
-     flex-flow: column nowrap;
-     width: 100%;
-     height: auto;
-}
 .header {
-     /* changed from .hero */
      display: flex;
      flex-flow: row;
      justify-content: flex-end;
@@ -117,43 +123,62 @@ main {
           margin-right: 2rem;
           overflow: hidden;
      }      /* removed .nav {position: relative;} */
-          .sticky {
-               position: fixed;
-               top: 0;
-               width: 100%;
-          }
-          .sticky + .content {
-               padding-top: 60px;
-          }
-          .content {padding: 1rem 0;}
-.hero, /* changed from .nav */
+     .sticky {
+          position: fixed;
+          top: 0;
+          width: 100%;
+     }
+     .sticky + .content {
+          padding-top: 60px;
+     }
+.content {
+     display: flex;
+     flex-flow: column nowrap;
+     justify-content: center;
+     width: 100%;
+     height: auto;
+}
+     .content > section {
+          display: flex;
+          justify-content: space-evenly;
+          align-items: center;
+          width: 100%;
+          height: auto;
+          border-bottom: 3px solid #000077;
+     }
+.hero {
+     flex-flow: column nowrap;
+     height: auto;
+     align-items: flex-start;
+     padding: 4rem 0;
+}
+     .hero-text {
+          display: flex;
+          flex-flow: column nowrap;
+          width: 60%;
+          height: auto;
+     }
 .socials {
      display: flex;
      flex-flow: row nowrap;
      justify-content: space-evenly;
-     width: 100%;
-     height: auto;
+     width: 40%;
+     padding: 1rem 0;
 }
-     .hero {
-          width: 60%;
-          height: 80%;
-          padding: 7%;
-          align-items: flex-start;
-     }
-     .socials {
-          width: 30%;
-          padding: 1rem 0;
-     }
 .about {
-     display: flex;
      flex-flow: row nowrap;
+     justify-content: space-evenly;
+     align-content: center;
+     align-items: center;
      height: 100%;
      width: 100%;
-     justify-content: space-between;
-     align-items: center;
 }
-.berries,
-.pie {
+     .about-text {
+          display: flex;
+          flex-flow: column nowrap;
+          justify-content: space-evenly;
+     }
+.fruit {
      width: auto;
 }
 .specialties {
@@ -218,6 +243,9 @@ main {
 }
 
 /* APPEARANCES */
+body {
+     background: #666;
+}
 button {
      background: #ff8800;
      color: #fff;
@@ -236,12 +264,8 @@ button {
      .hero input,
      .hero button {
           padding: 0.5rem;
-          margin: 0;
+          margin: 0.5rem 0;
      }
-.hours i,
-.reviews i {
-     color: #ff8800;
-}
 .footer-style {
      background: linear-gradient(315deg, #4143ac, #000077);
      height: auto;
@@ -257,27 +281,29 @@ button {
 
 /* IMAGES */
 .hero {
-     background-image: url("./landing.jpg");
+     background-image: url("../restaurant-jf/landing.jpg");
      background-size: cover;
      background-repeat: no-repeat;
 }
-.about-text{
-     background-image: url("./pie.jpg");
-     background-size: contain;
+.about-text {
+     background-image: url("../restaurant-jf/pie.jpg");
+     background-size: cover;
      background-repeat: no-repeat;
-     background-position: -150% 0;
+     /* background-position: -150% 0; */
+     padding: 5rem;
 }
+     .fruit {
+          max-width: 33%;
+          height: 100%;
+     }
 .hours {
-     background-image: url("./muffins.jpg");
+     background-image: url("../restaurant-jf/muffins.jpg");
      background-size: cover;
      background-position: 0 20%;
      background-repeat: no-repeat;
 }
 img {
      max-height: 600px;
-}
-.berries img {
-     padding: auto;
 }
 .reviews img {
      border-radius: 50%;

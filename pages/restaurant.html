@@ -9,16 +9,11 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=El+Messiri:wght@400;500;600;700&family=Great+Vibes&family=Josefin+Sans:ital,wght@0,100;0,300;0,400;0,700;1,100;1,300;1,400;1,700&family=Lavishly+Yours&display=swap" rel="stylesheet">
-    <!-- <link href="../project folders/restaurant-jf/restaurant.css" rel="stylesheet"> -->
-    <link href="../project folders/restaurant-jf/restaurant-updated.css" rel="stylesheet">
+    <link href="../project folders/restaurant-jf/restaurant.css" rel="stylesheet">
+    <!-- <link href="../project folders/restaurant-jf/restaurant-updated.css" rel="stylesheet"> -->
 </head>
 <body>
-    <!-- navbar starts at 50%, 5 items; cart icon, search icon -->
-    <!-- landing, about, specialties, hours, testimonials-->
-    <!-- updated section to header, 
-        changed header to nav, moved ul up one indent,
-        changed section 2 to section '.hero',
-        need to fix original CSS -->
+    <!-- sections: hero, about, specialties, hours, testimonials-->
     <header id="nav" class="header">
         <nav class="navbar">
             <a href="../index.html#one">Portfolio</a>
@@ -34,33 +29,32 @@
         </nav>
     </header>
     
-    <main id="content">
+    <main id="content" class="content">
         <section id="one" class="hero">
-            <h2>Howdy, Partner</h2>
-            <h1>Welcome To<br>Jester & Fjord's<br>Fun Good-Time Cuisine Restaurant</h1> <!-- set width to 70% -->
-            <label for="search">
-                <input type="search" placeholder="Search here"><!-- --><button name="location" id="search">Locations</button>
-            </label>
-            <ul class="socials">
-                <li><i class="fa-brands fa-facebook-f"></i> 252k</li>
-                <li><i class="fa-brands fa-twitter"></i> 62k</li>
-                <li><i class="fa-brands fa-instagram"></i> 55k</li>
-            </ul>
+            <div class="hero-text">
+                <h2 class="messiri-header">Howdy, Partner</h2>
+                <h1 class="lavish-header">Welcome To<br>Jester & Fjord's<br>Fun Good-Time Cuisine Restaurant</h1> <!-- set width to 70% -->
+                <label for="search">
+                    <input type="search" placeholder="Search here"><!-- --><button name="location" id="search">Locations</button>
+                </label>
+                <div class="socials">
+                    <a href="#"><i class="fa-brands fa-facebook-f"></i> 252k</a>
+                    <a href="#"><i class="fa-brands fa-twitter"></i> 62k</a>
+                    <a href="#"><i class="fa-brands fa-instagram"></i> 55k</a>
+                </div>
+            </div>
         </section>
 
         <section id="two" class="about">
-            <section class="about-text"> 
-                <div>
-                    <h2>About Us</h2>
-                    <h1>Our Tasty Story</h1>
-                    <p>Food - food! - is a team endeavor here at J&F Cuisine Restaurant Cafe where we aim to promote the foodstuff industry through the branches of fine ingredients and high skill. Here, we establish our menu and through new dishes integrate between different cultures. Our rich lives of travel and adventure have shown us the myriad wonders of the culinary arts and it is our mission to share morsels of that joy with you.</p>
-                    <p>Oh, and if you see a really weird guy - y'know, kinda tall, big poofy-curly orange hair, usually wears a cool green cape thing, big fan of pranks - tell him we say hello!</p>
-                    <button name="menu">Discover Menu</button>
-                </div>
+            <section class="about-text">
+                <h2 class="lavish-header">About Us</h2>
+                <h1 class="messiri-font">Our Tasty Story</h1>
+                <p>Food - food! - is a team endeavor here at J&F Cuisine Restaurant Cafe where we aim to promote the foodstuff industry through the branches of fine ingredients and high skill. Here, we establish our menu and through new dishes integrate between different cultures. Our rich lives of travel and adventure have shown us the myriad wonders of the culinary arts and it is our mission to share morsels of that joy with you.</p>
+                <p>Oh, and if you see a really weird guy - y'know, kinda tall, big poofy-curly orange hair, usually wears a cool green cape thing, big fan of pranks - tell him we say hello!</p>
+                <button name="menu">Discover Menu</button>
             </section>
-            <section class="berries">
-                <img src="/project folders/restaurant-jf/berries.jpg">
-            </section>
+            
+            <img class="fruit" src="../project folders/restaurant-jf/berries.jpg">
         </section>
 
         <section id="three" class="specialties">
