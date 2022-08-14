@@ -216,6 +216,14 @@ footer a {
           display: flex;
           flex-flow: row nowrap;
           justify-content: space-around;
+          align-items: center;
+          margin: 2rem;
+          background: #eee;
+          border-radius: 10px;
+     }
+     .specialties li {
+          padding: 1rem 2rem;
+          text-align: center;
      }
 .hours-background,
 .reviews {
