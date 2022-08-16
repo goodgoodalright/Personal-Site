@@ -47,11 +47,16 @@
 
         <section id="two" class="about">
             <section class="about-text">
-                <h2 class="lavish-header">About Us</h2>
-                <h1 class="messiri-font">Our Tasty Story</h1>
-                <p>Food - food! - is a team endeavor here at J&F Cuisine Restaurant Cafe where we aim to promote the foodstuff industry through the branches of fine ingredients and high skill. Here, we establish our menu and through new dishes integrate between different cultures. Our rich lives of travel and adventure have shown us the myriad wonders of the culinary arts and it is our mission to share morsels of that joy with you.</p>
-                <div>
-                    <button name="menu">Discover Our Menu</button> <!-- TODO: start centered, hover to reveal p, flexible size-->
+                <div class="about-top">
+                    <div>
+                        <h2 class="lavish-header">About Us</h2>
+                        <h1 class="messiri-font">Our Tasty Story</h1>
+                    </div>
+                    <p class="vibes-font">Food is life here at<br>J&F Cuisine Restaurant Cafe!</p>
+                </div>
+                <p>We aim to please through fine ingredients and high skill.<br>Our award-winning menu is curated from years of trying new dishes as we traveled the world.<br>These adventures have shown us the myriad wonders of the culinary arts and it is our mission to share them with you.
+                <div class="about-bottom">
+                    <button name="menu" class="messiri-small">Discover Our Menu</button> <!-- TODO: start centered, hover to reveal p, flexible size-->
                     <p class="vibes-font">Oh, and if you see a really weird guy - y'know, kinda tall, big poofy-curly orange hair and long pointy ears, usually wears a cool green cape, big fan of pranks - tell him we say hello!</p>
                 </div>
             </section>
@@ -60,14 +65,46 @@
         <section id="three" class="specialties">
             <h2 class="lavish-header">Order Online Now</h2>
             <h1 class="messiri-font">Our Specialty Cuisine</h1>
-            <nav> <!-- TODO: CAROUSEL -->
-                <ul>
+            <nav class="slideshow-container"> <!-- TODO: CAROUSEL -->
+                <div class="my-slides fade">
+                    <span class="slideshow-number">1 / 5</span>
+                    <img src="../project folders/restaurant-jf/spread.jpg">
+                    <span class="slideshow-text">Caption One</span>
+                </div>
+                <div class="my-slides fade">
+                    <span class="slideshow-number">2 / 5</span>
+                    <img src="../project folders/restaurant-jf/eggtoast.jpg">
+                    <span class="slideshow-text">Caption Two</span>
+                </div>
+                <div class="my-slides fade">
+                    <span class="slideshow-number">3 / 5</span>
+                    <img src="../project folders/restaurant-jf/bowl.jpg">
+                    <span class="slideshow-text">Caption Three</span>
+                </div>
+                <div class="my-slides fade">
+                    <span class="slideshow-number">4 / 5</span>
+                    <img src="../project folders/restaurant-jf/bowl.jpg">
+                    <span class="slideshow-text">Caption Four</span>
+                </div>
+                <div class="my-slides fade">
+                    <span class="slideshow-number">5 / 5</span>
+                    <img src="../project folders/restaurant-jf/bowl.jpg">
+                    <span class="slideshow-text">Caption Five</span>
+                </div>
+                <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+                <a class="next" onclick="plusSlides(1)">&#10095;</a>
+                <div>
+                    <span class="dot" onlick="currentSlide(1)"></span>
+                    <span class="dot" onlick="currentSlide(2)"></span>
+                    <span class="dot" onlick="currentSlide(3)"></span>
+                </div>
+                <!-- <ul>
                     <li>Breakfast</li>
                     <li>Lunch</li>
                     <li>Dinner</li>
                     <li>Dessert</li>
                     <li>Drinks</li>
-                </ul>
+                </ul> -->
             </nav>
             <!-- 2 rows of 4 that cycle between 2-5 pages -->
             <!-- each li has a different set of these rows -->
