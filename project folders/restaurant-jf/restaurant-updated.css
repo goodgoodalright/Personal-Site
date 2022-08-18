@@ -256,6 +256,7 @@ footer a {
      align-items: center;
      width: 100%;
      padding: 2rem 0;
+     background: linear-gradient(rgba(255, 255, 255, .9) 0%, rgba(225, 225, 225, .8) 50%, rgba(225, 225, 225, .7) 100%);
 }
      .slideshow-container {
           max-width: 70%;
@@ -289,10 +290,11 @@ footer a {
                background-color: rgba(0, 0, 0, 0.8);
           }
           .slideshow-text {
-               color: #f2f2f2;
+               color: #ff8800;
+               background: rgba(255, 255, 255, .5);
                padding: 0.5rem 1rem;
-               position: absolute;
-               bottom: .5rem;
+               position: relative;
+               bottom: 0.5rem;
                width: 100%;
                text-align: center;
           }
