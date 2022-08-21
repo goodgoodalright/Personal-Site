@@ -110,6 +110,9 @@ body {
      font-size: 1.5rem;
      font-weight: 500;
 }
+.italic-text {
+     font-style: italic;
+}
      .hours h2 {
           font-weight: 500;
      }
@@ -135,12 +138,6 @@ footer a {
 .hours i,
 .reviews i {
      color: #ff8800;
-}
-.reviews {
-     font-style: italic;
-}
-.testimonials * {
-     padding-top: 1rem; /* from .testimonials h5 & span & p */
 }
 
 /* STRUCTURE */
@@ -339,16 +336,9 @@ footer a {
           padding: 1rem 2rem;
           text-align: center;
      } */
-.hours-background,
-.reviews {
+.hours {
      display: flex;
-     flex-flow: column wrap;
-     justify-content: space-between;
-     align-content: center;
-     align-items: center;
-     text-align: center;
-     width: 50%;
-     margin: 2rem 0;
+     justify-content: center;
 }
      .hours-background {
           background: rgba(255, 255, 255, 0.6);
@@ -361,9 +351,16 @@ footer a {
           justify-content: space-evenly;
           height: 6rem;
      }
-     .hours {
+     .hours-background,
+     .reviews {
           display: flex;
-          justify-content: center;
+          flex-flow: column wrap;
+          justify-content: space-between;
+          align-content: center;
+          align-items: center;
+          text-align: center;
+          width: 50%;
+          margin: 2rem 0;
      }
 .times {
      display: flex;
@@ -375,16 +372,25 @@ footer a {
      .times div {
           width: 55%;
      }
-.testimonials {
-     display: flex;
-     flex-flow: column nowrap;
-     justify-content: space-around;
-     align-items: center;
-     width: 60%;
-}
 .reviews {
      width: 100%;
+     background: linear-gradient(to bottom, rgba(255, 255, 255, .9), rgba(255, 255, 255, 0.3));
 }
+     .reviews h2, .reviews h1 {
+          padding: .33rem 0;
+     }
+     .testimonials {
+          display: flex;
+          flex-flow: column nowrap;
+          justify-content: space-around;
+          align-items: center;
+          width: 50%;
+          padding: 1rem 2rem;
+          background: linear-gradient(to bottom, rgba(255, 255, 255, 0.9) 0%, rgba(255, 255, 255, 0.9) 55%, rgba(30, 30, 255, 0.6) 100%);
+     }
+     .testimonials * {
+          padding: .33rem 0;
+     }
 
 /* APPEARANCES */
 /* body {
