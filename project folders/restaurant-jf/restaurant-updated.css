@@ -159,6 +159,7 @@ footer a {
           padding: 1rem 3rem;
           margin-right: 2rem;
           overflow: hidden;
+          z-index: 3;
      }      /* removed .nav {position: relative;} */
      .sticky {
           position: fixed;
