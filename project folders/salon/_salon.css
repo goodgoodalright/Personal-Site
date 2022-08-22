@@ -52,15 +52,39 @@ body {
      font-size: 16px;
 }
 h1 {
+     font-family: "Cinzel", sans-serif;
      font-size: 4rem;
 }
 h2 {
      font-family: "Dancing Script", sans-serif;
      text-transform: none;
      font-weight: 700;
+     font-size: 1.75rem;
+}
+h3 {
+     font-family: "Dancing Script", sans-serif;
+     text-transform: none;
+     font-weight: 600;
      font-size: 1.5rem;
 }
-
+     /* .services h3,
+     .featured h1,
+     .featured p {
+          padding: 1rem 0;
+     }
+     .featured h1 {
+          font-size: 2.5rem;
+          font-weight: 500;
+     }
+     .services h3 {
+          font-size: 1.25rem;
+          font-weight: 700;
+     }
+     */
+p {
+     font-family: "Montserrat", sans-serif;
+     text-transform: none;
+}
 u {
      font-weight: 700;
      font-size: 2.5rem;
@@ -74,10 +98,6 @@ em {
 .plus-button {
      font-family: "Cinzel", sans-serif;
 }
-p {
-     font-family: "Montserrat", sans-serif;
-     text-transform: none;
-}
 a,
 .footer a {
      text-decoration: none;
@@ -86,7 +106,10 @@ a,
           color: #ff8800;
           transition: all 0.5s ease-in-out;
      }
+
 /* STRUCTURE */
+
+
 .footer {
      background: linear-gradient(315deg, #4143ac, #000077);
      height: auto;
