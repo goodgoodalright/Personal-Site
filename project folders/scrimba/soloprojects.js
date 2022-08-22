@@ -28,7 +28,7 @@ function closeContents() {
 
 // STOPWATCH - https://www.foolishdeveloper.com/2021/10/simple-stopwatch-using-javascript.html
 let [ms, sec, min, hrs] = [0,0,0,0];
-let timerRef = document.getElementById('stopwatch-time');  
+let timerRef = document.querySelector('stopwatch-time');  
 let int = null;
 // split time between Number(timer.substring(0, 2)), (3, 5), (6, 8), (9, 11)
 document.getElementById('start-stopwatch').addEventListener('click', () => {
@@ -188,83 +188,61 @@ calculatorKeys.addEventListener('click', (event) => { // access the clicked elem
     updateResult();
 })
 
+// AGE CHECKER
+var ageResponse = document.querySelector('ageCheckText'); 
+var ageInput = document.querySelector('ageCheckerInput'); 
+ageInput.addEventListener('input', checkAge); 
+function checkAge() {
+    var ageCheckerAge = Number(ageInput.value);
+    if (ageCheckerAge < 16) {
+        ageResponse.textContent = 'You can\'t drive.';
+    } else if (ageCheckerAge < 18) {
+        ageResponse.textContent = 'Old 2011 music reference, look at me now.';
+    } else if (ageCheckerAge < 21) {
+        ageResponse.textContent = 'Okay, but you can\'t drink.';
+    } else if (ageCheckerAge < 25) {
+        ageResponse.textContent = 'I bet you chose between cocaine and Ubering tonight.';
+    } else if (ageCheckerAge < 30) {
+        ageResponse.textContent = 'It never stops.';
+    } else if (ageCheckerAge >= 30) {
+        ageResponse.textContent = 'Live while you can.';
+    } else {
+        ageResponse.textContent = 'How old are you?';
+        console.log(ageCheckerAge);
+    }
+}
 
+// TEMP CONVERT
+document.querySelector('tempInput').addEventListener('input', tempConvert)
+function tempConvert() {
+    let tempGiven = Number(document.querySelector('tempInput').value);
+    let temp = tempGiven * 1.8 + 32
+    document.querySelector('tempText').innerText = temp;
+};
 
-
-// let contentTable = document.getElementById('contents')
-// let projContain = document.getElementsByClassName('project-container')
-// let project = document.getElementsByClassName('project')
-// function updateCT(arr) {
-//     let list = [...arr];
-//     do {
-        
-//         list.shift()
-//     } while (list.length > 0)
-// }
-// console.log(project);
-// console.log(projContain);
-// updateCT(project);
-
-// Table Update Functionality
-// https://www.htmlgoodies.com/html5/updating-html-table-content-using-javascript/
-
-// document.addEventListener("DOMContentLoaded", () => {
-//     let table = document.querySelector('contents')
-//     table.getCellTextAt = function(rowIndex, colIndex) {
-//         return this.find('tr:eq(' + rowIndex + ') t' + (rowIndex == 0 ?  "h" : "d") + ':eq(' + colIndex + ')').text(); 
-//     };
-//     table.getCellContentsAt = function(rowIndex, colIndex) {
-//         return this.find('tr:eq(' + rowIndex + ') t' + (rowIndex == 0 ?  "h" : "d") + ':eq(' + colIndex + ')').html(); 
-//     };
-//     table.setCellContentsAt = function(rowIndex, colIndex, newContents) {
-//         this.find('tr:eq(' + rowIndex + ') t' + (rowIndex == 0 ?  "h" : "d") + ':eq(' + colIndex + ')').html('').append(newContents);
-//     };
-//     table.setCellTextAt = function(rowIndex, colIndex, newText) {
-//         this.find('tr:eq(' + rowIndex + ') t' + (rowIndex == 0 ?  "h" : "d") + ':eq(' + colIndex + ')').text(newText);
-//     };
-//     table.findAndReplace = function(search, replace, options) {
-//     //set default options
-//     var first                  = false,
-//         exact                  = false,
-//         caseSensitive          = false,
-//         replaceMatchedTextOnly = false;
-//     //override option defaults
-//     if (options) {
-//         if (options['first']) first = !!options['first'];
-//         if (options['exact']) exact = !!options['exact'];
-//         if (options['caseSensitive']) 
-//         caseSensitive = !!options['caseSensitive'];
-//         if (options['replaceMatchedTextOnly']) 
-//         replaceMatchedTextOnly = !!options['replaceMatchedTextOnly'];
-//     }
-//     var matches;
-//     if (exact) {
-//         if (!caseSensitive) {
-//         matches = $("td").filter(function() {
-//             return $(this).text().trim().toLowerCase() == search.toLowerCase();
-//         });  
-//         }
-//         else {
-//         //escape single quotes
-//         matches = $("td:contains('" + search.replace(/'/g,'\$1') + "')");
-//         }
-//     }
-//     else {
-//         matches = $("td").filter(function() {
-//             var match = $(this).text().trim();
-//             if (!caseSensitive) {
-//             search = search.toLowerCase();
-//             match  = match.toLowerCase();
-//             }
-//             return match.indexOf(search) != -1;
-//         });
-//     }
-//     if (first) matches = matches.first();
-//     if (replaceMatchedTextOnly) replace = matches.text().replace(search, replace);
-
-//     matches.text(replace);
-
-//     return matches;
-//     };
-// end Table Update Functionality; wrapped in DOMContentLoaded listener
-// });
+// MAGIC NUMBER CUBE
+function differenceAlert(s, t) {
+    alert(Math.max(s, t) - Math.min(s, t));
+}
+function division(x, y, z) {
+    console.log(x / y / z);
+}
+function multiplication(j, k, l) {
+    return j * k * l;
+}
+function compression(m, n, o) {
+    let p = m + n;
+    return p % o;
+}
+function wizardry(a, b, c, d) {
+    let e = a * b;
+    let f = c + d;
+    if (e > 100) {
+        console.log(e + f)
+    } else if (e < 100) {
+        console.log(Math.max(c, d) - Math.min(c, d));
+    } else if (e === 100) {
+        alert((a * b * c) % d);
+    }
+    console.log(a, b, c, d, e, f, (Math.max(c, d) - Math.min(c, d)))
+}

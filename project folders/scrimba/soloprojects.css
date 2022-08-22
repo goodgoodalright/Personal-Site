@@ -238,15 +238,15 @@ header,
             color: #333;
             padding: 1rem;
         }
-    .stopwatch .buttons {
+    .stopwatch-buttons {
         width: 100%;
         display: flex;
         justify-content: space-around;
     }
-        .stopwatch .buttons button:nth-last-child(2) {
+        .stopwatch-buttons button:nth-last-child(2) {
             background: #d23332;
         }
-        .stopwatch .buttons button:nth-last-child(1) {
+        .stopwatch-buttons button:nth-last-child(1) {
             background: #20b380;
         }
     .stopwatch button {

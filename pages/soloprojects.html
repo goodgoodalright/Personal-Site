@@ -33,12 +33,12 @@
             <h1 onclick="openContents()" class="open-contents">Table of Contents</h1>
         </header>
 
-        <section class="project-container">
-            <h2 id="clockstopper">Stopwatch</h2>
+        <section class="stopwatch-container project-container">
+            <h2>Stopwatch</h2>
             <section class="stopwatch project">
                 <p>Clockstopper</p>
-                <span id="stopwatch-time">00:00:00:000</span>
-                <div class="buttons">
+                <span class="stopwatch-time">00:00:00:000</span>
+                <div class="stopwatch-buttons">
                     <button id="start-stopwatch">Start</button>
                     <button id="stop-stopwatch">Stop</button>
                     <button id="reset-stopwatch">Reset</button>
@@ -46,34 +46,35 @@
             </section>
         </section>
 
-        <section class="project-container">
-            <h2 id="el-reloj">El Reloj</h2>
+        <section class="clock-container project-container">
+            <h2>El Reloj</h2>
             <section class="clock project">
                 <p>Current Time</p>
                 <div id="clock-display" onload="showTime()"></div>
             </section>
         </section>
 
-        <section class="project-container">
-            <h2 id="ti-69">Calculator</h2>
+        <section class="calculator-container project-container">
+            <h2>Calculator</h2>
             <section class="calculator project">
                 <section class="calc-body">
                     <input type="text" class="calc-result" value="" disabled>
                     <div class="calc-btn">
+                        <!-- .calcbtn: (.calc-top, .calc-num, .calc-decimal) and the two buttons (IDs, not classes) for = and AC--> 
                         <button type="button" class="calc-top operator" value="+">+</button>
                         <button type="button" class="calc-top operator" value="-">-</button>
                         <button type="button" class="calc-top operator" value="*">&times;</button>
                         <button type="button" class="calc-top operator" value="/">&divide;</button>
-                        <button type="button" value="7">7</button>
-                        <button type="button" value="8">8</button>
-                        <button type="button" value="9">9</button>
-                        <button type="button" value="4">4</button>
-                        <button type="button" value="5">5</button>
-                        <button type="button" value="6">6</button>
-                        <button type="button" value="1">1</button>
-                        <button type="button" value="2">2</button>
-                        <button type="button" value="3">3</button>
-                        <button type="button" value="0">0</button>
+                        <button type="button" value="7" class="calc-num">7</button>
+                        <button type="button" value="8" class="calc-num">8</button>
+                        <button type="button" value="9" class="calc-num">9</button>
+                        <button type="button" value="4" class="calc-num">4</button>
+                        <button type="button" value="5" class="calc-num">5</button>
+                        <button type="button" value="6" class="calc-num">6</button>
+                        <button type="button" value="1" class="calc-num">1</button>
+                        <button type="button" value="2" class="calc-num">2</button>
+                        <button type="button" value="3" class="calc-num">3</button>
+                        <button type="button" value="0" class="calc-num">0</button>
                         <button type="button" value="." class="calc-decimal">.</button>
                         <button type="button" value="all-clear" id="calc-clear">AC</button>
                         <button type="button" value="=" id="calc-equals" class="operator">=</button>
@@ -89,6 +90,35 @@
             </section>
 
         </section>
+        
+        <section class="project-container">
+            <h2 id="superReview">Leon Super Review</h2>
+            <section class="ageCheck project">
+                <input class="ageCheckInput" type="text" name="" value="">
+                <h3>Hold up, let me see some ID.</h3>
+                <p class="ageCheckText"></p>
+            </section>
+
+            <section class="tempConvert project">
+                <input class="tempInput" type="number" name="" value="">
+                <h3>Celsi-sucks! Gimme Fahrenheit!</h3>
+                <p class="tempText"></p>
+            </section>
+            
+            <section class="magicCube project">
+                <!-- 
+
+                -->
+
+            </section>
+
+            <section class=" project">
+               
+                
+            </section>
+
+        </section>
+
         <footer>
             <a class="scroll-to-top" href="#top" id="footer"><i class="fa-solid fa-angles-up"></i></a>
         </footer>
