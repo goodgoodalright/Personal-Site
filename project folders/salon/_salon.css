@@ -43,8 +43,41 @@ table {
 	border-collapse: collapse;
 	border-spacing: 0;
 }
-
+/* end of reset */
 /* TEXT */
+body {
+     font-family: "Cinzel", Helvetica, sans-serif;
+     text-transform: uppercase;
+     font-weight: 400;
+     font-size: 16px;
+}
+h1 {
+     font-size: 4rem;
+}
+h2 {
+     font-family: "Dancing Script", sans-serif;
+     text-transform: none;
+     font-weight: 700;
+     font-size: 1.5rem;
+}
+
+u {
+     font-weight: 700;
+     font-size: 2.5rem;
+}
+em {
+     font-style: italic;
+}
+.booking,
+.featured-button,
+.about-button,
+.plus-button {
+     font-family: "Cinzel", sans-serif;
+}
+p {
+     font-family: "Montserrat", sans-serif;
+     text-transform: none;
+}
 a,
 .footer a {
      text-decoration: none;
