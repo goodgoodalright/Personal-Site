@@ -243,13 +243,13 @@ header,
         display: flex;
         justify-content: space-around;
     }
-        .stopwatch-buttons button:nth-last-child(2) {
+        .stopwatch-buttons:nth-last-child(2) {
             background: #d23332;
         }
-        .stopwatch-buttons button:nth-last-child(1) {
+        .stopwatch-buttons:nth-last-child(1) {
             background: #20b380;
         }
-    .stopwatch button {
+    .stopwatch-buttons {
         width: 30%;
         height: auto;
         padding: 0.8rem;
@@ -260,7 +260,6 @@ header,
         border-radius: 5%;
         cursor: pointer;
     }
-
 .clock {
     font: 300 1.5rem 'Roboto mono', monospace;
     color: #fff;
@@ -293,6 +292,12 @@ header,
                 5px 8px 5px 0 #44ff76,
                 2px 5px 8px 0 #448aff;
     }
+.ageCheck {
+    background: rgba(68, 255, 118, 0.5);
+}
+.tempConvert {
+    background:rgba(68, 138, 255, 0.5);
+}
 .calc-body {
     display: flex;
     flex-flow: column wrap;

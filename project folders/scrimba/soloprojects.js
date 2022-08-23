@@ -13,12 +13,13 @@ const scrollUp = function() {
 window.addEventListener('scroll', scrollUp);
 
 // Table of Contents
+
 function openContents() {
     document.getElementById("contents").style.width = "400px";
     document.getElementById("contents").style.padding = "1rem";
     document.getElementById("main").style.marginRight = "2rem";
     console.log('opened');
-}
+} // set up classes, change to TOGGLE
 function closeContents() {
     document.getElementById("contents").style.width = "0";
     document.getElementById("contents").style.padding = "0";
