@@ -91,24 +91,50 @@
         </section>
         
         <section class="superReview-container project-container">
-            <h2 id="superReview">Leon Super Review</h2>
+            <h2>Leon Super Review</h2>
+
             <section class="ageCheck project">
                 <input class="ageCheckInput" type="text" name="ageCheckInput" value="">
                 <h3>Hold up, let me see some ID.</h3>
                 <p class="ageCheckText"></p>
             </section>
+
             <section class="tempConvert project">
                 <input class="tempInput" type="number" name="tempInput" value="">
                 <h3>Celsi-sucks! Gimme Fahrenheit!</h3>
                 <p class="tempText"></p>
             </section>
-            <section class="magicCube project">
-                <!-- 
-                    collect up to four numbers
-                    store function responses as local variables
-                    manipulate variables
-                -->
 
+            <section class="magicCube project">
+                <div class="mCube-input">
+                    <input type="number" name="num1" class="num1 mCube-num" value="">
+                    <input type="number" name="num2" class="num2 mCube-num" value="">
+                    <input type="number" name="num3" class="num3 mCube-num" value="">
+                    <input type="number" name="num4" class="num4 mCube-num" value="">
+                </div>
+                <button name="numRandom">Randomize the Rest</button>
+                <!-- make the button fade in or out if inputs missing -->
+                <h3 class="mCube-click">Click for Magic!</h3>
+                <div class="mCube-operands">
+                    <span class="mCube-differences"></span>
+                </div>
+                <!-- 
+                    HTML
+                    section 1: input up to 4 numbers
+                    section 2: choices
+                    section 3: more choices
+                    section 4: final result
+                    sections to add: ?
+
+                    CSS
+                    magic 8 ball, but a cube / Casio calc watch
+
+                    JS
+                    collect up to four numbers, randomize missing
+                    click to run functions on operands
+                    store function responses as local variables
+                    manipulate variables with second set of operators
+                -->
             </section>
 
             <section class=" project">

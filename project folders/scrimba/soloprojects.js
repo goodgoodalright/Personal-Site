@@ -13,17 +13,17 @@ const scrollUp = function() {
 window.addEventListener('scroll', scrollUp);
 
 // Table of Contents
-
+var contentsTable = document.querySelector('contents')
 function openContents() {
-    document.getElementById("contents").style.width = "400px";
-    document.getElementById("contents").style.padding = "1rem";
-    document.getElementById("main").style.marginRight = "2rem";
+    contentsTable.style.width = "400px";
+    contentsTable.style.padding = "1rem";
+    document.querySelector('main').style.marginRight = "2rem";
     console.log('opened');
 } // set up classes, change to TOGGLE
 function closeContents() {
-    document.getElementById("contents").style.width = "0";
-    document.getElementById("contents").style.padding = "0";
-    document.getElementById("main").style.marginRight = "0";
+    contentsTable.style.width = "0";
+    contentsTable.style.padding = "0";
+    document.querySelector("main").style.marginRight = "0";
     console.log('closed')
 }
 
@@ -164,6 +164,7 @@ function updateResult() {
 updateResult();
 
 const calculatorKeys = document.querySelector('.calc-btn');
+// const calcButtons = Array.from.calculatorKeys.forEach(addEventListener('click', (event) => { COPY BELOW CODE }));
 calculatorKeys.addEventListener('click', (event) => { // access the clicked element
     const {target} = event;
     const {value} = target;
@@ -221,29 +222,51 @@ function tempConvert() {
     document.querySelector('tempText').innerText = temp;
 };
 
-// MAGIC NUMBER CUBE
-function differenceAlert(s, t) {
-    alert(Math.max(s, t) - Math.min(s, t));
-}
-function division(x, y, z) {
-    console.log(x / y / z);
-}
-function multiplication(j, k, l) {
-    return j * k * l;
-}
-function compression(m, n, o) {
-    let p = m + n;
-    return p % o;
-}
-function wizardry(a, b, c, d) {
-    let e = a * b;
-    let f = c + d;
-    if (e > 100) {
-        console.log(e + f)
-    } else if (e < 100) {
-        console.log(Math.max(c, d) - Math.min(c, d));
-    } else if (e === 100) {
-        alert((a * b * c) % d);
+// MAGIC CUBE / Magic Number Cube
+var num1 = document.querySelector('num1');
+var num2 = document.querySelector('num2');
+var num3 = document.querySelector('num3');
+var num4 = document.querySelector('num4');
+var mCube = [Number(num1), Number(num2), Number(num3), Number(num4)];
+
+var numRandom = document.querySelector('numRandom');
+// needs randomizing function
+numRandom.addEventListener('click', (event) => {
+    
+    for (let i = 0; i < mCube.length; i++) {
+        if(mCube[i] === "") {
+            mCube[i] = Math.random();
+        }
     }
-    console.log(a, b, c, d, e, f, (Math.max(c, d) - Math.min(c, d)))
-}
+});
+
+document.querySelector('mCube-click').addEventListener('click', (event) => {
+    let arr = [...mCube].sort();
+    function reduction() {
+        return arr.reduce((a, b) => a - b, 0);
+    }
+    function division() {
+        return arr.reduce((a, b) => a / b, 1);
+    }
+    function multiplication() {
+        return arr.reduce((a, b) => a * b, 1);
+    }
+    function compression() {
+        return arr.reduce((a, b) => a % b, 1);
+    }
+    function wizardry() {
+        let e = arr[0] * arr[1];
+        let f = arr[2] + arr[3];
+        let g = Math.abs(arr[0] - arr[3]) - Math.abs(arr[1] - arr[2]);
+        if (e > 100) {
+            return (e + f)
+        } else if (e < 100) {
+            return g;
+        } else if (e === 100) {
+            return (arr[0] * arr[1] * arr[2]) % arr[3];
+        } else {
+            console.log(...arr, e, f, g);
+        }
+    }
+    console.log(...arr);
+});
