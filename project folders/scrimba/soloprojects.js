@@ -13,7 +13,7 @@ const scrollUp = function() {
 window.addEventListener('scroll', scrollUp);
 
 // Table of Contents
-var contentsTable = document.querySelector('contents')
+var contentsTable = document.querySelector('.contents')
 function openContents() {
     contentsTable.style.width = "400px";
     contentsTable.style.padding = "1rem";
@@ -191,35 +191,39 @@ calculatorKeys.addEventListener('click', (event) => { // access the clicked elem
 })
 
 // AGE CHECKER
-var ageResponse = document.querySelector('ageCheckText'); 
-var ageInput = document.querySelector('ageCheckerInput'); 
-ageInput.addEventListener('input', checkAge); 
+document.querySelector('.ageCheckInput').addEventListener('input', checkAge);
 function checkAge() {
-    var ageCheckerAge = Number(ageInput.value);
-    if (ageCheckerAge < 16) {
-        ageResponse.textContent = 'You can\'t drive.';
-    } else if (ageCheckerAge < 18) {
-        ageResponse.textContent = 'Old 2011 music reference, look at me now.';
-    } else if (ageCheckerAge < 21) {
-        ageResponse.textContent = 'Okay, but you can\'t drink.';
-    } else if (ageCheckerAge < 25) {
-        ageResponse.textContent = 'I bet you chose between cocaine and Ubering tonight.';
-    } else if (ageCheckerAge < 30) {
-        ageResponse.textContent = 'It never stops.';
-    } else if (ageCheckerAge >= 30) {
-        ageResponse.textContent = 'Live while you can.';
+    let age = Number(document.querySelector('.ageCheckInput').value);
+    let response = document.querySelector('.ageCheckText'); 
+    if (age === 0) {
+        response.textContent = 'Whoa, a talking baby!'
+    } else if (age < 16) {
+        response.textContent = 'You can\'t drive, let alone drink.';
+    } else if (age < 18) {
+        response.textContent = 'Old 2011 music reference - look at me now.';
+    } else if (age < 21) {
+        response.textContent = 'Fine, come in, but you can\'t drink.';
+    } else if (age < 25) {
+        response.textContent = 'I bet you had to choose between cocaine and Uber tonight.';
+    } else if (age < 30) {
+        response.textContent = 'It never stops. But aye, there\'s the rub!';
+    } else if (age < 40) {
+        response.textContent = 'Live while you can.';
+    } else if (age < 50) {
+        response.textContent = 'Hey, you\'re back! Kept \'em waitin\', huh?';
+    } else if (age >= 60) {
+        response.textContent = 'Round and round it goes...';
     } else {
-        ageResponse.textContent = 'How old are you?';
-        console.log(ageCheckerAge);
+        console.log(checkAge());
     }
-}
+};
 
 // TEMP CONVERT
-document.querySelector('tempInput').addEventListener('input', tempConvert)
+document.querySelector('.tempInput').addEventListener('input', tempConvert)
 function tempConvert() {
-    let tempGiven = Number(document.querySelector('tempInput').value);
+    let tempGiven = Number(document.querySelector('.tempInput').value);
     let temp = tempGiven * 1.8 + 32
-    document.querySelector('tempText').innerText = temp;
+    document.querySelector('.tempText').textContent = temp;
 };
 
 // MAGIC CUBE / Magic Number Cube
