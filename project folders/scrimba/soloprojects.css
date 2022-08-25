@@ -371,16 +371,32 @@ footer {
     padding: 1.5rem;
     background: #2DC653;
     transition: all .5s ease-in-out;
+    flex-flow: row wrap;
+    justify-content: space-evenly;
+    width: auto;
 }
     .mCube-input {
         margin: 0.33rem;
         padding: 0.33rem;
         display: flex;
-        flex-flow: row nowrap;
-
-    }
-    .mCube button {
+        flex-flow: row wrap;
+        justify-content: space-evenly;
+        align-content: space-between;
+        text-align: center;
         width: 60%;
+    }
+    .mCube-input input {
+        margin: 3px;
+        text-align: center;
+        color: #000;
+    }
+    .mCube-click {cursor: pointer;}
+    .mCube .numrandom {width: auto;}
+    .mCube .numRandom button {
+        height: 1.25rem;
+        padding: 1rem;
+        box-shadow: 3px 3px 3px #000;
+        background: rgba(0, 0, 0, 0.5);
     }
 .calc-body {
     width: 60%;

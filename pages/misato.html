@@ -4,38 +4,40 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="/project folders/scrimba/reset.css" rel="stylesheet">
-    <link href="/project folders/scrimba/misato.css" rel="stylesheet">
+    <link href="../project folders/scrimba/reset.css" rel="stylesheet">
+    <!-- <link href="/project folders/scrimba/misato.css" rel="stylesheet"> -->
+    <link href="../project folders/scrimba/misatonew.css" rel="stylesheet">
     <title>Yebisu Calculator</title>
 </head>
 <body>
     <header>
-        <a href="index.html#one">Back to Home</a>
-        <a href="soloprojects.html">Return to Projects</a>
+        <a href="../index.html#one">Home</a>
+        <a href="../soloprojects.html">Portfolio</a>
     </header> 
-    <h2 class="two-column">
-        <img src="/project folders/scrimba/assets/Misato.jfif" alt="Misato Katsuragi sharing Yebisu beer">
-        <div class="right-column">
-            <div class="results">
-                <h1 id="original">Count: <span id="countElement">0</span></h1>
-                <h1 id="results"></h1>
+    <main>
+        <div class="col-container">
+            <div class="col-left">
+                <!-- <img src="../project folders/scrimba/assets/Misato.jfif" alt="Misato Katsuragi sharing Yebisu beer" class="img"> -->
             </div>
-            <div class="buttons">
-                <button class="button" id="eventButton" onclick="increment()">Chug!</button>
-                <button class="button" id="saveButton" onclick="save()">Tap Out</button>
-                <button class="button" id="resetButton" onclick="reset()">I'm buying next!</button>
-            </div>
-            <div id="score">
-                <ul>
-                <li>Misato: <span id="herScore"></span></li> 
-                <li>You: <span id="yourScore"></span></li> 
-                <br>
-                <li>That's <span id="total">0</span> crumpled cans of Yebisu.</li>
-                <li id="flavor"></li>
-                </ul>
+            <div class="col-right">
+                <div class="results">
+                    <h1>Count: <span id="countElement">0</span></h1>
+                    <h1 class="results"></h1>
+                </div>
+                <div class="buttons">
+                    <button class="button" id="eventButton" onclick="increment()">Chug!</button>
+                    <button class="button" id="saveButton" onclick="save()">Tap Out</button>
+                    <button class="button" id="resetButton" onclick="reset()">I'm buying next!</button>
+                </div>
+                <div class="score col-container">
+                    <h2>Misato: <span id="mScore"></span></h2>
+                    <h2>You: <span id="pScore"></span></h2>
+                    <h2>That's <span id="total">0</span> crumpled cans of Yebisu.</h2>
+                    <p id="flavor"></p>
+                </div>
             </div>
         </div>
-    </h2>
-    <script src="/project folders/scrimba/misato.js"></script>
+    </main>
+    <script src="./project folders/scrimba/misato.js"></script>
 </body>
 </html>
