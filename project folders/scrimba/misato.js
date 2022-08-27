@@ -1,6 +1,6 @@
-var currentCount = document.querySelector(".count");
-var original = document.querySelector(".original");
+var img = document.querySelector(".img");
 var results = document.querySelector(".results");
+var count = document.querySelector(".count");
 var text = document.querySelector(".resultsText");
 var buttons = document.querySelector(".buttons");
 var button = document.querySelector(".button");
@@ -19,50 +19,54 @@ document.getElementById('saveButton').addEventListener('click', save);
 document.getElementById('resetButton').addEventListener('click', reset);
 // TODO: CLEAR BUTTON
 
-let count = 0;
-let previousRound = 0;
+let previous = 0; // next round
+let pScore = 0; // player's score
 
 function increment() {
-    count = count + 1;
-    currentCount.textContent = count;
-    console.log(count);
+    pScore = pScore + 1;
+    count.textContent = pScore;
 }
+
 function save() {
-    let newCount = Math.floor(count*2.2) // total beers
-    let herScore = newCount - count; // Misato's score
-    previousRound = previousRound + newCount; // round sum
+    let round = Math.floor(Number(count.textContent) * 2.2); // beers per round
+    let mScore = Number(round) - Number(pScore); // Misato's score
+    previous = previous + round; // round sum
+    total.textContent = previous; // sum text
+    text.textContent = `The two of you drank ${round} beers in one sitting!`; // message
+
     if (misato.textContent === "") {
-        misato.textContent = herScore;
-        you.textContent = count;
+        misato.textContent = mScore;
+        you.textContent = pScore;
     } else {    
-        misato.textContent += " - " + herScore; // Misato text
-        you.textContent += " - " + count; // Your text
+        misato.textContent += " - " + mScore; // Misato text
+        you.textContent += " - " + pScore; // Your text
     }
-    total.textContent = previousRound; // sum text
-    results.textContent = `The two of you drank ${newCount} beers in one sitting!`;// message
-    results.style.display = "block";
-    original.style.display = "none"; // swap top message
     switch (true) {
-        case (previousRound >= 48): 
+        case (previous >= 48): 
             flavor.textContent = "Allshrigh' in tha wurl...";
             break;
-        case (previousRound < 48 && previousRound >= 36):
+        case (previous < 48 && previous >= 36):
             flavor.textContent = "[bad karaoke of Fly Me To The Moon]";
             break;
-        case (previousRound < 36 && previousRound >= 24):
+        case (previous < 36 && previous >= 24):
             flavor.textContent = "Just another day at NERV.";
             break;
-        case (previousRound < 24 && previousRound >= 12): 
+        case (previous < 24 && previous >= 12): 
             flavor.textContent = "Huh? Anta baka.";
             break;
         default:
             flavor.textContent = "Pathetic.";
     }
+    pScore = 0;
+    round = 0;
+    count.textContent = '0';
 }
 function reset() {
     text.textContent = "";
-    currentCount.textContent = 0;
-    count = 0;
+    mScore = 0;
+    pScore = 0;
+    round = 0;
+    count.textContent = 0;
 }
     
     
