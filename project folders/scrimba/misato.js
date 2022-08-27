@@ -57,15 +57,12 @@ function save() {
         default:
             flavor.textContent = "Pathetic.";
     }
-    pScore = 0;
-    round = 0;
-    count.textContent = '0';
-}
-function reset() {
-    text.textContent = "";
     mScore = 0;
     pScore = 0;
     round = 0;
+}
+function reset() {
+    text.textContent = "";
     count.textContent = 0;
 }
     

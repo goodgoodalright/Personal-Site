@@ -24,6 +24,7 @@ body {
 .total,
 .flavor {
      font-weight: 700;
+     font-style: italic;
 }
 header {
      background: transparent;
@@ -48,18 +49,23 @@ header {
           border-radius: 5px;
      }
      header a:hover,
-     .score div *:hover {
+     .score h2,
+     .score h3,
+     .score p {
           background: transparent;
-          background-image: linear-gradient(to right, #000044, #2828ea);
           background-size: 100%;
+          background-image: linear-gradient(to right, #7b7bfa, #fff);
           -webkit-background-clip: text;
           -moz-background-clip: text;
           -webkit-text-fill-color: transparent;
           -moz-text-fill-color: transparent;
           /* background: #2828ea; */
-          box-shadow: 3px 3px 3px #0000aa;
      }
-.col-container {
+     header a:hover{
+          box-shadow: 3px 3px 3px #0000aa;
+          background-image: linear-gradient(to right, #000044, #2828ea);
+     }
+     .col-container {
      display: flex;
      flex-flow: nowrap;
      justify-content: space-around;
@@ -109,7 +115,7 @@ header {
           padding: .33rem;
      }
      .resultsText{
-          display: none;
+          display: inline-block;
           width: 60%;
      }
 .buttons {
@@ -153,3 +159,4 @@ header {
           max-width: 50%;
           padding: 1rem 2.5rem;
      }
+     .score h2 {text-decoration: underline;}
