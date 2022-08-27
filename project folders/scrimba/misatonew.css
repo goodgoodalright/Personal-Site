@@ -5,31 +5,57 @@ body {
      align-content: center;
      text-align: center;
 
-     margin: 0;
-     padding: 0;
-     height: 100vh;
-     width: 100vw;
-
      background: linear-gradient(#5a5aff 0%, #2828ea 75%,#000044 100%);
      background-attachment: fixed;
      background-position: center;
      background-repeat: no-repeat;
      background-size: cover;
+
+     margin: 0;
+     height: auto;
+     width: 100%;
+
+     color: #000044;
+     font-family: 'Noto Serif', Arial, Helvetica, sans-serif;
 }
 header {
      background: transparent;
-     width: auto;
+     width: 100%;
      height: auto;
+     margin: auto;
+     position: absolute;
+     top: 0;
+     z-index: 2;
+     display: flex;
+     flex-flow: row wrap;
+     justify-content: space-around;
 }
      header a {
           text-decoration: none;
+          text-transform: uppercase;
           color: inherit;
+          width: auto;
+          margin: .5rem;
+          padding: .75rem 2rem;
+          transition: all .3s ease-in-out;
+          border-radius: 5px;
+     }
+     header a:hover,
+     .score div *:hover {
+          background: transparent;
+          background-image: linear-gradient(to right, #000044, #2828ea);
+          background-size: 100%;
+          -webkit-background-clip: text;
+          -moz-background-clip: text;
+          -webkit-text-fill-color: transparent;
+          -moz-text-fill-color: transparent;
+          /* background: #2828ea; */
+          box-shadow: 3px 3px 3px #0000aa;
      }
 .col-container {
      display: flex;
-     flex-flow: row nowrap;
-     justify-content: center;
-     align-content: center;
+     flex-flow: nowrap;
+     justify-content: space-around;
      align-items: center;
      border-radius: 15px;
      margin: auto;
@@ -40,23 +66,41 @@ header {
 .col-right {
      height: auto;
      width: auto;
-     margin: 2rem;
+     padding: 2rem;
      border-radius: 5%;
      box-shadow: 5px 5px 8px #000044;
 }
+     .col-left {
+          background: linear-gradient(135deg, #000044 0%, #2828ea 60%, #5a5aff 100%);
+          width: 50%;
+     }
+     .col-right {
+          background: linear-gradient(330deg, #000044 0%, #2828ea 60%, #5a5aff 100%);
+          margin-left: 2rem;
+     }
      .img {
           border-radius: 15px;
           box-shadow: 5px 5px 8px #000044;
           max-height: 70vh;
      }
      .results {
-          display: none;
+          display: flex;
+          flex-flow: row nowrap;
+          justify-content: space-between;
           text-align: center;
           height: auto;
-          width: 80%;
-          margin: 1rem auto;
+          width: 100%;
+          margin: auto;
           border-radius: 10%;
      }
+          .count {
+               width: 30%;
+               padding: .33rem;
+          }
+          .resultsText{
+               display: none;
+               width: 60%;
+          }
      .buttons {
           display: flex;
           flex-flow: row nowrap;
@@ -64,14 +108,17 @@ header {
           margin: 1rem;
      }
           .buttons button {
-               padding: .33rem 1rem;
+               padding: .33rem 2rem;
                border-radius: 10%;
-               border: 3px 3px 3px #000044;
+               box-shadow: 3px 3px 3px #0000aa;
                background: linear-gradient(#5a5aff 0%, #2828ea 100%);
                transition: all .5s ease-in-out;
+               cursor: pointer;
           }
           .buttons button:hover {
-               background: linear-gradient(#2828ea 0%, #5a5aff 100%);
+               padding: .33rem 3rem;
+               background: linear-gradient(#5a5aff 0%, #0000ac 100%);
+               box-shadow: 5px 5px 5px #000044;
           }
      .score {
           background-color: #5a5aff;

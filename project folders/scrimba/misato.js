@@ -1,63 +1,68 @@
-const currentCount = document.getElementById("countElement")
-const score = document.getElementById("score")
-const misato = document.getElementById("herScore")
-const you = document.getElementById("yourScore")
-const total = document.getElementById("total")
-const original = document.getElementById("original")
-const results = document.getElementById("results")
-const flavor = document.getElementById("flavor")
-const buttons = document.getElementsByClassName("button")
+var currentCount = document.querySelector(".count");
+var original = document.querySelector(".original");
+var results = document.querySelector(".results");
+var text = document.querySelector(".resultsText");
+var buttons = document.querySelector(".buttons");
+var button = document.querySelector(".button");
+var score = document.querySelector(".score");
+var misato = document.querySelector(".misato");
+var you = document.querySelector(".player");
+var total = document.querySelector(".total");
+var flavor = document.querySelector(".flavor");
 
 // buttons.eventListener('click', function buttonClick() {
 //     buttons.style.background = "#000"
 //     buttons.style.color = "#fff"
 // })
-let count = 0
-let previousRound = 0
+document.getElementById('eventButton').addEventListener('click', increment);
+document.getElementById('saveButton').addEventListener('click', save);
+document.getElementById('resetButton').addEventListener('click', reset);
+// TODO: CLEAR BUTTON
+
+let count = 0;
+let previousRound = 0;
 
 function increment() {
     count = count + 1;
-    currentCount.innerText = count;
+    currentCount.textContent = count;
+    console.log(count);
 }
-
 function save() {
-    const newCount = Math.floor(count*2.2) // total beers
+    let newCount = Math.floor(count*2.2) // total beers
     let herScore = newCount - count; // Misato's score
     previousRound = previousRound + newCount; // round sum
-    if (misato.innerText === "") {
-        misato.innerText = herScore
-        you.innerText = count
+    if (misato.textContent === "") {
+        misato.textContent = herScore;
+        you.textContent = count;
     } else {    
-        misato.innerText += " - " + herScore; // Misato text
-        you.innerText += " - " + count; // Your text
+        misato.textContent += " - " + herScore; // Misato text
+        you.textContent += " - " + count; // Your text
     }
-    total.innerText = previousRound; // sum text
-    results.innerText = `The two of you drank ${newCount} beers in one sitting!` // message
-    results.style.display = "block"
-    original.style.display = "none" // swap top message
+    total.textContent = previousRound; // sum text
+    results.textContent = `The two of you drank ${newCount} beers in one sitting!`;// message
+    results.style.display = "block";
+    original.style.display = "none"; // swap top message
     switch (true) {
         case (previousRound >= 48): 
-            flavor.innerText = "Allshrigh' in tha wurl..."
+            flavor.textContent = "Allshrigh' in tha wurl...";
             break;
         case (previousRound < 48 && previousRound >= 36):
-            flavor.innerText = "[bad karaoke of Fly Me To The Moon]"
+            flavor.textContent = "[bad karaoke of Fly Me To The Moon]";
             break;
         case (previousRound < 36 && previousRound >= 24):
-            flavor.innerText = "Just another day at NERV."
+            flavor.textContent = "Just another day at NERV.";
             break;
         case (previousRound < 24 && previousRound >= 12): 
-            flavor.innerText = "Huh? Anta baka."
+            flavor.textContent = "Huh? Anta baka.";
             break;
         default:
-            flavor.innerText = "Pathetic."
+            flavor.textContent = "Pathetic.";
     }
 }
-
 function reset() {
-    results.style.display = "none"
-    original.style.display = "block" // swap top message
-    currentCount.textContent = 0
-    count = 0
+    text.textContent = "";
+    currentCount.textContent = 0;
+    count = 0;
 }
     
     
