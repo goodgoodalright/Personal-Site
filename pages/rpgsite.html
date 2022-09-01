@@ -12,34 +12,35 @@
 <body>
      <header>
           <nav class="navbar">
-               <img src="../project folders/bbc-portfolio/cover.png" class="nav-img">
+               <a href="#" class="nav-btn nav-img">
+                    <!-- <img src="../project folders/bbc-portfolio/cover.png" class="nav-img"> -->
+               </a>
                <a href="#" class="nav-btn">Sign In</a>
                <a href="../index.html#one" class="nav-btn">Portfolio</a>
                <a href="../pages/rpgsite-flex.html" class="nav-btn">Original</a>
                <a href="#" class="nav-btn">Videos</a>
                <a href="#" class="nav-btn">Music</a>
+               <a href="#" class="nav-btn">Humor</a>
                <a href="#" class="nav-btn">Editorial</a>
                <a href="#" class="nav-btn">Random</a>
-               <form action="#" class="categories-container nav-btn">
-                    <label for="more" class="categories">Categories
-                         <select name="more">
-                              <!-- <option value="categories" selected>Categories</option> -->
-                              <option value="humor">Humor</option>
-                              <option value="archive">Archive</option>
-                              <option value="about">About Us</option>
-                              <option value="contact">Contact Us</option>
-                              <option value="careers">Careers</option>
-                              <option value="admin">Admin</option>
-                         </select>
-                    </label>
-               </form>
+               <select name="more" class="categories nav-btn">
+                    <option value="categories" selected>Categories</option>
+                    <option value="archive">Archive</option>
+                    <option value="about">About</option>
+                    <option value="admin">Admin</option>
+                    <option value="careers">Careers</option>
+                    <option value="contact">Contact Us</option>
+               </select>
                <input type="search" placeholder="Search" class="nav-search">
           </nav>
      </header>
      <main>
           <section class="welcome">
                <h1 class="barcode">Welcome to RPG Reviews</h1>
-               <span><!-- CURRENT DATE --></span>
+               <span class="datetime"></span>
+               <span class="datetimeTwo"></span>
+               <span class="datetimeThree"></span>
+               <!-- make object; update D&T in real time; methods to get D&T; summary -->
           </section>
 
      </main>
