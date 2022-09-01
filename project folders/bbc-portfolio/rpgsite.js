@@ -1,15 +1,13 @@
-var datetime = new Date();
-console.log(datetime);
+var datetime = new Date().toLocaleTimeString();
 document.querySelector('.datetime').textContent = datetime;
 function refreshTime() {
      const dt = document.querySelector('.datetime');
      const dtText = new Date().toLocaleString();
      const datetimeText = dtText.replace(", ", " - ");
      dt.textContent = datetimeText;
-}
      setInterval(refreshTime, 1000);
+}
+refreshTime();
 
-let datetimeTwo = new Date().toDateString();
+var datetimeTwo = new Date().toDateString();
 document.querySelector('.datetimeTwo').textContent = datetimeTwo;
-let datetimeThree = new Date().toLocaleTimeString();
-document.querySelector('.datetimeThree').textContent = datetimeThree;

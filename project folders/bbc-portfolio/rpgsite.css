@@ -11,12 +11,16 @@ body {
      font-family: 'Libre Barcode 39 Text', sans-serif;
      letter-spacing: 0.33rem;
 }
-.nav-btn a {
+.nav-btn {
      font-family: 'Dosis', 'Montserrat', sans-serif;
      text-decoration: none;
      color: #ededed;
-     cursor: url("../bbc-portfolio/pointer.png"), auto;
+     text-align: center;
 }
+     .nav-btn.categories {
+          text-transform: uppercase;
+          color: #0b0ba1;
+     }
 em, 
 span {
      font-style: italic
@@ -44,10 +48,6 @@ body {
      width: 100vw;
      height: 100vh;
      padding: 5rem;
-}
-header {
-     width: 100%;
-     height: auto;
 }
 .navbar {
      max-height: 3rem;
@@ -81,12 +81,21 @@ main {
           height: auto;
           display: flex;
           flex-flow: row nowrap;
-          justify-content: space-between;
+          justify-content: space-evenly;
+     }
+     .welcome h1 {width: 50%};
+     .datetime-container {
+          height: auto;
+          max-width: 40%;
+          display: flex;
+          flex-flow: column nowrap;
+          justify-content: center;
      }
 
 /* APPEARANCE */
 .nav-btn {
      border-right: 1px solid #ededed;
+     box-shadow: inset 3px 3px 3px #000044;
      padding: 0 2rem;
      width: auto;
      padding: 1rem;
@@ -96,8 +105,10 @@ main {
           max-width: 2rem;
      }
      .nav-search {
+          width: 25%;
+          text-align: right;
           border: none;
-          background: #000044;
+          background: #0b0ba1;
           color: #fff;
           font-family: 'Nunito', 'Source Sans Pro', sans-serif;
      }
