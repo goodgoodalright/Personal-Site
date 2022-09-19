@@ -109,7 +109,24 @@ main {
      .welcome h1 {
           min-width: 50%;
           max-width: 60%;
+          transition: all .5s ease-in-out;
+          animation: rainbow 2s ease-in-out infinite;
+          /* color: inherit; below is watermelon effect from - https: //codepen.io/bsander/pen/pPpbNm */
+
+          background: linear-gradient(to right, crimson, pink, springgreen);
+          background-size: 200% 200%;
+          background-clip: text; /* add webkits */
+          color: rgba(0,0,0,1);
      }
+          .welcome h1:hover {
+               /* color: linear-gradient(); */
+               color: rgba(0,0,0,0);
+          }
+          @keyframes rainbow {
+               0% {background-position: left;}
+               50% {background-position: right;}
+               100% {background-position: left;}
+          }
      .datetime-container {
           height: auto;
           display: flex;
