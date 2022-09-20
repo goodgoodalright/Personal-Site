@@ -107,20 +107,25 @@ main {
      box-shadow: 3px 3px 0 3px #000044;
 }
      .welcome h1 {
-          min-width: 50%;
-          max-width: 60%;
+          width: auto;
+          text-align: center;
+          text-shadow: rgba(0, 0, 0, 0.5) 5px 5px 10px;
+          padding: 0.75rem 2.5rem;
+          clip-path: polygon(5% 0%, 100% 0%, 95% 100%, 0% 100%);
+
           transition: all .5s ease-in-out;
           animation: rainbow 2s ease-in-out infinite;
           /* color: inherit; below is watermelon effect from - https: //codepen.io/bsander/pen/pPpbNm */
-
           background: linear-gradient(to right, crimson, pink, springgreen);
           background-size: 200% 200%;
-          background-clip: text; /* add webkits */
-          color: rgba(0,0,0,1);
+          /* background-clip: text;
+          -webkit-background-clip: text; */
+          color: rgba(255, 255, 255, 1);
      }
           .welcome h1:hover {
                /* color: linear-gradient(); */
-               color: rgba(0,0,0,0);
+               color: rgba(0, 0, 0, 1);
+               text-shadow: rgba(0, 0, 0, 0.5) 10px 10px 10px;
           }
           @keyframes rainbow {
                0% {background-position: left;}
