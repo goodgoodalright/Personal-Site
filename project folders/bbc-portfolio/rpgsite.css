@@ -23,8 +23,7 @@ body {
           color: #0b0ba1;
           border: none;
      }
-em, 
-span {
+em, span {
      font-style: italic
 }
 h1 {
@@ -32,16 +31,29 @@ h1 {
      font-weight: 600;
 }
 h2 {
-     font-size: 1.25rem;
-     font-weight: 600;
+     font-size: 2.5rem;
+     font-weight: 900;
+     color: #000;
 }
-h3,
-p {
+h3, h4, p {
      text-transform: uppercase;
 }
 p {
      line-height: 1.15rem;
+     background: rgba(255, 255, 255, .2);
+     padding: 1rem;
 }
+h4 {
+     color: #fff;
+     text-shadow: 2px 2px #000044;
+     padding: .5rem;
+     background: linear-gradient(to right, rgba(0, 0, 69, .5), transparent);
+     font-style: italic;
+}
+     h4::first-letter {
+          color: #F00;
+          font-style: normal;
+     }
 .datetime {
      background: #077;
      padding: 0.33rem 0.33rem 0.33rem 0.66rem;
@@ -89,23 +101,26 @@ main {
      flex-flow: column nowrap;
      max-width: 100%;
      max-height: 100%;
-     padding: 2rem;
+     padding: 1rem;
      background: #2525ab;
 }
 .welcome {
      max-width: 100%;
      min-width: 80%;
      height: auto;
-     margin: 0 auto;
+     margin: 1rem auto;
      padding: 1rem 2rem;
      display: flex;
      flex-flow: row nowrap;
      justify-content: space-evenly;
      align-items: center;
-     background: rgba(255, 255, 255, 0.1);
-     border-radius: 15px;
-     box-shadow: 3px 3px 0 3px #000044;
 }
+     .welcome,
+     .news-container {
+          background: rgba(255, 255, 255, 0.1);
+          border-radius: 15px;
+          box-shadow: 3px 3px 0 3px #000044;
+     }
      .welcome h1 {
           width: auto;
           text-align: center;
@@ -137,44 +152,60 @@ main {
           display: flex;
           flex-flow: column wrap;
           justify-content: center;
-          border: 12px double #000044;
+          border-radius: 10px;
+          box-shadow: 3px 3px #000044;
      }
 .news-container {
      display: flex;
      flex-flow: row nowrap;
-     justify-content: space-evenly;
+     justify-content: flex-start;
      align-content: center;
-     margin: auto;
-     height: auto;
-     width: 80%;
-     background:rgba(255, 255, 255, 0.1);
+     margin: 1rem auto;
+     height: 100%;
+     width: 90%;
 }
-     .news-left,
-     .news-right {
+     .news-main, 
+     .news-quadrant, 
+     .news-other {
+          display: flex;
+          flex-flow: column nowrap;
+          justify-content: flex-end;
+     }
+     .news-main {
           height: 100%;
           width: 50%;
-          padding: 1rem;
-          margin: 1rem;
+          margin: auto;
+          padding: 2rem;
+          border-radius: 5px;
+          box-shadow: 3px 3px #000044;
+          flex-basis: 4;
      }
+          .news-main .banner {
+               align-self: flex-start;
+               margin-bottom: auto;
+          }
+          .news-main p,
+          .news-main h4 {
+               flex-basis: 1;
+               margin: 1rem 0;
+          }
      .news-right {
           display: flex;
           flex-flow: row wrap; 
           justify-content: space-evenly;
      }
-     .news-main {
-          height: 100%;
-          width: 100%;
-          padding: 1rem;
-     }
      .news-quadrant {
-          height: 40%;
-          width: 40%;
+          max-height: 12.5%;
+          max-width: 12.5%;
           padding: 1rem;
+          border-radius: 10px;
+          box-shadow: 3px 3px #000044;
+          flex-basis: 1;
      }
-          .news-quadrant.q1,
+          /* .news-quadrant.q1,
           .news-quadrant.q2 {
                margin-bottom: 1rem;
-          }
+          } */
      .news-other {
           height: 100%;
           width: 30%;
