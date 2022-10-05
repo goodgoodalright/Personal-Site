@@ -83,6 +83,7 @@ body {
      display: flex;
      flex-flow: row nowrap;
      justify-content: space-evenly;
+     /* align-items: center; */
 
      background: linear-gradient(45deg, #2525ab 0%, #000044 100%);
      color: #fff;
@@ -163,14 +164,17 @@ main {
      margin: 1rem auto;
      height: 100%;
      width: 90%;
-} */
-.news-container.top-stories {
+} changed news stories to be arranged in grid instead of flexbox */
+.news-container {
      display: grid;
+     margin: 1rem 0;
+     gap: 1rem;
+     max-width: 100%;
+     padding: 1rem;
+}
+.news-container.top-stories {
      grid-template-columns: repeat(8, 1fr);
      grid-template-rows: repeat(4, 1fr);
-     gap: 1rem;
-     padding: 1rem;
-     height: 100%;
 }
      .news-main,
      .news-quadrant,
@@ -183,7 +187,7 @@ main {
           grid-area: 1 / 1 / 5 / 5;
           max-height: 100%;
           padding: 1rem;
-          border-radius: 5px;
+          border-radius: 10px;
           box-shadow: 3px 3px #000044;
           flex-basis: 4;
      }
@@ -196,7 +200,8 @@ main {
                flex-basis: 1;
                margin: 1rem 0;
           }
-     .news-quadrant {
+     .news-quadrant,
+     .news-other {
           height: auto;
           width: auto;
           padding: 1rem;
@@ -213,23 +218,28 @@ main {
                margin-bottom: 1rem;
           } */
 .news-container.bottom-stories {
-     display: grid;
      grid-template-columns: repeat(3, 1fr);
-
+     grid-template-rows: 4rem repeat(1, 1fr);
+     column-gap: 0;
+     justify-content: space-evenly;
 }
-     .news-other {
-          height: 100%;
-          width: 30%;
-          margin: auto;
-          padding: 1rem;
-     }
-
+     .news-other {width: 90%; margin: auto;}
+     .o0 {
+          grid-area: 1 / 1 / 2 / 7;
+          background: #000044;
+          margin-bottom: 1rem;
+          justify-content: center;
+          color: #fff;
+     };
+     .o1 {grid-area: 2 / 1 / 4 / 2};
+     .o2 {grid-area: 2 / 2 / 4 / 3};
+     .o3 {grid-area: 2 / 3 / 4 / 4};
 
 /* APPEARANCE */
 .nav-btn {
      box-shadow: inset 1px 1px 3px 3px #000044;
-     padding: 0 2rem;
      width: auto;
+     margin: 0 2rem;
      padding: 1rem;
      text-transform: uppercase;
      transition: all .5s ease-in-out;
@@ -242,6 +252,7 @@ main {
           max-height: auto;
           max-width: 8%;
           background: #000044;
+          align-self: center;
      }
      .nav-search {
           width: 25%;
@@ -271,5 +282,17 @@ main {
 }
 .news-quadrant.q4 {
      background-image: url("../bbc-portfolio/dmc5.jpg");
+     background-size: cover;
+}
+.news-other.o1 {
+     background-image: url("../bbc-portfolio/arceus.jpg");
+     background-size: cover;
+}
+.news-other.o2 {
+     background-image: url("../bbc-portfolio/sk.jpg");
+     background-size: cover;
+}
+.news-other.o3 {
+     background-image: url("../bbc-portfolio/dq11.jpg");
      background-size: cover;
 }
