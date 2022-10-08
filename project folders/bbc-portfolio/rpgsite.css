@@ -32,12 +32,14 @@ h1 {
 }
 h2 {
      font-size: 2.5rem;
-     font-weight: 900;
-     color: #000;
 }
+h2,
 h3 {
      color: #fff;
-     text-shadow: 3px 3px 3px rgba(0, 0, 0, 0.5);
+     font-weight: 900;
+     text-shadow: 5px 5px 3px #000044;
+     text-decoration: underline;
+     text-decoration-style: dotted #000044;
 }
 h3, h4, p {
      text-transform: uppercase;
@@ -195,7 +197,7 @@ main {
           box-shadow: 3px 3px #000044;
           flex-basis: 4;
      }
-          .news-main .banner {
+          .banner {
                align-self: flex-start;
                margin-bottom: auto;
           }
@@ -213,14 +215,13 @@ main {
           box-shadow: 3px 3px #000044;
           flex-basis: 1;
      }
+     .news-quadrant {
+          min-height: 50%;
+     }
      .q1 {grid-area: 1 / 5 / 3 / 7;}
      .q2 {grid-area: 1 / 7 / 3 / 9;}
      .q3 {grid-area: 3 / 5 / 5 / 7;}
      .q4 {grid-area: 3 / 7 / 5 / 9;}
-          /* .news-quadrant.q1,
-          .news-quadrant.q2 {
-               margin-bottom: 1rem;
-          } */
 .news-container.bottom-stories {
      grid-template-columns: repeat(3, 1fr);
      grid-template-rows: 4rem repeat(1, 1fr);
