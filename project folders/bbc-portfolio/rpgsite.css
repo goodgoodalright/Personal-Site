@@ -19,24 +19,26 @@ body {
      color: #ededed;
      text-align: center;
      padding: .5rem 1.25rem;
-     box-shadow: inset 0 0 0 3px #3030e6;
+     /* box-shadow: inset 0 0 0 3px #3030e6; */
      border-radius: 10px;
-     width: auto;
-     transition: all .5s ease-in-out;
+     max-width: 10%;
+     width: 10%;
+     /* transition: all .5s ease-in-out; */
 }
      .nav-btn:hover {
-          box-shadow: inset 0 -3px 0 0 #fff;
-          background: rgba(255, 255, 255, .1);
+          /* box-shadow: inset 0 -3px 0 0 #fff; */
+          background: linear-gradient(to bottom, transparent 0%, rgba(255, 255, 255, .1) 100%);
           border-radius: 5px;
           font-weight: bold;
      }
      .nav-btn.categories {
           color: #0b0ba1;
           border: none;
+          /* box-shadow: none; */
           width: 10%;
           border-radius: 2px;
           font-weight: bold;
-          transition: none;
+          /* transition: none; */
           background: #fff;
      }
 em, span {
@@ -59,6 +61,10 @@ h3 {
 }
 h3, h4, p {
      text-transform: uppercase;
+}
+h3 {
+     background: rgba(255, 255, 255, .3);
+     padding: .5rem;
 }
 p {
      line-height: 1.15rem;
@@ -110,7 +116,7 @@ body {
 
      background: linear-gradient(45deg, #2525ab 0%, #000044 100%);
      color: #fff;
-     box-shadow: 3px 3px #000088;
+     border: solid 3px #000088; /* changed from box-shadow */
 }
      .categories {
           padding: 0.25rem 1rem;
@@ -123,12 +129,6 @@ body {
      }
      .categories option:hover {
           font-style: italic;
-     }
-     .navbar input {
-          padding: .2rem .4rem;
-          letter-spacing: .15rem;
-          width: 15%;
-          border: none;
      }
      .footer {
           background: linear-gradient(45deg, #000044 0%, #2525ab 100%);
@@ -162,28 +162,29 @@ main {
      .news-container {
           background: rgba(255, 255, 255, 0.1);
           border-radius: 15px;
-          box-shadow: 3px 3px 0 3px #000044;
+          border: 3px solid #000044;
+          /* box-shadow: 3px 3px 0 3px #000044;  */
      }
-     .welcome h1 {
+     .welcome .barcode {
           width: auto;
           text-align: center;
           text-shadow: rgba(0, 0, 0, 0.5) 5px 5px 10px;
+          color: transparent;
           padding: 0.75rem 2.5rem;
-          clip-path: polygon(5% 0%, 100% 0%, 95% 100%, 0% 100%);
+          /* transition: all .5s ease-in-out; */
+     }
+     .welcome h1:hover {
+          /* watermelon effect from - https: //codepen.io/bsander/pen/pPpbNm - (removed this, box-shadow, and transition due to intensive RAM usage)
 
-          transition: all .5s ease-in-out;
+          clip-path: polygon(5% 0%, 100% 0%, 95% 100%, 0% 100%);
+          text-shadow: rgba(0, 0, 0, 0.5) 5px 5px 10px;
           animation: rainbow 2s ease-in-out infinite;
-          /* color: inherit; below is watermelon effect from - https: //codepen.io/bsander/pen/pPpbNm */
           background: linear-gradient(to right, crimson, pink, springgreen);
           background-size: 200% 200%;
-          /* background-clip: text;
-          -webkit-background-clip: text; */
+          background-clip: text;
+          -webkit-background-clip: text; 
+          */
           color: rgba(255, 255, 255, 1);
-     }
-          .welcome h1:hover {
-               /* color: linear-gradient(); */
-               color: rgba(0, 0, 0, 1);
-               text-shadow: rgba(0, 0, 0, 0.5) 10px 10px 10px;
           }
           @keyframes rainbow {
                0% {background-position: left;}
@@ -196,7 +197,7 @@ main {
           flex-flow: column wrap;
           justify-content: center;
           border-radius: 10px;
-          box-shadow: 3px 3px #000044;
+          border: solid 3px #000044; /* changed from box-shadow */
      }
 /* .news-container {
      display: flex;
@@ -230,7 +231,7 @@ main {
           max-height: 100%;
           padding: 1rem;
           border-radius: 10px;
-          box-shadow: 3px 3px #000044;
+          border: solid 3px #000044; /* changed from box-shadow */
           flex-basis: 4;
      }
           .banner {
@@ -248,7 +249,7 @@ main {
           width: auto;
           padding: 1rem;
           border-radius: 10px;
-          box-shadow: 3px 3px #000044;
+          border: solid 3px #000044; /* changed from box-shadow */
           flex-basis: 1;
      }
      .news-quadrant {
@@ -286,10 +287,12 @@ main {
 } */
      .nav-search {
           width: 25%;
-          text-align: right;
           border: none;
+          padding: .2rem .4rem;
           background: #0b0ba1;
           color: #fff;
+          letter-spacing: .15rem;
+          text-align: right;
           font-family: 'Nunito', 'Source Sans Pro', sans-serif;
      }
 
