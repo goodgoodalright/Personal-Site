@@ -12,7 +12,8 @@ function scroll() {
 
 // carousel
 let slideIndex = 1;
-showSlides(slideIndex);
+showMenuSlides(slideIndex);
+showReviewSlides(slideIndex);
 function changeMenuSlide(n) {showMenuSlides(slideIndex += n);}
 function changeReviewSlide(n) {showReviewSlides(slideIndex += n);}
 function currentMenuSlide(n) {showMenuSlides(slideIndex = n);}

@@ -143,6 +143,7 @@ footer a {
 .hours i,
 .stars-wrap i {
      color: #ff8800;
+     text-shadow: 2px 2px #7a4100;
 }
      .hours-numbers {
           font-size: 1.25rem;
@@ -305,19 +306,39 @@ html {
      
      /* begin carousel CSS */
      * {box-sizing: border-box}
-     .slide-container {
+     .slide-container.menu,
+     .slide-container.testimonials {
           max-width: 1000px;
           position: relative;
-          margin: auto;
+          margin: 1rem auto;
      }
-     .slide-wrap {
-          display: none;
-     } /* Hide the images by default */
-     .slide-wrap img {
+     .slide-container.testimonials {
+          /* display: flex;
+          flex-flow: column nowrap;
+          justify-content: space-evenly;
+          place-items: center; */
+          border-radius: 15px;
+          min-width: 50%;
+          max-width: 80%;
+          padding: 1rem 2rem;
+          background: linear-gradient(to bottom, rgba(255, 255, 255, 0.9) 0%, rgba(255, 255, 255, 0.9) 55%, rgba(30, 30, 255, 0.6) 100%);
+     }
+     .slide-wrap {display: none;} /* hides images by default */
+     .slide-wrap.menu img {
           border-radius: 5px;
           width: 100%;
           height: auto;
           background-origin: border-box;
+     }
+     .slide-wrap.review {
+          width: 100%;
+          min-width: 60%;
+          min-height: 400px;
+          max-height: 60vh;
+     }
+     .slide-wrap.review img {
+          width: 250px;
+          height: auto;
      }
      .slide-prev,
      .slide-next {
@@ -329,11 +350,17 @@ html {
           width: auto;
           color: white;
           font-weight: bold;
-          font-size: 18px;
+          font-size: 1.25rem;
           transition: 0.6s ease;
           border-radius: 0 3px 3px 0;
           user-select: none;
           background: rgba(255, 255, 255, 0.3);
+          z-index: 2;
+     }
+     .slide-prev.review,
+     .slide-next.review {
+          width: auto;
+          background: rgba(255, 0, 0, 0.8);
      }
      .slide-next {
           right: 0;
@@ -344,7 +371,7 @@ html {
           background-color: rgba(0, 0, 0, 0.75);
      }
      /* Caption text */
-     .slide-desc {
+     .slide-wrap.menu .slide-desc {
           color: #f2f2f2;
           font-size: 1.5rem;
           padding: .5rem 1.25rem;
@@ -362,6 +389,12 @@ html {
           position: absolute;
           top: 0;
      }
+     .slide-wrap.review .slide-text {
+          position: relative;
+          bottom: 0;
+          right: 0;
+          width: 3rem;
+     }
      .dot {
           cursor: pointer;
           height: 15px;
@@ -378,25 +411,48 @@ html {
           display: flex;
           flex-flow: row nowrap;
           text-align: center;
-          background: rgba(0, 0, 0, 0.33);
-          width: auto;
+          justify-content: space-evenly;
+          width: 100px;
      }
      /* Fading animation */
      .fade {
           animation-name: fade;
           animation-duration: 1.5s;
      }
-
      @keyframes fade {
-          from {
-               opacity: .4
-          }
-
-          to {
-               opacity: 1
-          }
+          from {opacity: .4}
+          to {opacity: 1}
      }
      /* end carousel CSS */
+/* reviews is #five but kept here close to carousel code */
+     
+     .slide-review {
+          width: auto;
+          display: flex;
+          flex-flow: row nowrap;
+          justify-content: space-evenly;
+          place-items: center;
+     }
+     .slide-author *,
+     .slide-desc p {
+          padding: .25rem;
+     }
+     .slide-review .slide-author,
+     .slide-review .slide-desc {
+          max-width: 50%;
+          height: 100%;
+          padding: 1rem;
+          line-height: 1.5rem;
+          font-size: 1.25rem;
+     }
+.reviews-container {
+     padding-top: 2rem;
+     height: 100%;
+     width: 80%;
+     margin: 0 auto;
+     background: linear-gradient(to bottom, rgba(255, 255, 255, .9), rgba(255, 255, 255, 0.3));
+}
+
 .hours {
      display: flex;
      justify-content: center;
@@ -433,26 +489,6 @@ html {
 }
      .times div {
           width: 55%;
-     }
-.reviews-container {
-     padding-top: 2rem;
-     height: 100%;
-     width: 100%;
-     background: linear-gradient(to bottom, rgba(255, 255, 255, .9), rgba(255, 255, 255, 0.3));
-}
-     #reviews-carousel {
-          display: flex;
-          flex-flow: column nowrap;
-          justify-content: space-around;
-          align-items: center;
-          border-radius: 15px;
-          min-width: 50%;
-          max-width: 80%;
-          padding: 1rem 2rem;
-          background: linear-gradient(to bottom, rgba(255, 255, 255, 0.9) 0%, rgba(255, 255, 255, 0.9) 55%, rgba(30, 30, 255, 0.6) 100%);
-     }
-     .testimonials div * {
-          padding: .33rem;
      }
 
 /* APPEARANCES */

@@ -70,8 +70,8 @@
 
         <section id="three" class="specialties">
             <h2 class="lavish-header">Order Online Now</h2>
-            <h1 class="messiri-font">Our Specialty Cuisine</h1>
-            <div id="specialties-carousel" class="slide-container">
+            <h1 class="messiri-font">Our Specialty Dishes</h1>
+            <div id="specialties-carousel" class="slide-container menu">
                 <div class="slide-wrap menu fade">
                     <div class="slide-text">1 / 3</div>
                     <img src="../project folders/restaurant-jf/eggtoast.jpg">
@@ -82,7 +82,7 @@
                     <img src="../project folders/restaurant-jf/bowl.jpg">
                     <div class="slide-desc">You'll only find fresh, healthy, invigorating food at our house.</div>
                 </div>
-                <div class="slide-wrap fade">
+                <div class="slide-wrap menu fade">
                     <div class="slide-text">3 / 3</div>
                     <img src="../project folders/restaurant-jf/spread.jpg">
                     <div class="slide-desc">A fantastic rendezvous for friends, family, foes, and fae alike!</div>
@@ -128,25 +128,26 @@
             <section id="reviews-carousel" class="testimonials slide-container">
                 <div class="slide-wrap review fade">
                     <div class="slide-text">1 / 3</div>
-                    <img src="../project folders/restaurant-jf/jester_winter.jpg" alt="Jester Lavorre winter">
                     <div class="slide-review">
-                        <div class="slide-author">
-                            <h5 class="vibes-font">Joy Buzzer</h5>
-                            <h6 class="messiri-small italic-text">Art Director</h6>
-                            <span class="stars-wrap">
-                                <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
-                            </span>
-                        </div>
-                        <div class="slide-desc">
-                            <p>Deliciously glazed and seasoned chicken breasts; fresh wild mushrooms; greens grown thanks to the friendly cows I met today; all buried beneath a savory white wine garlic sauce. Simply the best meal this side of Marquet - praise that I, a refined globetrotter, rarely give.</p>
-                        </div>
+                    <div class="slide-author">
+                        <img src="../project folders/restaurant-jf/jester_winter.jpg" alt="Jester Lavorre winter">
+                        <h5 class="vibes-font">Joy Buzzer</h5>
+                        <h6 class="messiri-small italic-text">Art Director</h6>
+                        <span class="stars-wrap">
+                            <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                        </span>
+                    </div>
+                    <div class="slide-desc">
+                        <p>Deliciously glazed and seasoned chicken breasts; fresh wild mushrooms; greens grown by the friendly cows I met today; all buried beneath a savory white wine garlic sauce.</p>
+                        <p>Simply the best meal this side of Marquet - praise that I, a refined globetrotter, rarely give.</p>
+                    </div>
                     </div>
                 </div>
                 <div class="slide-wrap review fade">
                     <div class="slide-text">2 / 3</div>
-                    <img src="../project folders/restaurant-jf/fjord.jpg" alt="Fjord">
                     <div class="slide-review">
                         <div class="slide-author">
+                            <img src="../project folders/restaurant-jf/fjord.jpg" alt="Fjord">
                             <h5 class="vibes-font">Big Ironsides</h5>
                             <h6 class="messiri-small italic-text">Art Director</h6>
                             <span class="stars-wrap">
@@ -158,22 +159,31 @@
                         </div>
                     </div>
                 </div>
-
                 <div class="slide-wrap review fade">
                     <div class="slide-text">3 / 3</div>
-                    <img src="../project folders/restaurant-jf/spread.jpg">
-                    <div class="slide-desc">A fantastic rendezvous for friends, family, foes, and fae alike!</div>
+                    <div class="slide-review">
+                        <div class="slide-author">
+                            <img src="../project folders/restaurant-jf/pie.jpg" alt="pie">
+                            <h5 class="vibes-font">Very Berry Barry</h5>
+                            <h6 class="messiri-small italic-text">Art Director</h6>
+                            <span class="stars-wrap">
+                                <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                            </span>
+                        </div>
+                        <div class="slide-desc">
+                            <p>Really, really, really good food.</p>
+                        </div>
+                    </div>
                 </div>
 
-                <a class="slide-prev" onclick="changeReviewSlide(-1)">&#10094;</a>
-                <a class="slide-next" onclick="changeReviewSlide(1)">&#10095;</a>
-            </div>
+                <a class="slide-prev review" onclick="changeReviewSlide(-1)">&#10094;</a>
+                <a class="slide-next review" onclick="changeReviewSlide(1)">&#10095;</a>
+            </section>
             <div class="dot-wrap review">
                 <span class="dot" onclick="currentReviewSlide(1)"></span>
                 <span class="dot" onclick="currentReviewSlide(2)"></span>
                 <span class="dot" onclick="currentReviewSlide(3)"></span>
             </div>
-            </section>
         </section>
     </main>
 
