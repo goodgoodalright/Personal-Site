@@ -135,6 +135,14 @@ footer a {
      .about p:last-of-type {
           text-align: right;
      }
+     .about p.vibes-font:first-of-type {
+          text-align: center;
+          width: 100%;
+     }
+     .about-top p.vibes-font {
+          line-height: 2rem;
+          font-size: 1.85rem;
+     }
 .hours i,
 .reviews i {
      color: #ff8800;
@@ -145,6 +153,7 @@ html {
      width: 100%;
      margin: 0 auto;
      overflow-x: hidden;
+     scroll-behavior: smooth;
 }
 .header {
      display: flex;
@@ -161,9 +170,11 @@ html {
           flex-flow: row nowrap;
           justify-content: space-between;
           flex-basis: flex-end;
-          width: 66%;
+          width: 100%;
+          min-width: 33%;
+          max-width: 66%;
           padding: 1rem 3rem;
-          margin-right: 2rem;
+          right: 2rem;
           overflow: hidden;
           z-index: 10;
      }      /* removed .nav {position: relative;} */
@@ -171,9 +182,24 @@ html {
           position: fixed;
           top: 0;
           width: 100%;
+          z-index: 3;
      }
      .sticky + .content {
           padding-top: 60px;
+     }
+     .nav-hidden {
+          display: none;
+     }
+     .navbar a:hover .nav-hidden {
+          position: fixed;
+          display: block;
+          top: 4rem;
+          right: 2rem;
+          width: auto;
+          height: auto;
+          padding: 1rem 3rem;
+          font-style: italic;background: linear-gradient(to left, transparent 0%, rgba(255, 255, 255, .9) 15%, rgba(255, 255, 255, .75) 85%, transparent 100%);
+          color: #000;
      }
 .content {
      display: flex;
@@ -278,11 +304,103 @@ html {
      } */
      
      /* begin carousel CSS */
-     
+     * {box-sizing: border-box}
+     .slide-container {
+          max-width: 1000px;
+          position: relative;
+          margin: auto;
+     }
+     .slide-wrap {
+          display: none;
+     } /* Hide the images by default */
+     .slide-wrap img {
+          border-radius: 5px;
+          width: 100%;
+          height: auto;
+          background-origin: border-box;
+     }
+     .slide-prev,
+     .slide-next {
+          cursor: pointer;
+          position: absolute;
+          top: 50%;
+          margin-top: -22px;
+          padding: 16px;
+          width: auto;
+          color: white;
+          font-weight: bold;
+          font-size: 18px;
+          transition: 0.6s ease;
+          border-radius: 0 3px 3px 0;
+          user-select: none;
+          background: rgba(255, 255, 255, 0.3);
+     }
+     .slide-next {
+          right: 0;
+          border-radius: 3px 0 0 3px;
+     }
+     .slide-prev:hover,
+     .slide-next:hover {
+          background-color: rgba(0, 0, 0, 0.75);
+     }
+     /* Caption text */
+     .slide-desc {
+          color: #f2f2f2;
+          font-size: 1.5rem;
+          padding: .5rem 1.25rem;
+          position: absolute;
+          bottom: .5rem;
+          width: 100%;
+          background: rgba(0, 0, 0, 0.75);
+          text-align: center;
+     }
+     .slide-text {
+          background-color: rgba(0, 0, 0, 0.66);
+          color: #f2f2f2;
+          font-size: 12px;
+          padding: 8px 12px;
+          position: absolute;
+          top: 0;
+     }
+     .dot {
+          cursor: pointer;
+          height: 15px;
+          width: 15px;
+          margin: 0 2px;
+          background-color: #bbb;
+          border-radius: 50%;
+          display: inline-block;
+          transition: background-color 0.6s ease;
+     }
+     .active,
+     .dot:hover {background-color: #717171;}
+     .dot-wrap {
+          display: flex;
+          flex-flow: row nowrap;
+          text-align: center;
+          background: rgba(0, 0, 0, 0.33);
+          width: auto;
+     }
+     /* Fading animation */
+     .fade {
+          animation-name: fade;
+          animation-duration: 1.5s;
+     }
+
+     @keyframes fade {
+          from {
+               opacity: .4
+          }
+
+          to {
+               opacity: 1
+          }
+     }
      /* end carousel CSS */
 .hours {
      display: flex;
      justify-content: center;
+     min-height: 90vh;
 }
      .hours-background {
           background: rgba(255, 255, 255, 0.6);
@@ -319,6 +437,7 @@ html {
 .reviews {
      width: 100%;
      background: linear-gradient(to bottom, rgba(255, 255, 255, .9), rgba(255, 255, 255, 0.3));
+     height: 100%;
 }
      .reviews h2, .reviews h1 {
           padding: .33rem 0;
@@ -337,9 +456,9 @@ html {
      }
 
 /* APPEARANCES */
-/* body {
-     background: #666;
-} */
+body {
+     background: #fff;
+}
 button {
      background: #ff8800;
      color: #fff;
@@ -364,6 +483,10 @@ button {
      .about button {
           margin: 1.25rem;
           width: 30%;
+          border-radius: 5px;
+     }
+     .about button:hover {
+          box-shadow: 
      }
 .footer-style {
      background: linear-gradient(315deg, #4143ac, #000077);
