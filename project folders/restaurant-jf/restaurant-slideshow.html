@@ -1,0 +1,434 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <nav class="slideshow-container"> <!-- TODO: CAROUSEL -->
+        <div class="my-slides fade">
+            <span class="slideshow-number">1 / 5</span>
+            <img src="../project folders/restaurant-jf/spread.jpg">
+            <span class="slideshow-text">A big breakfast, just for you!</span>
+        </div>
+        <div class="my-slides fade">
+            <span class="slideshow-number">2 / 5</span>
+            <img src="../project folders/restaurant-jf/eggtoast.jpg">
+            <span class="slideshow-text">Always Be Cooking!</span>
+        </div>
+        <div class="my-slides fade">
+            <span class="slideshow-number">3 / 5</span>
+            <img src="../project folders/restaurant-jf/bowl.jpg">
+            <span class="slideshow-text">This counts as a salad, right?</span>
+        </div>
+        <div class="my-slides fade">
+            <span class="slideshow-number">4 / 5</span>
+            <img src="../project folders/restaurant-jf/pie.jpg">
+            <span class="slideshow-text">As tasty as the Ruby of the Sea!</span>
+        </div>
+        <div class="my-slides fade">
+            <span class="slideshow-number">5 / 5</span>
+            <img src="../project folders/restaurant-jf/berries_square.jpg">
+            <span class="slideshow-text">Berry nice to see you!</span>
+        </div>
+        <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+        <a class="next" onclick="plusSlides(1)">&#10095;</a>
+        <div>
+            <span class="dot" onlick="currentSlide(1)"></span>
+            <span class="dot" onlick="currentSlide(2)"></span>
+            <span class="dot" onlick="currentSlide(3)"></span>
+            <span class="dot" onlick="currentSlide(4)"></span>
+            <span class="dot" onlick="currentSlide(5)"></span>
+        </div>
+        <!-- <ul>
+                        <li>Breakfast</li>
+                        <li>Lunch</li>
+                        <li>Dinner</li>
+                        <li>Dessert</li>
+                        <li>Drinks</li>
+                    </ul> -->
+    </nav>
+
+    <!-- -->
+     <section class="carousel" aria-label="Gallery">
+          <ol class="c-viewport">
+               <li id="c-slide1" tabindex="0" class="c-slide">
+                    <div class="c-snapper">
+                         <a href="#c-slide4" class="c-prev">Go to last slide</a>
+                         <a href="#c-slide2" class="c-next">Go to next slide</a>
+                    </div>
+               </li>
+               <li id="c-slide2" tabindex="0" class="c-slide">
+                    <div class="c-snapper"></div>
+                    <a href="#c-slide1" class="c-prev">Go to previous slide</a>
+                    <a href="#c-slide3" class="c-next">Go to next slide</a>
+               </li>
+               <li id="c-slide3" tabindex="0" class="c-slide">
+                    <div class="c-snapper"></div>
+                    <a href="#c-slide2" class="c-prev">Go to previous slide</a>
+                    <a href="#c-slide4" class="c-next">Go to next slide</a>
+               </li>
+               <li id="c-slide4" tabindex="0" class="c-slide">
+                    <div class="c-snapper"></div>
+                    <a href="#c-slide3" class="c-prev">Go to previous slide</a>
+                    <a href="#c-slide1" class="c-next">Go to first slide</a>
+               </li>
+          </ol>
+          <aside class="c-nav">
+               <ol class="c-nav-list">
+                    <li class="c-nav-item">
+                         <a href="#c-slide1" onclick="return false" class="c-nav-button">Go to slide 1</a>
+                    </li>
+                    <li class="c-nav-item">
+                         <a href="#c-slide2" class="c-nav-button">Go to slide 2</a>
+                    </li>
+                    <li class="c-nav-item">
+                         <a href="#c-slide3" class="c-nav-button">Go to slide 3</a>
+                    </li>
+                    <li class="c-nav-item">
+                         <a href="#c-slide4" class="c-nav-button">Go to slide 4</a>
+                    </li>
+               </ol>
+          </aside>
+     </section>
+
+     <!-- -->
+     
+
+</body>
+</html>
+
+<style>
+.slideshow-container {
+        max-width: 70%;
+        position: relative;
+        margin: auto;
+    }
+    .my-slides {
+        display: none;
+    }
+    .my-slides img {
+        width: 100%;
+    }
+    .prev, .next {
+        cursor: pointer;
+        position: absolute;
+        top: 50%;
+        width: auto;
+        margin-top: -1rem;
+        padding: 1rem;
+        color: #fff;
+        transition: 0.6s ease;
+        border-radius: 0 3px 3px 0;
+        user-select: none;
+    }
+    .next {
+        right: 0;
+        border-radius: 3px 0 0 3px;
+    }
+    .next:hover, 
+    .prev:hover {
+        background-color: rgba(0, 0, 0, 0.8);
+    }
+    .slideshow-text {
+        color: #ff8800;
+        background: rgba(255, 255, 255, .5);
+        padding: 0.5rem 1rem;
+        position: relative;
+        bottom: 0.5rem;
+        width: 100%;
+        text-align: center;
+    }
+    .slideshow-number {
+        color: #f2f2f2;
+        padding: 0.5rem 1rem;
+        position: absolute;
+        top: 0;
+    }
+    .dot {
+        cursor: pointer;
+        height: 1.15rem;
+        width: 1.15rem;
+        margin: 0 2px;
+        background-color: #bbb;
+        border-radius: 50%;
+        display: inline-block;
+        transition: background-color 0.6s ease;
+    }
+    .active, 
+    .dot:hover {
+        background-color: #717171;
+    }
+    .fade {
+        animation-name: fade;
+        animation-duration: 1.5s;
+    }
+    @keyframes fade {
+        from {opacity: 0.4}
+        to {opacity: 1}
+    }
+
+    /* */
+
+    .specialties *::-webkit-scrollbar {
+          width: 0;
+     }
+     .specialties *::-webkit-scrollbar-track {
+          background: transparent;
+     }
+     .specialties *::-webkit-scrollbar-thumb {
+          background: transparent;
+          border: none;
+     }
+     * {
+          -ms-overflow-style: none;
+     }
+     .carousel ol,
+     .carousel li {
+          list-style: none;
+          margin: 0;
+          padding: 0;
+     }
+     .carousel {
+          position: relative;
+          perspective: 100px;
+          padding: 100px;
+          filter: drop-shadow(0 0 10px #0003);
+     }
+     .c-viewport {
+          position: absolute;
+          top: 0;
+          right: 0;
+          bottom: 0;
+          left: 0;
+          display: flex;
+          overflow-x: scroll;
+          counter-reset: item;
+          scroll-behavior: smooth;
+          scroll-snap-type: x mandatory;
+     }
+     .c-slide {
+          position: relative;
+          flex: 0 0 100%;
+          width: 100%;
+          background-color: #f99;
+          counter-increment: item;
+     }
+     .c-slide:nth-child(even) {
+          background-color: #99f;
+     }
+     .c-slide:before {
+          content: counter(item);
+          position: absolute;
+          top: 50%;
+          left: 50%;
+          transform: translate3d(-50%, -40%, 70px);
+          color: #fff;
+          font-size: 2em;
+     }
+     .c-snapper {
+          position: absolute;
+          top: 0;
+          left: 0;
+          width: 100%;
+          height: 100%;
+          scroll-snap-align: center;
+     }
+     @media (hover: hover) {
+          .c-snapper {
+               animation-name: tonext, snap;
+               animation-timing-function: ease;
+               animation-duration: 4s;
+               animation-iteration-count: infinite;
+          }
+
+          .c-slide:last-child .c-snapper {
+               animation-name: tostart, snap;
+          }
+     }
+     @media (prefers-reduced-motion: reduce) {
+          .c-snapper {
+               animation-name: none;
+          }
+     }
+     .carousel:hover .c-snapper,
+     .carousel:focus-within .c-snapper {
+          animation-name: none;
+     }
+     .c-nav {
+          position: absolute;
+          right: 0;
+          bottom: 0;
+          left: 0;
+          text-align: center;
+     }
+     .c-nav-list,
+     .c-nav-item,
+     .c-nav-button {
+          display: inline-block;
+     }
+     .c-nav-button {
+          width: 1.5rem;
+          height: 1.5rem;
+          background-color: #333;
+          background-clip: content-box;
+          border: 0.25rem solid transparent;
+          border-radius: 50%;
+          font-size: 0;
+          transition: transform 0.1s;
+     }
+     .carousel::before,
+     .carousel::after,
+     .c-prev,
+     .c-next {
+          position: absolute;
+          top: 0;
+          margin-top: 37.5%;
+          width: 4rem;
+          height: 4rem;
+          transform: translateY(-50%);
+          border-radius: 50%;
+          font-size: 0;
+          outline: 0;
+     }
+     .carousel::before,
+     .c-prev {
+          left: -1rem;
+     }
+     .carousel::after,
+     .c-next {
+          right: -1rem;
+     }
+     .carousel::before,
+     .carousel::after {
+          content: '';
+          z-index: 1;
+          background-color: #333;
+          background-size: 1.5rem 1.5rem;
+          background-repeat: no-repeat;
+          background-position: center center;
+          color: #fff;
+          font-size: 2.5rem;
+          line-height: 4rem;
+          text-align: center;
+          pointer-events: none;
+     }
+
+     .carousel::before {
+          background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 100 100' xmlns='http://www.w3.org/2000/svg'%3E%3Cpolygon points='0,50 80,100 80,0' fill='%23fff'/%3E%3C/svg%3E");
+     }
+     .carousel::after {
+          background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 100 100' xmlns='http://www.w3.org/2000/svg'%3E%3Cpolygon points='100,50 20,100 20,0' fill='%23fff'/%3E%3C/svg%3E");
+     }
+     /* */
+
+     .carousel-container {
+          height: 600px;
+          max-height: 800px;
+          width: auto;
+          max-width: 100%;
+          margin: 0;
+          /* display: grid;
+          grid-template-rows: 500px 100px;
+          grid-template-columns: 1fr 30px 30px 30px 30px 30px 1fr; */
+          display: flex;
+          flex-flow: column nowrap;
+          justify-content: center;
+          place-items: center;
+     }
+     .clicker-wrap {
+          display: flex;
+          flex-flow: row wrap;
+          width: 100%;
+          height: auto;
+          justify-content: center;
+     }
+     .carousel-wrap {
+          grid-row: 1 / 2;
+          grid-column: 1 / 8;
+          width: 90vw;
+          height: 500px;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          overflow: hidden;
+          transform-style: preserve-3d;
+          perspective: 600px;
+          --items: 5;
+          --middle: 3;
+          --position: 1;
+          pointer-events: none;
+     }
+     .carousel-wrap div.item {
+          position: absolute;
+          width: 300px;
+          height: 400px;
+          background-color: coral;
+          --r: calc(var(--position) - var(--offset));
+          --abs: max(calc(var(--r) * -1), var(--r));
+          transition: all 0.25s linear;
+          transform: rotateY(calc(-10deg * var(--r))) translateX(calc(-300px * var(--r)));
+          z-index: calc((var(--position) - var(--abs)));
+     }
+     div.item:nth-of-type(1) {
+          --offset: 1;
+          /* background-color: #90f1ef; */
+          background-image: url(./eggtoast.jpg);
+          object-fit: cover;
+          object-position: 50% 50%;
+     }
+     div.item:nth-of-type(2) {
+          --offset: 2;
+          background-color: #ff70a6;
+     }
+     .carousel-wrap div.item:nth-of-type(3) {
+          --offset: 3;
+          background-color: #ff9770;
+     }
+     .carousel-wrap div.item:nth-of-type(4) {
+          --offset: 4;
+          background-color: #ffd670;
+     }
+     .carousel-wrap div.item:nth-of-type(5) {
+          --offset: 5;
+          background-color: #e9ff70;
+     }
+     .clicker-wrap input:nth-of-type(1) {
+          grid-column: 2 / 3;
+          grid-row: 2 / 3;
+     }
+     input:nth-of-type(1):checked ~ div#carousel {
+          --position: 1;
+     }
+     .input:nth-of-type(2) {
+          grid-column: 3 / 4;
+          grid-row: 2 / 3;
+     }
+     .input:nth-of-type(2):checked ~ div#carousel {
+          --position: 2;
+     }
+     .carousel-wrap .input:nth-of-type(3) {
+          grid-column: 4 /5;
+          grid-row: 2 / 3;
+     }
+     .carousel-wrap .input:nth-of-type(3):checked ~ div#carousel {
+          --position: 3;
+     }
+     .carousel-wrap .input:nth-of-type(4) {
+          grid-column: 5 / 6;
+          grid-row: 2 / 3;
+     }
+     .carousel-wrap .input:nth-of-type(4):checked ~ div#carousel {
+          --position: 4;
+     }
+     .carousel-wrap .input:nth-of-type(5) {
+          grid-column: 6 / 7;
+          grid-row: 2 / 3;
+     }
+     .carousel-wrap .input:nth-of-type(5):checked ~ div#carousel {
+          --position: 5;
+     }
+</style>

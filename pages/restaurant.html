@@ -14,7 +14,7 @@
 </head>
 <body>
     <!-- sections: hero, about, specialties, hours, testimonials-->
-    <header id="nav" class="header">
+    <header id="nav" class="header sticky">
         <nav class="navbar">
             <a href="../index.html#one">Portfolio</a>
             <a href="#one">Home</a>
@@ -65,51 +65,24 @@
         <section id="three" class="specialties">
             <h2 class="lavish-header">Order Online Now</h2>
             <h1 class="messiri-font">Our Specialty Cuisine</h1>
-            <nav class="slideshow-container"> <!-- TODO: CAROUSEL -->
-                <div class="my-slides fade">
-                    <span class="slideshow-number">1 / 5</span>
-                    <img src="../project folders/restaurant-jf/spread.jpg">
-                    <span class="slideshow-text">A big breakfast, just for you!</span>
+            <section class="carousel-container">
+                <div id="carousel-clickers" class="clicker-wrap">
+                    <input type="radio" name="position" checked />
+                    <input type="radio" name="position" />
+                    <input type="radio" name="position" />
+                    <input type="radio" name="position" />
+                    <input type="radio" name="position" />
                 </div>
-                <div class="my-slides fade">
-                    <span class="slideshow-number">2 / 5</span>
-                    <img src="../project folders/restaurant-jf/eggtoast.jpg">
-                    <span class="slideshow-text">Always Be Cooking!</span>
+                <div id="carousel" class="carousel-wrap">
+                    <div class="item"></div>
+                    <div class="item"></div>
+                    <div class="item"></div>
+                    <div class="item"></div>
+                    <div class="item"></div>
                 </div>
-                <div class="my-slides fade">
-                    <span class="slideshow-number">3 / 5</span>
-                    <img src="../project folders/restaurant-jf/bowl.jpg">
-                    <span class="slideshow-text">This counts as a salad, right?</span>
-                </div>
-                <div class="my-slides fade">
-                    <span class="slideshow-number">4 / 5</span>
-                    <img src="../project folders/restaurant-jf/pie.jpg">
-                    <span class="slideshow-text">As tasty as the Ruby of the Sea!</span>
-                </div>
-                <div class="my-slides fade">
-                    <span class="slideshow-number">5 / 5</span>
-                    <img src="../project folders/restaurant-jf/berries_square.jpg">
-                    <span class="slideshow-text">Berry nice to see you!</span>
-                </div>
-                <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
-                <a class="next" onclick="plusSlides(1)">&#10095;</a>
-                <div>
-                    <span class="dot" onlick="currentSlide(1)"></span>
-                    <span class="dot" onlick="currentSlide(2)"></span>
-                    <span class="dot" onlick="currentSlide(3)"></span>
-                    <span class="dot" onlick="currentSlide(4)"></span>
-                    <span class="dot" onlick="currentSlide(5)"></span>
-                </div>
-                <!-- <ul>
-                    <li>Breakfast</li>
-                    <li>Lunch</li>
-                    <li>Dinner</li>
-                    <li>Dessert</li>
-                    <li>Drinks</li>
-                </ul> -->
-            </nav>
-            <!-- 2 rows of 4 that cycle between 2-5 pages -->
-            <!-- each li has a different set of these rows -->
+            </section>
+
+            <!-- 2 rows of 4 that cycle between 2-5 pages, each li has a different set of these rows -->
         </section>
 
         <section id="four" class="hours">

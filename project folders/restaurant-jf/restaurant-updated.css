@@ -141,6 +141,11 @@ footer a {
 }
 
 /* STRUCTURE */
+html {
+     width: 100%;
+     margin: 0 auto;
+     overflow-x: hidden;
+}
 .header {
      display: flex;
      flex-flow: row;
@@ -151,15 +156,16 @@ footer a {
      /* border-bottom: 1px solid #333; */
      position: relative;
 }
-     .navbar {
+     #nav .navbar {
           display: flex;
           flex-flow: row nowrap;
           justify-content: space-between;
+          flex-basis: flex-end;
           width: 66%;
           padding: 1rem 3rem;
           margin-right: 2rem;
           overflow: hidden;
-          z-index: 3;
+          z-index: 10;
      }      /* removed .nav {position: relative;} */
      .sticky {
           position: fixed;
@@ -253,77 +259,10 @@ footer a {
      align-content: center;
      align-items: center;
      width: 100%;
+     margin: 0 auto;
      padding: 2rem 0;
      background: linear-gradient(rgba(255, 255, 255, .9) 0%, rgba(225, 225, 225, .8) 50%, rgba(225, 225, 225, .7) 100%);
 }
-     .slideshow-container {
-          max-width: 70%;
-          position: relative;
-          margin: auto;
-     }
-          .my-slides {
-               display: none;
-          }
-          .my-slides img {
-               width: 100%;
-          }
-          .prev, .next {
-               cursor: pointer;
-               position: absolute;
-               top: 50%;
-               width: auto;
-               margin-top: -1rem;
-               padding: 1rem;
-               color: #fff;
-               transition: 0.6s ease;
-               border-radius: 0 3px 3px 0;
-               user-select: none;
-          }
-          .next {
-               right: 0;
-               border-radius: 3px 0 0 3px;
-          }
-          .next:hover, 
-          .prev:hover {
-               background-color: rgba(0, 0, 0, 0.8);
-          }
-          .slideshow-text {
-               color: #ff8800;
-               background: rgba(255, 255, 255, .5);
-               padding: 0.5rem 1rem;
-               position: relative;
-               bottom: 0.5rem;
-               width: 100%;
-               text-align: center;
-          }
-          .slideshow-number {
-               color: #f2f2f2;
-               padding: 0.5rem 1rem;
-               position: absolute;
-               top: 0;
-          }
-          .dot {
-               cursor: pointer;
-               height: 1.15rem;
-               width: 1.15rem;
-               margin: 0 2px;
-               background-color: #bbb;
-               border-radius: 50%;
-               display: inline-block;
-               transition: background-color 0.6s ease;
-          }
-          .active, 
-          .dot:hover {
-               background-color: #717171;
-          }
-          .fade {
-               animation-name: fade;
-               animation-duration: 1.5s;
-          }
-          @keyframes fade {
-               from {opacity: 0.4}
-               to {opacity: 1}
-          }
      /* .specialties ul {
           display: flex;
           flex-flow: row nowrap;
@@ -337,6 +276,10 @@ footer a {
           padding: 1rem 2rem;
           text-align: center;
      } */
+     
+     /* begin carousel CSS */
+     
+     /* end carousel CSS */
 .hours {
      display: flex;
      justify-content: center;

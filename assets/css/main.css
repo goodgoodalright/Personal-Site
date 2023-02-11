@@ -2633,8 +2633,15 @@ input, select, textarea {
 			
 		}
 		
-		.image iframe::-webkit-scrollbar {
+		::-webkit-scrollbar {
 			width: 5px;
+		}
+		::-webkit-scrollbar-thumb {
+			width: 5px;
+			color: #a0a;
+		}
+		::-webkit-scrollbar-track {
+			color: #000;
 		}
 
 		.image img {
