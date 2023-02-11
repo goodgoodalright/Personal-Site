@@ -113,9 +113,6 @@ body {
 .italic-text {
      font-style: italic;
 }
-     .hours h2 {
-          font-weight: 500;
-     }
 .navbar a,
 .socials a,
 footer a {
@@ -147,6 +144,9 @@ footer a {
 .reviews i {
      color: #ff8800;
 }
+     .hours-numbers {
+          font-size: 1.25rem;
+     }
 
 /* STRUCTURE */
 html {
@@ -435,9 +435,10 @@ html {
           width: 55%;
      }
 .reviews {
+     padding-top: 2rem;
+     height: 100%;
      width: 100%;
      background: linear-gradient(to bottom, rgba(255, 255, 255, .9), rgba(255, 255, 255, 0.3));
-     height: 100%;
 }
      .reviews h2, .reviews h1 {
           padding: .33rem 0;
@@ -447,7 +448,9 @@ html {
           flex-flow: column nowrap;
           justify-content: space-around;
           align-items: center;
-          width: 50%;
+          border-radius: 15px;
+          min-width: 50%;
+          max-width: 80%;
           padding: 1rem 2rem;
           background: linear-gradient(to bottom, rgba(255, 255, 255, 0.9) 0%, rgba(255, 255, 255, 0.9) 55%, rgba(30, 30, 255, 0.6) 100%);
      }
