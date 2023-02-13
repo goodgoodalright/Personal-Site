@@ -124,6 +124,7 @@ footer a {
           color: rgb(0, 45, 178);
           transition: all 0.5s;
      }
+.hero-wrap label {text-align: center;}
 .about p:first-of-type {
      padding: 1.25rem 0;
      line-height: 1.33rem;
@@ -216,23 +217,26 @@ html {
           width: 100%;
           height: auto;
      }
-     .hero-text,
+     .hero-wrap,
      .about-text {
           border-radius: 20px;
           margin: 1rem;
      }
-.hero {
+.hero-container{
      flex-flow: column nowrap;
      height: auto;
      align-items: flex-start;
 }
-     .hero-text {
+     .hero-wrap {
           display: flex;
           flex-flow: column nowrap;
-          width: 60%;
+          width: 100%;
+          max-width: 60%;
           height: auto;
           padding: 3rem;
+          margin: .5rem auto;
           background: linear-gradient(to right, rgba(240, 240, 240, 0.6) 0%, rgba(255, 255, 255, 0.5) 60%, transparent 100%);
+          left: 0;
      }
 .socials {
      display: flex;
@@ -496,32 +500,49 @@ body {
      background: #fff;
 }
 button {
-     background: #ff8800;
-     color: #fff;
+     /* background: #ff8800;
+     color: #fff; */
      width: auto;
+     
 }
-.hero input {
-     width: 60%;
-     border-top-left-radius: 5px;
-     border-bottom-left-radius: 5px;
+.email-wrap {
+     margin: 1rem auto 2rem auto;
+     width: 100%;
+     display: flex;
+     flex-flow: row wrap;
+     justify-content: center;
 }
-.hero button,
-.about button {
-     padding: 0.5rem 1.5rem;
-     border-top-right-radius: 5px;
-     border-bottom-right-radius: 5px;
-}
-     .hero input,
-     .hero button {
-          padding: 0.5rem;
-          margin: 0.5rem 0;
+     .email-wrap label {
+          width: 100%;
+          margin-bottom: 1rem;
      }
-     .about button {
+     .email-input {
+          max-width: 70%;
+          min-width: 60%;
+          border-radius: 5px 0 0 5px;
+          padding: 1rem 2rem;
+     }
+     .email-button {
+          width: auto;
+          height: auto;
+          border-radius: 0 5px 5px 0;
+          background-color: rgba(0, 0, 0, 0);
+          border: 1px solid #000;
+          cursor: pointer;
+          position: relative;
+          -webkit-user-select: none;
+          touch-action: manipulation;
+     }
+     .email-button,
+     .about-button {
+          padding: 0.5rem 1.5rem;
+     }
+     .about-button {
           margin: 1.25rem;
           width: 30%;
           border-radius: 5px;
      }
-     /* .about button:hover {
+     /* .about-button:hover {
           box-shadow: 
      } */
 .footer-style {
@@ -542,7 +563,7 @@ button {
      }
 
 /* IMAGES */
-.hero {
+.hero-container{
      background-image: url("../restaurant-jf/landing.jpg");
      background-size: cover;
      background-repeat: no-repeat;

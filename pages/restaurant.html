@@ -36,17 +36,22 @@
     </header>
     
     <main id="content" class="content">
-        <section id="one" class="hero">
-            <div class="hero-text">
+        <section id="hero" class="hero-container">
+            <div class="hero-wrap">
                 <h2 class="messiri-header">Howdy, Partner</h2>
-                <h1 class="lavish-header">Welcome To<br>Jester & Fjord's<br>Fun Good-Time Cuisine Restaurant</h1> <!-- set width to 70% -->
-                <label for="search">
-                    <input type="search" placeholder="Search here"><!-- --><button name="location" id="search">Jenga!</button>
-                </label>
-                <div class="socials">
-                    <a href="#"><i class="fa-brands fa-facebook-f"></i> 252k</a>
-                    <a href="#"><i class="fa-brands fa-twitter"></i> 62k</a>
-                    <a href="#"><i class="fa-brands fa-instagram"></i> 55k</a>
+                <h1 class="lavish-header">Welcome To<br>Jester & Fjord's<br>Fun Good-Time Cuisine Restaurant</h1> 
+                    <!-- set width to 70% -->
+                <div class="email-wrap">   
+                    <label for="email">Join our mailing list!</label>
+                    <input type="email" class="email-input" id="email" placeholder="you@email.com">
+                    <button class="email-button" id="email-button">Jenga!</button>
+                    <!-- original button, trying others instead 
+                        <button name="search" class="search-button" id="search">Jenga!</button> -->
+                    <div class="socials">
+                        <a href="#"><i class="fa-brands fa-facebook-f"></i> 252k</a>
+                        <a href="#"><i class="fa-brands fa-twitter"></i> 62k</a>
+                        <a href="#"><i class="fa-brands fa-instagram"></i> 55k</a>
+                    </div>
                 </div>
             </div>
         </section>
@@ -62,7 +67,10 @@
                 </div>
                 <p>We aim to please through fine ingredients and high skill.<br>Our award-winning menu is curated from years of traveling the world.<br>These adventures have shown us the myriad wonders of the culinary arts and it is our mission to share them with you.
                 <div class="about-bottom">
-                    <button name="menu" class="messiri-small">Discover Our Menu</button> <!-- TODO: start centered, hover to reveal p, flexible size-->
+                    <button name="menu" class="about-button messiri-small">Discover Our Menu</button> 
+                        <!-- TODO: 
+                            start centered, hover reveals p, responsive
+                        -->
                     <p class="vibes-font">Oh, and if you see a really weird guy - y'know,<br>kinda tall, big poofy-curly orange hair and long pointy ears, usually wears a cool green cape, big fan of pranks<br>- tell him we say hello!</p>
                 </div>
             </section>
