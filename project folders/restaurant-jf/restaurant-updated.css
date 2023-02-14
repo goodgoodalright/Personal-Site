@@ -149,6 +149,14 @@ footer a {
      .hours-numbers {
           font-size: 1.25rem;
      }
+     .hours-wrap h2 {
+          font-size: 4rem;
+          text-shadow: 2px 2px rgba(0, 0, 0, .7);
+          font-style: italic;
+     }
+     .schedule-text * {
+          line-height: 2rem;
+     }
 
 /* STRUCTURE */
 html {
@@ -462,18 +470,29 @@ html {
      justify-content: center;
      min-height: 90vh;
 }
-     .hours-background {
+     .hours-wrap {
           background: rgba(255, 255, 255, 0.6);
           border-radius: 5px;
           padding: 2rem 0;
      }
-     .hours-background div {
+     .call-wrap {
           display: flex;
           flex-flow: column wrap;
           justify-content: space-evenly;
-          height: 6rem;
+          min-height: 6rem;
      }
-     .hours-background,
+     .schedule-wrap {
+          display: flex;
+          flex-flow: row nowrap;
+          justify-content: space-between;
+          height: auto;
+          width: 80%;
+     }
+     .schedule-text {
+          width: 55%;
+          padding: .5rem;
+     }
+     .hours-wrap,
      .reviews-container {
           display: flex;
           flex-flow: column wrap;
@@ -483,16 +502,6 @@ html {
           text-align: center;
           width: 50%;
           margin: 2rem 0;
-     }
-.times {
-     display: flex;
-     flex-flow: row nowrap;
-     justify-content: space-between;
-     height: auto;
-     width: 80%;
-}
-     .times div {
-          width: 55%;
      }
 
 /* APPEARANCES */
