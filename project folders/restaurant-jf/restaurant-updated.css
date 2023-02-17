@@ -383,6 +383,9 @@ html {
           right: 0;
           border-radius: 3px 0 0 3px;
      }
+     .slide-prev.review {
+          left: 0;
+     }
      .slide-prev:hover,
      .slide-next:hover {
           background-color: rgba(0, 0, 0, 0.75);
@@ -477,15 +480,17 @@ html {
      align-items: center;
      text-align: center;
      height: 100%;
+     min-height: 90vh;
      width: 100%;
-     margin: 6rem auto;
+     margin: 6rem auto 0 auto;
+     padding: 3rem;
      
      background-image: url('./muffins.jpg');
      background-position: center;
      background-repeat: no-repeat;
      background-size: cover;
      background-origin: border-box;
-     border-radius: 5px;
+     border-radius: 5px; rgba(0, 0, 0, 0.66);
 }
      .hours-header,
      .call-wrap,
